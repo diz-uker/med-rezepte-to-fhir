@@ -30,12 +30,12 @@ public class MedRezepteToFhirProcessor {
         return null;
       }
 
-      var record = message.getPayload();
+      var rezept = message.getPayload();
 
-      try (var _ = MDC.putCloseable("rezeptId", record.rezeptId());
-          var _ = MDC.putCloseable("rezeptPos", record.rezeptPos()); ) {
+      try (var _ = MDC.putCloseable("rezeptId", rezept.rezeptId());
+          var _ = MDC.putCloseable("rezeptPos", rezept.rezeptPos()); ) {
         LOG.debug("Processing rezept");
-        var mapped = mapper.map(record);
+        var mapped = mapper.map(rezept);
         if (mapped.isPresent()) {
           var bundle = mapped.get();
           var messageKey = bundle.getId();

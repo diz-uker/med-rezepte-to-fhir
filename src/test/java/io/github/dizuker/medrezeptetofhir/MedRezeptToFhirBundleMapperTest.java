@@ -10,8 +10,11 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cloud.stream.binder.test.TestChannelBinderConfiguration;
+import org.springframework.context.annotation.Import;
 
 @SpringBootTest
+@Import(TestChannelBinderConfiguration.class)
 class MedRezeptToFhirBundleMapperTest {
   private static final FhirContext FHIR_CONTEXT = FhirContext.forR4();
 
@@ -20,6 +23,7 @@ class MedRezeptToFhirBundleMapperTest {
   @ParameterizedTest
   @CsvSource({
     "rezept-1.json",
+    "rezept-null.json",
   })
   void map_withGivenMedRezeptRecord_shouldCreateExpectedFhirBundle(String sourceFile)
       throws IOException {

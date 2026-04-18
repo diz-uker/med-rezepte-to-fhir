@@ -87,27 +87,35 @@ public class MedRezeptToFhirBundleMapper {
     var patientReference = new Reference(patientId).setIdentifier(patientIdentifier);
     request.setSubject(patientReference);
 
-    var rezeptDatum = rezept.rezeptDatum().atZone(ZoneId.of("Europe/Berlin")).toLocalDate();
-    var authored = new DateTimeType(rezeptDatum.toString());
-    authored.setPrecision(TemporalPrecisionEnum.DAY);
-    request.setAuthoredOnElement(authored);
+    if (rezept.rezeptDatum() != null) {
+      var rezeptDatum = rezept.rezeptDatum().atZone(ZoneId.of("Europe/Berlin")).toLocalDate();
+      var authored = new DateTimeType(rezeptDatum.toString());
+      authored.setPrecision(TemporalPrecisionEnum.DAY);
+      request.setAuthoredOnElement(authored);
+    } else {
+      LOG.warn("Rezept Datum is unset");
+    }
 
     request.addDosageInstruction().setText(rezept.signatur());
 
-    var encounterIdType = new CodeableConcept();
-    encounterIdType
-        .addCoding()
-        .setSystem(fhirProperties.systems().identifierType())
-        .setCode("VN")
-        .setDisplay("Visit number");
-    var encounterIdentifier =
-        new Identifier()
-            .setSystem(fhirProperties.systems().identifiers().encounterId())
-            .setValue(rezept.fallId())
-            .setType(encounterIdType);
-    var encounterId = IdUtils.fromIdentifier(encounterIdentifier, ResourceType.Encounter);
-    var encounterReference = new Reference(encounterId).setIdentifier(encounterIdentifier);
-    request.setEncounter(encounterReference);
+    if (StringUtils.isAllBlank(rezept.fallId())) {
+      LOG.warn("Fall ID is unset, skipping encounter reference.");
+    } else {
+      var encounterIdType = new CodeableConcept();
+      encounterIdType
+          .addCoding()
+          .setSystem(fhirProperties.systems().identifierType())
+          .setCode("VN")
+          .setDisplay("Visit number");
+      var encounterIdentifier =
+          new Identifier()
+              .setSystem(fhirProperties.systems().identifiers().encounterId())
+              .setValue(rezept.fallId())
+              .setType(encounterIdType);
+      var encounterId = IdUtils.fromIdentifier(encounterIdentifier, ResourceType.Encounter);
+      var encounterReference = new Reference(encounterId).setIdentifier(encounterIdentifier);
+      request.setEncounter(encounterReference);
+    }
 
     var medication = mapMedication(rezept);
     var medicationReference =
