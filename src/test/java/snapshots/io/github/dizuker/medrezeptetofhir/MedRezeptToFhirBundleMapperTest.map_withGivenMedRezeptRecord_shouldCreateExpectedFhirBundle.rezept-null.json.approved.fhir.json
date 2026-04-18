@@ -157,7 +157,8 @@
           } ]
         } ],
         "who": {
-          "reference": "Device/574b02d2a9cd8ee227f6154dfb34acac9b3d69a282e530a480eab120b9e5436d"
+          "reference": "Device/574b02d2a9cd8ee227f6154dfb34acac9b3d69a282e530a480eab120b9e5436d",
+          "display": "Med Rezepte to FHIR 0.1.10"
         }
       } ],
       "entity": [ {

@@ -134,7 +134,13 @@ public class MedRezeptToFhirBundleMapper {
         new TransactionBuilder()
             .withId(request.getId())
             .withType(BundleType.TRANSACTION)
-            .withProvenance(ReferenceUtils.createReferenceTo(device), what)
+            .withProvenance(
+                ReferenceUtils.createReferenceTo(device)
+                    .setDisplay(
+                        device.getDeviceNameFirstRep().getName()
+                            + " "
+                            + device.getVersionFirstRep().getValue()),
+                what)
             .failOnDuplicateEntries()
             .addEntry(request)
             .addEntry(medication)
