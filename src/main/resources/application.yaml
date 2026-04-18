@@ -23,6 +23,9 @@ fhir:
 spring:
   application:
     name: med-rezepte-to-fhir
+  profiles:
+    active:
+      - dev
   kafka:
     bootstrapServers: ${KAFKA_BOOTSTRAP_SERVERS}
     security.protocol: ${KAFKA_SECURITY_PROTOCOL:PLAINTEXT}

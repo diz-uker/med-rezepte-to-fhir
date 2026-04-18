@@ -1,17 +1,19 @@
 package io.github.dizuker.medrezeptetofhir;
 
+import ca.uhn.fhir.model.api.TemporalPrecisionEnum;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
 import io.github.dizuker.tofhir.ReferenceUtils;
 import io.github.dizuker.tofhir.TransactionBuilder;
 import io.github.dizuker.tofhir.config.ToFhirProperties;
-import java.util.Date;
+import java.time.ZoneId;
 import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
+import org.hl7.fhir.r4.model.DateTimeType;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Medication;
 import org.hl7.fhir.r4.model.MedicationRequest;
@@ -85,7 +87,10 @@ public class MedRezeptToFhirBundleMapper {
     var patientReference = new Reference(patientId).setIdentifier(patientIdentifier);
     request.setSubject(patientReference);
 
-    request.setAuthoredOn(new Date(rezept.rezeptDatum().toEpochMilli()));
+    var rezeptDatum = rezept.rezeptDatum().atZone(ZoneId.of("Europe/Berlin")).toLocalDate();
+    var authored = new DateTimeType(rezeptDatum.toString());
+    authored.setPrecision(TemporalPrecisionEnum.DAY);
+    request.setAuthoredOnElement(authored);
 
     request.addDosageInstruction().setText(rezept.signatur());
 
