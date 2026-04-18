@@ -12,6 +12,7 @@ import org.hl7.fhir.r4.model.MedicationRequest;
 import org.hl7.fhir.r4.model.Reference;
 
 public class MedRezeptToFhirBundleMapper {
+  private static final String PZN_SYSTEM = "http://fhir.de/CodeSystem/ifa/pzn";
 
   public Optional<Bundle> map(MedRezept rezept) {
     if (rezept == null
@@ -46,7 +47,7 @@ public class MedRezeptToFhirBundleMapper {
 
     var medication = new CodeableConcept().setText(rezept.verschreibung());
     if (!isBlank(rezept.pzn())) {
-      medication.addCoding(new Coding().setSystem("http://fhir.de/CodeSystem/ifa/pzn").setCode(rezept.pzn()));
+      medication.addCoding(new Coding().setSystem(PZN_SYSTEM).setCode(rezept.pzn()));
     }
     request.setMedication(medication);
 
