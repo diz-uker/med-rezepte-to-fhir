@@ -1,0 +1,7 @@
+spring:
+  kafka:
+    bootstrapServers: localhost:9094
+  docker:
+    compose:
+      readiness:
+        timeout: 10s

@@ -1,0 +1,101 @@
+// groovylint-disable NestedBlockDepth
+plugins {
+    id 'java'
+    id 'jacoco'
+    id 'org.springframework.boot' version '4.0.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'com.diffplug.spotless' version '8.4.0'
+    id 'net.ltgt.errorprone' version '5.1.0'
+}
+
+group = 'io.github.diz-uker'
+version = '0.1.0' // x-release-please-version
+description = 'Med Rezepte to FHIR'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', '2025.1.1')
+    set('hapiVersion', '8.8.1')
+}
+
+dependencies {
+    implementation 'org.springframework.cloud:spring-cloud-stream'
+    implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'net.logstash.logback:logstash-logback-encoder:9.0'
+    implementation 'org.miracum:kafka-fhir-serializer:3.0.0'
+    implementation "ca.uhn.hapi.fhir:hapi-fhir-structures-r4:${hapiVersion}"
+    implementation 'io.github.diz-uker:to-fhir:0.1.11'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+
+    testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation:${hapiVersion}"
+    testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:${hapiVersion}"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.cloud:spring-cloud-stream-test-support'
+    testImplementation 'org.apache.kafka:kafka-streams-test-utils'
+    testImplementation 'com.approvaltests:approvaltests:30.1.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    errorprone 'com.google.errorprone:error_prone_core:2.48.0'
+    errorprone 'com.uber.nullaway:nullaway:0.13.1'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+spotless {
+    java {
+        target('**/*.java')
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat()
+    }
+}
+
+// via <https://stackoverflow.com/questions/24936781/gradle-plugin-project-version-number>
+task printVersion {
+    doLast {
+        println project.version
+    }
+}
+
+jacoco {
+    toolVersion = '0.8.14'
+}
+
+jacocoTestReport {
+    reports {
+        csv.required = true
+        html.required = true
+        xml.required = true
+    }
+}
+
+import net.ltgt.gradle.errorprone.CheckSeverity
+
+tasks.withType(JavaCompile).configureEach {
+    options.errorprone {
+        check('NullAway', CheckSeverity.WARN)
+        option('NullAway:AnnotatedPackages', 'io.github.diz-uker.medrezeptetofhir')
+    }
+    options.errorprone.disableWarningsInGeneratedCode = true
+    // ignore legacy mappers code
+}
