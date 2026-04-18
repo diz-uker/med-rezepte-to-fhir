@@ -1,0 +1,34 @@
+{
+  "resourceType": "Bundle",
+  "id": "50002062760_0",
+  "type": "collection",
+  "entry": [ {
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "50002062760_0",
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/rezept-id",
+        "value": "50002062760_0"
+      }, {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/rezept-pos",
+        "value": "1"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn",
+          "code": "PZN08806317"
+        } ],
+        "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+      },
+      "subject": {
+        "reference": "Patient/1234"
+      },
+      "authoredOn": "2026-04-18T18:04:34+00:00",
+      "dosageInstruction": [ {
+        "text": "1-0-0 für 10 Tage"
+      } ]
+    }
+  } ]
+}
