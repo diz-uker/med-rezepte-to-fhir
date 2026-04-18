@@ -6,6 +6,9 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import java.io.IOException;
 import org.approvaltests.Approvals;
+import org.approvaltests.core.Scrubber;
+import org.approvaltests.scrubbers.RegExScrubber;
+import org.approvaltests.scrubbers.Scrubbers;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +20,11 @@ import org.springframework.context.annotation.Import;
 @Import(TestChannelBinderConfiguration.class)
 class MedRezeptToFhirBundleMapperTest {
   private static final FhirContext FHIR_CONTEXT = FhirContext.forR4();
-
+  public static final Scrubber FHIR_DATE_TIME_SCRUBBER =
+      Scrubbers.scrubAll(
+          new RegExScrubber(
+              "\"occurredDateTime\": \"(.*)\"", "\"occurredDateTime\": \"2000-01-01T11:11:11Z\""),
+          new RegExScrubber("\"recorded\": \"(.*)\"", "\"recorded\": \"2000-01-01T11:11:11Z\""));
   @Autowired private MedRezeptToFhirBundleMapper sut;
 
   @ParameterizedTest
@@ -37,6 +44,11 @@ class MedRezeptToFhirBundleMapperTest {
     var fhirParser = FHIR_CONTEXT.newJsonParser().setPrettyPrint(true);
     var fhirJson = fhirParser.encodeResourceToString(mapped);
     Approvals.verify(
-        fhirJson, Approvals.NAMES.withParameters(sourceFile).forFile().withExtension(".fhir.json"));
+        fhirJson,
+        Approvals.NAMES
+            .withParameters(sourceFile)
+            .withScrubber(FHIR_DATE_TIME_SCRUBBER)
+            .forFile()
+            .withExtension(".fhir.json"));
   }
 }
