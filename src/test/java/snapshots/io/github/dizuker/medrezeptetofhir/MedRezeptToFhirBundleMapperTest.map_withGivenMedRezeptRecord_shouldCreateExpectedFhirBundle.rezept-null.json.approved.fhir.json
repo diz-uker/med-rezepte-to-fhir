@@ -86,13 +86,13 @@
       "url": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
     }
   }, {
-    "fullUrl": "Device/574b02d2a9cd8ee227f6154dfb34acac9b3d69a282e530a480eab120b9e5436d",
+    "fullUrl": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
     "resource": {
       "resourceType": "Device",
-      "id": "574b02d2a9cd8ee227f6154dfb34acac9b3d69a282e530a480eab120b9e5436d",
+      "id": "364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/device-id",
-        "value": "med-rezepte-to-fhir-v0.1.10"
+        "value": "med-rezepte-to-fhir-v0.0.0-test"
       } ],
       "status": "active",
       "manufacturer": "https://github.com/diz-uker",
@@ -109,7 +109,7 @@
         } ]
       },
       "version": [ {
-        "value": "0.1.10"
+        "value": "0.0.0-test"
       } ],
       "contact": [ {
         "system": "url",
@@ -118,19 +118,19 @@
     },
     "request": {
       "method": "PUT",
-      "url": "Device/574b02d2a9cd8ee227f6154dfb34acac9b3d69a282e530a480eab120b9e5436d"
+      "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
     }
   }, {
-    "fullUrl": "Provenance/920f08d581ca1770116955126ec36201b81d6e543e399598028cd329087f0185",
+    "fullUrl": "Provenance/4b09cb4a4235d5bc81c0997855454c109148b05ced34d367da0b70c4814f8a8c",
     "resource": {
       "resourceType": "Provenance",
-      "id": "920f08d581ca1770116955126ec36201b81d6e543e399598028cd329087f0185",
+      "id": "4b09cb4a4235d5bc81c0997855454c109148b05ced34d367da0b70c4814f8a8c",
       "target": [ {
         "reference": "MedicationRequest/e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba"
       }, {
         "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
       }, {
-        "reference": "Device/574b02d2a9cd8ee227f6154dfb34acac9b3d69a282e530a480eab120b9e5436d"
+        "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
       } ],
       "occurredDateTime": "2000-01-01T11:11:11Z",
       "recorded": "2000-01-01T11:11:11Z",
@@ -157,8 +157,8 @@
           } ]
         } ],
         "who": {
-          "reference": "Device/574b02d2a9cd8ee227f6154dfb34acac9b3d69a282e530a480eab120b9e5436d",
-          "display": "Med Rezepte to FHIR 0.1.10"
+          "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
+          "display": "Med Rezepte to FHIR 0.0.0-test"
         }
       } ],
       "entity": [ {
@@ -170,7 +170,7 @@
     },
     "request": {
       "method": "PUT",
-      "url": "Provenance/920f08d581ca1770116955126ec36201b81d6e543e399598028cd329087f0185"
+      "url": "Provenance/4b09cb4a4235d5bc81c0997855454c109148b05ced34d367da0b70c4814f8a8c"
     }
   } ]
 }
