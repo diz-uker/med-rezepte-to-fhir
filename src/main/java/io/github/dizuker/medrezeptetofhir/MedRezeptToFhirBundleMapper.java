@@ -30,10 +30,13 @@ public class MedRezeptToFhirBundleMapper {
   private static final Logger LOG = LoggerFactory.getLogger(MedRezeptToFhirBundleMapper.class);
   private final FhirProperties fhirProperties;
   private final ToFhirProperties toFhirProperties;
+  private final DeviceMapper deviceMapper;
 
-  public MedRezeptToFhirBundleMapper(FhirProperties properties, ToFhirProperties toFhirProperties) {
+  public MedRezeptToFhirBundleMapper(
+      FhirProperties properties, ToFhirProperties toFhirProperties, DeviceMapper deviceMapper) {
     this.fhirProperties = properties;
     this.toFhirProperties = toFhirProperties;
+    this.deviceMapper = deviceMapper;
   }
 
   public Optional<Bundle> map(MedRezept rezept) {
@@ -122,13 +125,26 @@ public class MedRezeptToFhirBundleMapper {
         ReferenceUtils.createReferenceTo(medication).setDisplay(rezept.verschreibung());
     request.setMedication(medicationReference);
 
+    var device = deviceMapper.map();
+    var what =
+        new Reference()
+            .setDisplay("Rezept ID: " + rezept.rezeptId() + ", Rezept Pos: " + rezept.rezeptPos());
+
     var trxBuilder =
         new TransactionBuilder()
             .withId(request.getId())
             .withType(BundleType.TRANSACTION)
+            .withProvenance(
+                ReferenceUtils.createReferenceTo(device)
+                    .setDisplay(
+                        device.getDeviceNameFirstRep().getName()
+                            + " "
+                            + device.getVersionFirstRep().getValue()),
+                what)
             .failOnDuplicateEntries()
             .addEntry(request)
-            .addEntry(medication);
+            .addEntry(medication)
+            .addEntry(device);
     return Optional.of(trxBuilder.build());
   }
 
