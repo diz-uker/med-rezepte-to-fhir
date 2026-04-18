@@ -1,0 +1,61 @@
+name: validate-fhir-resources
+
+on:
+  pull_request:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+
+jobs:
+  validate-fhir-resource:
+    name: validate fhir resources
+    runs-on: ubuntu-24.04
+    container: ghcr.io/miracum/ig-build-tools:v2.2.41@sha256:60bfe761c45852cf505b68c5176df0171cdbf818c4cc9e4279b9c64aba527c70
+    steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        with:
+          egress-policy: audit # change to 'egress-policy: block' after couple of runs
+
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Configure fhir cli
+        run: |
+          fhir config inflate All
+          fhir config validator Advanced
+
+      - name: Cache FHIR packages
+        id: fhir-package-cache
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        with:
+          path: |
+            /github/home/.fhir/packages
+            fhirpkg.lock.json
+          key: fhir-packages-${{ hashFiles('package.json') }}
+          restore-keys: |
+            fhir-packages-
+
+      - name: Restore FHIR package dependencies
+        if: ${{ steps.fhir-package-cache.outputs.cache-hit != 'true' }}
+        run: |
+          fhir cache location --path
+          fhir cache list
+          fhir restore
+
+      - name: Validate bundles
+        continue-on-error: true
+        run: |
+          fhir cache location --path
+          fhir cache list
+          find src/test/java/snapshots/ -type f \
+            -name "*.fhir.json" -print0 | \
+            xargs -0 -I {} sh -c 'echo "\n\n\nValidating: {}" && fhir validate --verbose --fail "{}"'

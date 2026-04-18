@@ -1,0 +1,89 @@
+{
+  "resourceType": "Bundle",
+  "id": "e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "MedicationRequest/e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
+        "value": "50002062760_0-1"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "outpatient",
+          "display": "Outpatient"
+        } ]
+      } ],
+      "medicationReference": {
+        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
+      },
+      "subject": {
+        "reference": "Patient/7d2d53c05ff39abbbf03a51d4975f7a22eefd9d79fc7612854366b49c246d242",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "MR",
+              "display": "Medical record number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
+          "value": "123"
+        }
+      },
+      "dosageInstruction": [ {
+        "text": "1-0-0 für 10 Tage"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba"
+    }
+  }, {
+    "fullUrl": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
+        "value": "08806317"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn",
+          "code": "08806317"
+        } ]
+      },
+      "ingredient": [ {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "version": "http://snomed.info/sct/900000000000207008/version/20250701",
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "unknown"
+              } ]
+            }
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
+    }
+  } ]
+}

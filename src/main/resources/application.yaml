@@ -1,0 +1,102 @@
+app-version: 0.1.0 # x-release-please-version
+
+fhir:
+  systems:
+    identifiers:
+      base-url: "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers"
+      patient-id: "${fhir.systems.identifiers.base-url}/patient-id"
+      encounter-id: "${fhir.systems.identifiers.base-url}/encounter-id"
+      rezept-medication-request-id: "${fhir.systems.identifiers.base-url}/rezept-medication-request-id"
+      rezept-medication-id: "${fhir.systems.identifiers.base-url}/rezept-medication-id"
+      device-id: "${fhir.systems.identifiers.base-url}/device-id"
+    medicationrequest-category: "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+    identifier-type: "http://terminology.hl7.org/CodeSystem/v2-0203"
+  profiles:
+    # MII
+    # @ignored
+    versions:
+      # renovate: datasource=npm depName=de.medizininformatikinitiative.kerndatensatz.medikation
+      mii-medikation: "|2026.0.1"
+    mii-medication: "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication${fhir.profiles.versions.mii-medikation}"
+    mii-medication-request: "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest${fhir.profiles.versions.mii-medikation}"
+
+spring:
+  application:
+    name: med-rezepte-to-fhir
+  profiles:
+    active: dev
+  kafka:
+    bootstrapServers: ${KAFKA_BOOTSTRAP_SERVERS}
+    security.protocol: ${KAFKA_SECURITY_PROTOCOL:PLAINTEXT}
+    ssl:
+      trust-store-type: PKCS12
+      trust-store-location: file://${KAFKA_SSL_TRUST_STORE:/opt/kafka-certs/ca.p12}
+      trust-store-password: ${KAFKA_SSL_TRUST_STORE_PASSWORD}
+      key-store-type: PKCS12
+      key-store-location: file://${KAFKA_SSL_KEY_STORE_FILE:/opt/kafka-certs/user.p12}
+      key-store-password: ${KAFKA_SSL_KEY_STORE_PASSWORD}
+    consumer:
+      properties:
+        allow.auto.create.topics: ${KAFKA_AUTO_CREATE_TOPICS:false}
+        max.request.size: ${KAFKA_MAX_REQUEST_SIZE:1048576}
+    producer:
+      compression-type: ${KAFKA_PRODUCER_COMPRESSION_TYPE:zstd}
+  cloud:
+    function:
+      definition: sink
+    stream:
+      bindings:
+        sink-in-0:
+          consumer:
+            concurrency: ${KAFKA_CONSUMER_CONCURRENCY:12}
+            use-native-decoding: true
+          destination: ${KAFKA_INPUT_TOPIC:dwh.med-rezepte}
+          group: ${KAFKA_GROUP_ID:medrezepte-to-fhir}
+        sink-out-0:
+          destination: ${KAFKA_OUTPUT_TOPIC:fhir.med-rezepte}
+          producer:
+            use-native-encoding: true
+      kafka:
+        default:
+          consumer:
+            enableDlq: true
+            dlqProducerProperties:
+              configuration:
+                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+                value.serializer: org.springframework.kafka.support.serializer.JsonSerializer
+                spring.json.value.default.type: io.github.dizuker.medrezeptetofhir.models.MedRezept
+        bindings:
+          sink-in-0:
+            consumer:
+              configuration:
+                key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+                value.deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+                spring.json.value.default.type: io.github.dizuker.medrezeptetofhir.models.MedRezept
+                spring.json.trusted.packages: io.github.dizuker.medrezeptetofhir.models
+          sink-out-0:
+            producer:
+              configuration:
+                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+                value.serializer: org.miracum.kafka.serializers.KafkaFhirSerializer
+  main:
+    banner-mode: off
+
+management:
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(-){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m %X %n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"

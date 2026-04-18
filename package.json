@@ -1,0 +1,12 @@
+{
+  "name": "med-rezepte-to-fhir",
+  "version": "0.0.0",
+  "description": "Creates FHIR resources from SAP-postprocessed medication prescriptions.",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1",
+    "de.medizininformatikinitiative.kerndatensatz.medikation": "2026.0.1"
+  },
+  "fhirVersions": [
+    "4.0.1"
+  ]
+}

@@ -1,0 +1,4 @@
+# Message: The instruction 'RUN <package-manager> update' should always be followed by '<package-manager> install' in the same RUN statement.
+# Link: [DS017](https://avd.aquasec.com/misconfig/ds017)
+# False positive since trivy doesn't work with HEREDOC syntax apparantly
+DS017

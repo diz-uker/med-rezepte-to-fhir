@@ -1,0 +1,4 @@
+fhir:
+  profiles:
+    versions:
+      mii-medikation: ""
