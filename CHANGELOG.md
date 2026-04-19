@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.11...v0.1.12) (2026-04-19)
+
+
+### Features
+
+* write provenance resources to separate topic ([#7](https://github.com/diz-uker/med-rezepte-to-fhir/issues/7)) ([9310aae](https://github.com/diz-uker/med-rezepte-to-fhir/commit/9310aae715218566374bd0f6d51c768c3160e17e))
+
 ## [0.1.11](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.10...v0.1.11) (2026-04-18)
 
 
