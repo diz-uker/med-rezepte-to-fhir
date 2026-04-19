@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "ed482f801f5bab824a5a0886c286158fa4fff3bf095c52c1bc6a533dc9fb2e9f",
+  "id": "2230381155aff69a28fdf189e6952b2ffbb0ff89d5d12f3f9177b612f0d33523",
   "type": "transaction",
   "entry": [ {
     "fullUrl": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
@@ -38,12 +38,12 @@
       "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
     }
   }, {
-    "fullUrl": "Provenance/ff9fecd2fb9cfdd5ca4e9440c9e4108a1b4adb5fef662a4469c1286e57ab6cbe",
+    "fullUrl": "Provenance/e9803e05b5e9a4399946ee60e6dc8b95e39a74310b25f6680f84922dfa1e2a96",
     "resource": {
       "resourceType": "Provenance",
-      "id": "ff9fecd2fb9cfdd5ca4e9440c9e4108a1b4adb5fef662a4469c1286e57ab6cbe",
+      "id": "e9803e05b5e9a4399946ee60e6dc8b95e39a74310b25f6680f84922dfa1e2a96",
       "target": [ {
-        "reference": "MedicationRequest/f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c"
+        "reference": "MedicationRequest/f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d"
       }, {
         "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
       }, {
@@ -82,14 +82,14 @@
         "what": {
           "identifier": {
             "system": "https://diz-uker.github.io/source-system",
-            "value": "urn:source:diz-uker:db:schema:table:rezept_id=1_0;rezept_pos=1"
+            "value": "urn:source:diz-uker:db:schema:table:rezept_id=2_0;rezept_pos=1"
           }
         }
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "Provenance/ff9fecd2fb9cfdd5ca4e9440c9e4108a1b4adb5fef662a4469c1286e57ab6cbe"
+      "url": "Provenance/e9803e05b5e9a4399946ee60e6dc8b95e39a74310b25f6680f84922dfa1e2a96"
     }
   } ]
 }

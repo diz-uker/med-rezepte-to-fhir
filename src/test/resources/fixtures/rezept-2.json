@@ -1,0 +1,14 @@
+{
+    "REZEPT_ID": "2_0",
+    "REZEPT_QUELLE": "ACM",
+    "FALL_ID": "22",
+    "PATIENT_ID": "21",
+    "REZEPT_DATUM": 1025128800000,
+    "PRIVAT_FLAG": "0",
+    "VERSCHREIBUNG": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317",
+    "SIGNATUR": "1-0-0 für 10 Tage",
+    "REZEPT_POS": "1",
+    "PZN": "08806317",
+    "PZN_NAME": "Levofloxacin Heumann 500mg 10 Filmtbl. N3",
+    "PZN_PRESCRIPTION_TEXT": "Levofloxacin Heumann 500mg 10 Filmtbl. N3"
+}

@@ -19,4 +19,6 @@ public record MedRezept(
     @JsonProperty("VERSCHREIBUNG") String verschreibung,
     @JsonProperty("SIGNATUR") String signatur,
     @JsonProperty("REZEPT_POS") String rezeptPos,
-    @JsonProperty("PZN") String pzn) {}
+    @JsonProperty("PZN") String pzn,
+    @JsonProperty("PZN_NAME") String pznName,
+    @JsonProperty("PZN_PRESCRIPTION_TEXT") String pznPrescriptionText) {}
