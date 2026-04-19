@@ -42,13 +42,20 @@ class MedRezeptToFhirBundleMapperTest {
     var mapped = sut.map(rezept).orElseThrow();
 
     var fhirParser = FHIR_CONTEXT.newJsonParser().setPrettyPrint(true);
-    var fhirJson = fhirParser.encodeResourceToString(mapped);
     Approvals.verify(
-        fhirJson,
+        fhirParser.encodeResourceToString(mapped.dataBundle()),
         Approvals.NAMES
             .withParameters(sourceFile)
             .withScrubber(FHIR_DATE_TIME_SCRUBBER)
             .forFile()
-            .withExtension(".fhir.json"));
+            .withExtension(".data.fhir.json"));
+
+    Approvals.verify(
+        fhirParser.encodeResourceToString(mapped.provenanceBundle()),
+        Approvals.NAMES
+            .withParameters(sourceFile)
+            .withScrubber(FHIR_DATE_TIME_SCRUBBER)
+            .forFile()
+            .withExtension(".provenance.fhir.json"));
   }
 }

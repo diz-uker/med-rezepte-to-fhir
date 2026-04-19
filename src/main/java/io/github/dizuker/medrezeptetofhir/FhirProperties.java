@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @ConfigurationProperties(prefix = "fhir")
 @ConfigurationPropertiesScan
-public record FhirProperties(Systems systems, Profiles profiles) {
+public record FhirProperties(Systems systems, Profiles profiles, String sourceSystemValueTemplate) {
   public record Systems(
       Identifiers identifiers, String medicationrequestCategory, String identifierType) {}
 
@@ -14,7 +14,8 @@ public record FhirProperties(Systems systems, Profiles profiles) {
       String encounterId,
       String rezeptMedicationRequestId,
       String rezeptMedicationId,
-      String deviceId) {}
+      String deviceId,
+      String sourceSystem) {}
 
   public record Profiles(String miiMedication, String miiMedicationRequest) {}
 }

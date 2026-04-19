@@ -34,7 +34,7 @@ dependencies {
     implementation 'net.logstash.logback:logstash-logback-encoder:9.0'
     implementation 'org.miracum:kafka-fhir-serializer:3.0.0'
     implementation "ca.uhn.hapi.fhir:hapi-fhir-structures-r4:${hapiVersion}"
-    implementation 'io.github.diz-uker:to-fhir:0.1.11'
+    implementation 'io.github.diz-uker:to-fhir:0.1.12'
 
     testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation:${hapiVersion}"
     testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:${hapiVersion}"

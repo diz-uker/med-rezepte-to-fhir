@@ -24,11 +24,10 @@
         } ]
       } ],
       "medicationReference": {
-        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
-        "display": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
       },
       "subject": {
-        "reference": "Patient/e2b9fd4266cffdb4d4becc9f46572c6778599720089accfc7783f7bdde19c7df",
+        "reference": "Patient/7d2d53c05ff39abbbf03a51d4975f7a22eefd9d79fc7612854366b49c246d242",
         "identifier": {
           "type": {
             "coding": [ {
@@ -38,24 +37,9 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
-          "value": "1234"
-        }
-      },
-      "encounter": {
-        "reference": "Encounter/8c28caae14d41bf27766c002b9be422e57364850f8af952a630d432a66689212",
-        "identifier": {
-          "type": {
-            "coding": [ {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "VN",
-              "display": "Visit number"
-            } ]
-          },
-          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
           "value": "123"
         }
       },
-      "authoredOn": "2026-04-18",
       "dosageInstruction": [ {
         "text": "1-0-0 für 10 Tage"
       } ]
@@ -80,8 +64,7 @@
         "coding": [ {
           "system": "http://fhir.de/CodeSystem/ifa/pzn",
           "code": "08806317"
-        } ],
-        "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        } ]
       },
       "ingredient": [ {
         "itemCodeableConcept": {
@@ -136,58 +119,6 @@
     "request": {
       "method": "PUT",
       "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
-    }
-  }, {
-    "fullUrl": "Provenance/4b09cb4a4235d5bc81c0997855454c109148b05ced34d367da0b70c4814f8a8c",
-    "resource": {
-      "resourceType": "Provenance",
-      "id": "4b09cb4a4235d5bc81c0997855454c109148b05ced34d367da0b70c4814f8a8c",
-      "target": [ {
-        "reference": "MedicationRequest/e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba"
-      }, {
-        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
-      }, {
-        "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
-      } ],
-      "occurredDateTime": "2000-01-01T11:11:11Z",
-      "recorded": "2000-01-01T11:11:11Z",
-      "activity": {
-        "coding": [ {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
-          "code": "CREATE",
-          "display": "create"
-        } ]
-      },
-      "agent": [ {
-        "type": {
-          "coding": [ {
-            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
-            "code": "assembler",
-            "display": "Assembler"
-          } ]
-        },
-        "role": [ {
-          "coding": [ {
-            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-            "code": "AUT",
-            "display": "author"
-          } ]
-        } ],
-        "who": {
-          "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
-          "display": "Med Rezepte to FHIR 0.0.0-test"
-        }
-      } ],
-      "entity": [ {
-        "role": "source",
-        "what": {
-          "display": "Rezept ID: 50002062760_0, Rezept Pos: 1"
-        }
-      } ]
-    },
-    "request": {
-      "method": "PUT",
-      "url": "Provenance/4b09cb4a4235d5bc81c0997855454c109148b05ced34d367da0b70c4814f8a8c"
     }
   } ]
 }
