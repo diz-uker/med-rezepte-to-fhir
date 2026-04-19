@@ -126,6 +126,7 @@ public class MedRezeptToFhirBundleMapper {
     request.setMedication(medicationReference);
 
     var device = deviceMapper.map();
+
     var sourceSystemValue =
         String.format(
             fhirProperties.sourceSystemValueTemplate(), rezept.rezeptId(), rezept.rezeptPos());
