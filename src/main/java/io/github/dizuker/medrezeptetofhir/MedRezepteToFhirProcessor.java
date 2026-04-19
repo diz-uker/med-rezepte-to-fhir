@@ -44,12 +44,21 @@ public class MedRezepteToFhirProcessor {
           var messageKey = bundle.getId();
 
           var provenance = mapped.get().provenanceBundle();
+          var provenanceMessageKey = "provenance-" + messageKey;
 
-          streamBridge.send(
-              "provenance-out-0",
-              MessageBuilder.withPayload(provenance)
-                  .setHeader(KafkaHeaders.KEY, "provenance-" + messageKey)
-                  .build());
+          var provenanceSent =
+              streamBridge.send(
+                  "provenance-out-0",
+                  MessageBuilder.withPayload(provenance)
+                      .setHeader(KafkaHeaders.KEY, provenanceMessageKey)
+                      .build());
+          if (!provenanceSent) {
+            LOG.error(
+                "Failed to send provenance bundle to provenance-out-0 for messageKey={} provenanceMessageKey={}",
+                messageKey,
+                provenanceMessageKey);
+            throw new IllegalStateException("Failed to send provenance bundle");
+          }
 
           var messageBuilder =
               MessageBuilder.withPayload(bundle).setHeader(KafkaHeaders.KEY, messageKey);

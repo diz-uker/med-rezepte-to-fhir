@@ -43,8 +43,8 @@ spring:
         max.request.size: ${KAFKA_MAX_REQUEST_SIZE:1048576}
     producer:
       properties:
-        batch.size: ${KAFKA_PRODUCER_BATCH_SIZE:1048576} # 1 MiB, default: 16384
-        linger.ms: ${KAFKA_PRODUCER_LINGER_MS:5000} # 5 s, default: 5 ms
+        batch.size: ${KAFKA_PRODUCER_BATCH_SIZE:16384} # 1 MiB, default: 16384
+        linger.ms: ${KAFKA_PRODUCER_LINGER_MS:5} # default: 5 ms
       compression-type: ${KAFKA_PRODUCER_COMPRESSION_TYPE:zstd}
   cloud:
     function:

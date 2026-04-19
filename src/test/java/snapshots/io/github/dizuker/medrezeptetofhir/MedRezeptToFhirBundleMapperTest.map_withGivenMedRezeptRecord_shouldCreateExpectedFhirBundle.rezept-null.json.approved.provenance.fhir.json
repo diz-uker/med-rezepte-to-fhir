@@ -45,8 +45,6 @@
         "reference": "MedicationRequest/e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba"
       }, {
         "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
-      }, {
-        "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
       } ],
       "occurredDateTime": "2000-01-01T11:11:11Z",
       "recorded": "2000-01-01T11:11:11Z",

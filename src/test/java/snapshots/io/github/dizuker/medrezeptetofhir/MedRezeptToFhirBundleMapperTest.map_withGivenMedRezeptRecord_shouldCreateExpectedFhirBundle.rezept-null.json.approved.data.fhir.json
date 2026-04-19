@@ -85,40 +85,5 @@
       "method": "PUT",
       "url": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
     }
-  }, {
-    "fullUrl": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
-    "resource": {
-      "resourceType": "Device",
-      "id": "364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
-      "identifier": [ {
-        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/device-id",
-        "value": "med-rezepte-to-fhir-v0.0.0-test"
-      } ],
-      "status": "active",
-      "manufacturer": "https://github.com/diz-uker",
-      "deviceName": [ {
-        "name": "Med Rezepte to FHIR",
-        "type": "user-friendly-name"
-      } ],
-      "type": {
-        "coding": [ {
-          "system": "http://snomed.info/sct",
-          "version": "http://snomed.info/sct/900000000000207008/version/20250701",
-          "code": "706689003",
-          "display": "Application program software (physical object)"
-        } ]
-      },
-      "version": [ {
-        "value": "0.0.0-test"
-      } ],
-      "contact": [ {
-        "system": "url",
-        "value": "https://github.com/diz-uker/med-rezepte-to-fhir/issues"
-      } ]
-    },
-    "request": {
-      "method": "PUT",
-      "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
-    }
   } ]
 }
