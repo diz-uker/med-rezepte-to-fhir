@@ -1,18 +1,18 @@
 {
   "resourceType": "Bundle",
-  "id": "f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c",
+  "id": "f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "MedicationRequest/f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c",
+    "fullUrl": "MedicationRequest/f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d",
     "resource": {
       "resourceType": "MedicationRequest",
-      "id": "f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c",
+      "id": "f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
-        "value": "1_0-1"
+        "value": "2_0-1"
       } ],
       "status": "active",
       "intent": "order",
@@ -28,7 +28,7 @@
         "display": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
       },
       "subject": {
-        "reference": "Patient/e2b9fd4266cffdb4d4becc9f46572c6778599720089accfc7783f7bdde19c7df",
+        "reference": "Patient/a47e2bfe81c1c6ab29359d9b02882dc8e9068860208bc7c66daf04ec8f6983ee",
         "identifier": {
           "type": {
             "coding": [ {
@@ -38,11 +38,11 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
-          "value": "1234"
+          "value": "21"
         }
       },
       "encounter": {
-        "reference": "Encounter/8c28caae14d41bf27766c002b9be422e57364850f8af952a630d432a66689212",
+        "reference": "Encounter/566b83a8e4f10eefc72cdd34e295f3ce9b78cf4f0fd81695f2d119992624086b",
         "identifier": {
           "type": {
             "coding": [ {
@@ -52,17 +52,17 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
-          "value": "123"
+          "value": "22"
         }
       },
-      "authoredOn": "2026-04-18",
+      "authoredOn": "2002-06-27",
       "dosageInstruction": [ {
         "text": "1-0-0 für 10 Tage"
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "MedicationRequest/f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c"
+      "url": "MedicationRequest/f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d"
     }
   }, {
     "fullUrl": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
@@ -79,7 +79,8 @@
       "code": {
         "coding": [ {
           "system": "http://fhir.de/CodeSystem/ifa/pzn",
-          "code": "08806317"
+          "code": "08806317",
+          "display": "Levofloxacin Heumann 500mg 10 Filmtbl. N3"
         } ],
         "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
       },

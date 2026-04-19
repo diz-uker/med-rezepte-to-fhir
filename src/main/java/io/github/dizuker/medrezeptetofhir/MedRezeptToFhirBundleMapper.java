@@ -102,7 +102,7 @@ public class MedRezeptToFhirBundleMapper {
     request.addDosageInstruction().setText(rezept.signatur());
 
     if (StringUtils.isAllBlank(rezept.fallId())) {
-      LOG.warn("Fall ID is unset, skipping encounter reference.");
+      LOG.warn("Fall ID is unset, not setting encounter reference.");
     } else {
       var encounterIdType = new CodeableConcept();
       encounterIdType
@@ -156,7 +156,8 @@ public class MedRezeptToFhirBundleMapper {
     medication.addIdentifier(medicationIdentifier);
     medication.setId(IdUtils.fromIdentifier(medicationIdentifier));
     medication.getMeta().addProfile(fhirProperties.profiles().miiMedication());
-    var coding = toFhirProperties.fhir().codings().pzn().setCode(rezept.pzn());
+    var coding =
+        toFhirProperties.fhir().codings().pzn().setCode(rezept.pzn()).setDisplay(rezept.pznName());
     var code = new CodeableConcept(coding).setText(rezept.verschreibung());
     medication.setCode(code);
 
