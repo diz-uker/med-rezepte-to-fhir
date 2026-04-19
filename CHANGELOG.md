@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.13](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.12...v0.1.13) (2026-04-19)
+
+
+### Features
+
+* include pzn name in display ([#9](https://github.com/diz-uker/med-rezepte-to-fhir/issues/9)) ([bc03328](https://github.com/diz-uker/med-rezepte-to-fhir/commit/bc0332869f0230369ef01fc8b591f3ad0c3ec058))
+
 ## [0.1.12](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.11...v0.1.12) (2026-04-19)
 
 
