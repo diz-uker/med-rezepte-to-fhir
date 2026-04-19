@@ -9,6 +9,7 @@ fhir:
       rezept-medication-request-id: "${fhir.systems.identifiers.base-url}/rezept-medication-request-id"
       rezept-medication-id: "${fhir.systems.identifiers.base-url}/rezept-medication-id"
       device-id: "${fhir.systems.identifiers.base-url}/device-id"
+      source-system: "https://diz-uker.github.io/source-system"
     medicationrequest-category: "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
     identifier-type: "http://terminology.hl7.org/CodeSystem/v2-0203"
   profiles:
@@ -19,6 +20,7 @@ fhir:
       mii-medikation: "|2026.0.1"
     mii-medication: "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication${fhir.profiles.versions.mii-medikation}"
     mii-medication-request: "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest${fhir.profiles.versions.mii-medikation}"
+  source-system-value-template: "urn:source:diz-uker:db:schema:table:rezept_id=%s;rezept_pos=%s"
 
 spring:
   application:
@@ -40,6 +42,9 @@ spring:
         allow.auto.create.topics: ${KAFKA_AUTO_CREATE_TOPICS:false}
         max.request.size: ${KAFKA_MAX_REQUEST_SIZE:1048576}
     producer:
+      properties:
+        batch.size: ${KAFKA_PRODUCER_BATCH_SIZE:16384} # 1 MiB, default: 16384
+        linger.ms: ${KAFKA_PRODUCER_LINGER_MS:5} # default: 5 ms
       compression-type: ${KAFKA_PRODUCER_COMPRESSION_TYPE:zstd}
   cloud:
     function:
@@ -54,6 +59,10 @@ spring:
           group: ${KAFKA_GROUP_ID:medrezepte-to-fhir}
         sink-out-0:
           destination: ${KAFKA_OUTPUT_TOPIC:fhir.med-rezepte}
+          producer:
+            use-native-encoding: true
+        provenance-out-0:
+          destination: ${spring.cloud.stream.bindings.sink-out-0.destination}.provenance
           producer:
             use-native-encoding: true
       kafka:
@@ -74,6 +83,11 @@ spring:
                 spring.json.value.default.type: io.github.dizuker.medrezeptetofhir.models.MedRezept
                 spring.json.trusted.packages: io.github.dizuker.medrezeptetofhir.models
           sink-out-0:
+            producer:
+              configuration:
+                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+                value.serializer: org.miracum.kafka.serializers.KafkaFhirSerializer
+          provenance-out-0:
             producer:
               configuration:
                 key.serializer: org.apache.kafka.common.serialization.StringSerializer

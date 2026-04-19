@@ -6,6 +6,7 @@ import org.hl7.fhir.r4.model.Bundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.Message;
@@ -15,11 +16,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class MedRezepteToFhirProcessor {
   private static final Logger LOG = LoggerFactory.getLogger(MedRezepteToFhirProcessor.class);
-  private MedRezeptToFhirBundleMapper mapper;
+  private final MedRezeptToFhirBundleMapper mapper;
+  private final StreamBridge streamBridge;
 
-  public MedRezepteToFhirProcessor(MedRezeptToFhirBundleMapper mapper) {
+  public MedRezepteToFhirProcessor(MedRezeptToFhirBundleMapper mapper, StreamBridge streamBridge) {
     super();
     this.mapper = mapper;
+    this.streamBridge = streamBridge;
   }
 
   @Bean
@@ -37,8 +40,25 @@ public class MedRezepteToFhirProcessor {
         LOG.debug("Processing rezept");
         var mapped = mapper.map(rezept);
         if (mapped.isPresent()) {
-          var bundle = mapped.get();
+          var bundle = mapped.get().dataBundle();
           var messageKey = bundle.getId();
+
+          var provenance = mapped.get().provenanceBundle();
+          var provenanceMessageKey = "provenance-" + messageKey;
+
+          var provenanceSent =
+              streamBridge.send(
+                  "provenance-out-0",
+                  MessageBuilder.withPayload(provenance)
+                      .setHeader(KafkaHeaders.KEY, provenanceMessageKey)
+                      .build());
+          if (!provenanceSent) {
+            LOG.error(
+                "Failed to send provenance bundle to provenance-out-0 for messageKey={} provenanceMessageKey={}",
+                messageKey,
+                provenanceMessageKey);
+            throw new IllegalStateException("Failed to send provenance bundle");
+          }
 
           var messageBuilder =
               MessageBuilder.withPayload(bundle).setHeader(KafkaHeaders.KEY, messageKey);

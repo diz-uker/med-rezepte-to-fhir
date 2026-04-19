@@ -5,11 +5,11 @@ import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
 import io.github.dizuker.tofhir.ReferenceUtils;
 import io.github.dizuker.tofhir.TransactionBuilder;
+import io.github.dizuker.tofhir.TransactionBuilder.DataAndProvenanceBundles;
 import io.github.dizuker.tofhir.config.ToFhirProperties;
 import java.time.ZoneId;
 import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
-import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
@@ -39,7 +39,7 @@ public class MedRezeptToFhirBundleMapper {
     this.deviceMapper = deviceMapper;
   }
 
-  public Optional<Bundle> map(MedRezept rezept) {
+  public Optional<DataAndProvenanceBundles> map(MedRezept rezept) {
     if (StringUtils.isBlank(rezept.pzn())) {
       LOG.warn("PZN is unset, skipping.");
       return Optional.empty();
@@ -126,26 +126,25 @@ public class MedRezeptToFhirBundleMapper {
     request.setMedication(medicationReference);
 
     var device = deviceMapper.map();
+
+    var sourceSystemValue =
+        String.format(
+            fhirProperties.sourceSystemValueTemplate(), rezept.rezeptId(), rezept.rezeptPos());
     var what =
         new Reference()
-            .setDisplay("Rezept ID: " + rezept.rezeptId() + ", Rezept Pos: " + rezept.rezeptPos());
+            .setIdentifier(
+                new Identifier()
+                    .setSystem(fhirProperties.systems().identifiers().sourceSystem())
+                    .setValue(sourceSystemValue));
 
     var trxBuilder =
         new TransactionBuilder()
             .withId(request.getId())
             .withType(BundleType.TRANSACTION)
-            .withProvenance(
-                ReferenceUtils.createReferenceTo(device)
-                    .setDisplay(
-                        device.getDeviceNameFirstRep().getName()
-                            + " "
-                            + device.getVersionFirstRep().getValue()),
-                what)
             .failOnDuplicateEntries()
-            .addEntry(request)
-            .addEntry(medication)
-            .addEntry(device);
-    return Optional.of(trxBuilder.build());
+            .withProvenance(device, what)
+            .addEntries(request, medication);
+    return Optional.of(trxBuilder.buildWithSeparateProvenance());
   }
 
   private Medication mapMedication(MedRezept rezept) {
