@@ -23,6 +23,7 @@
           "display": "Outpatient"
         } ]
       } ],
+      "reportedBoolean": false,
       "medicationReference": {
         "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
       },
@@ -74,7 +75,7 @@
             "_code": {
               "extension": [ {
                 "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
+                "valueCode": "not-applicable"
               } ]
             }
           } ]

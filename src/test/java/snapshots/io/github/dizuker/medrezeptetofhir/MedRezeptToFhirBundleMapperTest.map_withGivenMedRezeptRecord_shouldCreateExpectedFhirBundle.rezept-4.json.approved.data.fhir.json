@@ -25,8 +25,8 @@
       } ],
       "reportedBoolean": false,
       "medicationReference": {
-        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
-        "display": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        "reference": "Medication/264e565967eb11fd7d56edf5ea1436ea935e930f271dd8f47d8423101e7008b1",
+        "display": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St"
       },
       "subject": {
         "reference": "Patient/e2b9fd4266cffdb4d4becc9f46572c6778599720089accfc7783f7bdde19c7df",
@@ -66,23 +66,19 @@
       "url": "MedicationRequest/f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c"
     }
   }, {
-    "fullUrl": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+    "fullUrl": "Medication/264e565967eb11fd7d56edf5ea1436ea935e930f271dd8f47d8423101e7008b1",
     "resource": {
       "resourceType": "Medication",
-      "id": "abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+      "id": "264e565967eb11fd7d56edf5ea1436ea935e930f271dd8f47d8423101e7008b1",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
-        "value": "08806317"
+        "value": "levofloxacin-heumann-500mg-fta-n3-10st"
       } ],
       "code": {
-        "coding": [ {
-          "system": "http://fhir.de/CodeSystem/ifa/pzn",
-          "code": "08806317"
-        } ],
-        "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St"
       },
       "ingredient": [ {
         "itemCodeableConcept": {
@@ -101,7 +97,7 @@
     },
     "request": {
       "method": "PUT",
-      "url": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
+      "url": "Medication/264e565967eb11fd7d56edf5ea1436ea935e930f271dd8f47d8423101e7008b1"
     }
   } ]
 }

@@ -1,6 +1,7 @@
 package io.github.dizuker.medrezeptetofhir;
 
 import ca.uhn.fhir.model.api.TemporalPrecisionEnum;
+import com.github.slugify.Slugify;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
 import io.github.dizuker.tofhir.ReferenceUtils;
@@ -8,8 +9,10 @@ import io.github.dizuker.tofhir.TransactionBuilder;
 import io.github.dizuker.tofhir.TransactionBuilder.DataAndProvenanceBundles;
 import io.github.dizuker.tofhir.config.ToFhirProperties;
 import java.time.ZoneId;
+import java.util.Locale;
 import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
+import org.hl7.fhir.r4.model.BooleanType;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
@@ -28,6 +31,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MedRezeptToFhirBundleMapper {
   private static final Logger LOG = LoggerFactory.getLogger(MedRezeptToFhirBundleMapper.class);
+  private static final Slugify slugifier =
+      Slugify.builder().lowerCase(true).locale(Locale.GERMAN).build();
   private final FhirProperties fhirProperties;
   private final ToFhirProperties toFhirProperties;
   private final DeviceMapper deviceMapper;
@@ -40,11 +45,6 @@ public class MedRezeptToFhirBundleMapper {
   }
 
   public Optional<DataAndProvenanceBundles> map(MedRezept rezept) {
-    if (StringUtils.isBlank(rezept.pzn())) {
-      LOG.warn("PZN is unset, skipping.");
-      return Optional.empty();
-    }
-
     if (StringUtils.isBlank(rezept.rezeptId())) {
       LOG.warn("Rezept ID is unset, skipping.");
       return Optional.empty();
@@ -68,6 +68,8 @@ public class MedRezeptToFhirBundleMapper {
 
     request.setStatus(MedicationRequestStatus.ACTIVE);
     request.setIntent(MedicationRequestIntent.ORDER);
+    request.setReported(new BooleanType(false));
+
     request
         .addCategory()
         .addCoding()
@@ -150,15 +152,32 @@ public class MedRezeptToFhirBundleMapper {
   private Medication mapMedication(MedRezept rezept) {
     var medication = new Medication();
     var medicationIdentifier =
-        new Identifier()
-            .setSystem(fhirProperties.systems().identifiers().rezeptMedicationId())
-            .setValue(rezept.pzn());
+        new Identifier().setSystem(fhirProperties.systems().identifiers().rezeptMedicationId());
+
+    if (StringUtils.isNotBlank(rezept.pzn())) {
+      medicationIdentifier.setValue(rezept.pzn());
+    } else {
+      medicationIdentifier.setValue(slugifier.slugify(rezept.verschreibung()));
+    }
+
     medication.addIdentifier(medicationIdentifier);
     medication.setId(IdUtils.fromIdentifier(medicationIdentifier));
     medication.getMeta().addProfile(fhirProperties.profiles().miiMedication());
-    var coding =
-        toFhirProperties.fhir().codings().pzn().setCode(rezept.pzn()).setDisplay(rezept.pznName());
-    var code = new CodeableConcept(coding).setText(rezept.verschreibung());
+    var code = new CodeableConcept().setText(rezept.verschreibung());
+
+    if (StringUtils.isNotBlank(rezept.pzn())) {
+      var coding =
+          toFhirProperties
+              .fhir()
+              .codings()
+              .pzn()
+              .setCode(rezept.pzn())
+              .setDisplay(rezept.pznName());
+      code.addCoding(coding);
+    } else {
+      LOG.warn("PZN is blank, not setting medication code.");
+    }
+
     medication.setCode(code);
 
     var ingredient = toFhirProperties.fhir().codings().snomed();
@@ -169,7 +188,7 @@ public class MedRezeptToFhirBundleMapper {
                 .fhir()
                 .extensions()
                 .dataAbsentReason()
-                .setValue(new CodeType("unknown")));
+                .setValue(new CodeType("not-applicable")));
     medication.addIngredient().setItem(new CodeableConcept().addCoding(ingredient));
     return medication;
   }

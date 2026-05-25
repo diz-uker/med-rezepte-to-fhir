@@ -31,6 +31,8 @@ class MedRezeptToFhirBundleMapperTest {
   @CsvSource({
     "rezept-1.json",
     "rezept-2.json",
+    "rezept-3.json",
+    "rezept-4.json",
     "rezept-null.json",
   })
   void map_withGivenMedRezeptRecord_shouldCreateExpectedFhirBundle(String sourceFile)

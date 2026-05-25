@@ -1,0 +1,14 @@
+{
+  "REZEPT_ID": "123_0",
+  "REZEPT_QUELLE": "ACM",
+  "FALL_ID": "123",
+  "PATIENT_ID": "456",
+  "REZEPT_DATUM": 1779660000000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "TEZSPIRE 210MG ILO PEN 3St PZN17882122",
+  "SIGNATUR": "dj",
+  "REZEPT_POS": "1",
+  "PZN": "17882122",
+  "PZN_NAME": "Tezspire® 210 mg Injektionslösung 3 Fertigpen",
+  "PZN_PRESCRIPTION_TEXT": "Tezspire® 210 mg Injektionslösung 3 Fertigpen"
+}
