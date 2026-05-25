@@ -65,7 +65,8 @@ class MedRezeptToFhirBundleMapperTest {
 
   @Test
   void map_withBlankVerschreibung_shouldSkipMapping() throws IOException {
-    final var recordStream = this.getClass().getClassLoader().getResource("fixtures/rezept-null.json");
+    final var recordStream =
+        this.getClass().getClassLoader().getResource("fixtures/rezept-null.json");
     var mapper = new ObjectMapper();
     mapper.registerModule(new JavaTimeModule());
     final var rezept = mapper.readValue(recordStream.openStream(), MedRezept.class);
