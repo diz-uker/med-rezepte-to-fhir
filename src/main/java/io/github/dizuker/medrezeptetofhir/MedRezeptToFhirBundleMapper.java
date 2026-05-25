@@ -55,6 +55,11 @@ public class MedRezeptToFhirBundleMapper {
       return Optional.empty();
     }
 
+    if (StringUtils.isBlank(rezept.verschreibung())) {
+      LOG.warn("Verschreibung is unset, skipping.");
+      return Optional.empty();
+    }
+
     var request = new MedicationRequest();
 
     var identifierValue = String.format("%s-%s", rezept.rezeptId(), rezept.rezeptPos());
