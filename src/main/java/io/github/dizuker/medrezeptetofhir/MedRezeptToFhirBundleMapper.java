@@ -175,7 +175,7 @@ public class MedRezeptToFhirBundleMapper {
               .setDisplay(rezept.pznName());
       code.addCoding(coding);
     } else {
-      LOG.warn("PZN is blank, not setting medication code.");
+      LOG.warn("PZN is blank, not adding PZN coding to medication code.");
     }
 
     medication.setCode(code);
