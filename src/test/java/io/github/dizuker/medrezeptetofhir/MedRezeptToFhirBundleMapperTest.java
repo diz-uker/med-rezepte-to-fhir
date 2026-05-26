@@ -9,6 +9,8 @@ import org.approvaltests.Approvals;
 import org.approvaltests.core.Scrubber;
 import org.approvaltests.scrubbers.RegExScrubber;
 import org.approvaltests.scrubbers.Scrubbers;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +33,8 @@ class MedRezeptToFhirBundleMapperTest {
   @CsvSource({
     "rezept-1.json",
     "rezept-2.json",
-    "rezept-null.json",
+    "rezept-3.json",
+    "rezept-4.json",
   })
   void map_withGivenMedRezeptRecord_shouldCreateExpectedFhirBundle(String sourceFile)
       throws IOException {
@@ -58,5 +61,18 @@ class MedRezeptToFhirBundleMapperTest {
             .withScrubber(FHIR_DATE_TIME_SCRUBBER)
             .forFile()
             .withExtension(".provenance.fhir.json"));
+  }
+
+  @Test
+  void map_withBlankVerschreibung_shouldSkipMapping() throws IOException {
+    final var recordStream =
+        this.getClass().getClassLoader().getResource("fixtures/rezept-null.json");
+    var mapper = new ObjectMapper();
+    mapper.registerModule(new JavaTimeModule());
+    final var rezept = mapper.readValue(recordStream.openStream(), MedRezept.class);
+
+    var mapped = sut.map(rezept);
+
+    Assertions.assertThat(mapped).isEmpty();
   }
 }

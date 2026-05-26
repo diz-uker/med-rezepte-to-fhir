@@ -1,0 +1,14 @@
+{
+    "REZEPT_ID": "1_0",
+    "REZEPT_QUELLE": "ACM",
+    "FALL_ID": "123",
+    "PATIENT_ID": "1234",
+    "REZEPT_DATUM": 1776535474000,
+    "PRIVAT_FLAG": "0",
+    "VERSCHREIBUNG": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St",
+    "SIGNATUR": "1-0-0 für 10 Tage",
+    "REZEPT_POS": "1",
+    "PZN": null,
+    "PZN_NAME": null,
+    "PZN_PRESCRIPTION_TEXT": null
+}

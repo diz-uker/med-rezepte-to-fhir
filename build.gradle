@@ -35,6 +35,7 @@ dependencies {
     implementation 'org.miracum:kafka-fhir-serializer:3.0.0'
     implementation "ca.uhn.hapi.fhir:hapi-fhir-structures-r4:${hapiVersion}"
     implementation 'io.github.diz-uker:to-fhir:0.1.13'
+    implementation("com.github.slugify:slugify:4.0.0")
 
     testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation:${hapiVersion}"
     testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:${hapiVersion}"

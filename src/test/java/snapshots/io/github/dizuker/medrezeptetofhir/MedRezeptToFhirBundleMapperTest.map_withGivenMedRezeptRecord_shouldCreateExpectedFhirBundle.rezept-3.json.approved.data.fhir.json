@@ -1,18 +1,18 @@
 {
   "resourceType": "Bundle",
-  "id": "f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c",
+  "id": "6fbe5d48613cd696983a1e4f09df709e891a8be73a9235be8c0184bb16ed3888",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "MedicationRequest/f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c",
+    "fullUrl": "MedicationRequest/6fbe5d48613cd696983a1e4f09df709e891a8be73a9235be8c0184bb16ed3888",
     "resource": {
       "resourceType": "MedicationRequest",
-      "id": "f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c",
+      "id": "6fbe5d48613cd696983a1e4f09df709e891a8be73a9235be8c0184bb16ed3888",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
-        "value": "1_0-1"
+        "value": "123_0-1"
       } ],
       "status": "active",
       "intent": "order",
@@ -25,11 +25,11 @@
       } ],
       "reportedBoolean": false,
       "medicationReference": {
-        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
-        "display": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        "reference": "Medication/61cbe435e083102301924d49c6d5deb395bbe7235363d943bc8c3edbd8350032",
+        "display": "TEZSPIRE 210MG ILO PEN 3St PZN17882122"
       },
       "subject": {
-        "reference": "Patient/e2b9fd4266cffdb4d4becc9f46572c6778599720089accfc7783f7bdde19c7df",
+        "reference": "Patient/1dd14bd4a8837519ac7306fdfac8e204636e56c7d5f6325c1e1d06af4e1840ae",
         "identifier": {
           "type": {
             "coding": [ {
@@ -39,7 +39,7 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
-          "value": "1234"
+          "value": "456"
         }
       },
       "encounter": {
@@ -56,33 +56,34 @@
           "value": "123"
         }
       },
-      "authoredOn": "2026-04-18",
+      "authoredOn": "2026-05-25",
       "dosageInstruction": [ {
-        "text": "1-0-0 für 10 Tage"
+        "text": "dj"
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "MedicationRequest/f3c3c03fd3e06096f6fdf396753135372123b4a98b07e87bd2ed60351a6b630c"
+      "url": "MedicationRequest/6fbe5d48613cd696983a1e4f09df709e891a8be73a9235be8c0184bb16ed3888"
     }
   }, {
-    "fullUrl": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+    "fullUrl": "Medication/61cbe435e083102301924d49c6d5deb395bbe7235363d943bc8c3edbd8350032",
     "resource": {
       "resourceType": "Medication",
-      "id": "abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+      "id": "61cbe435e083102301924d49c6d5deb395bbe7235363d943bc8c3edbd8350032",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
-        "value": "08806317"
+        "value": "17882122"
       } ],
       "code": {
         "coding": [ {
           "system": "http://fhir.de/CodeSystem/ifa/pzn",
-          "code": "08806317"
+          "code": "17882122",
+          "display": "Tezspire® 210 mg Injektionslösung 3 Fertigpen"
         } ],
-        "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        "text": "TEZSPIRE 210MG ILO PEN 3St PZN17882122"
       },
       "ingredient": [ {
         "itemCodeableConcept": {
@@ -101,7 +102,7 @@
     },
     "request": {
       "method": "PUT",
-      "url": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
+      "url": "Medication/61cbe435e083102301924d49c6d5deb395bbe7235363d943bc8c3edbd8350032"
     }
   } ]
 }
