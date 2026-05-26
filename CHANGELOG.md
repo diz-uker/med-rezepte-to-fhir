@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.14](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.13...v0.1.14) (2026-05-26)
+
+
+### Features
+
+* support for handling messages without a PZN ([#11](https://github.com/diz-uker/med-rezepte-to-fhir/issues/11)) ([4024861](https://github.com/diz-uker/med-rezepte-to-fhir/commit/40248615656399ad39df9ef6e3169db6ed8e411b))
+
 ## [0.1.13](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.12...v0.1.13) (2026-04-19)
 
 
