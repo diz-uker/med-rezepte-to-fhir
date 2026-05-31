@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.15](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.14...v0.1.15) (2026-05-31)
+
+
+### Features
+
+* enhance mapping for MedRezept ([#13](https://github.com/diz-uker/med-rezepte-to-fhir/issues/13)) ([f3cafc0](https://github.com/diz-uker/med-rezepte-to-fhir/commit/f3cafc07730b1a5d5c6e32fdcf294fa81c14e3d6))
+
 ## [0.1.14](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.13...v0.1.14) (2026-05-26)
 
 
