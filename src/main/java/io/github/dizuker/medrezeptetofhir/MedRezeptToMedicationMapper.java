@@ -8,7 +8,6 @@ import java.util.Locale;
 import org.apache.commons.lang3.StringUtils;
 import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
-import org.hl7.fhir.r4.model.Coding;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Medication;
 import org.slf4j.Logger;
@@ -76,21 +75,22 @@ public class MedRezeptToMedicationMapper {
     if (!rezept.ingredients().isEmpty()) {
       for (var ingredient : rezept.ingredients()) {
         var ingredientConcept = new CodeableConcept().setText(ingredient.name());
+        var coding = fhirProperties.codings().ask();
 
         if (StringUtils.isNotBlank(ingredient.ask())) {
-          var coding = fhirProperties.codings().ask().setCode(ingredient.ask());
-          ingredientConcept.addCoding(coding);
+          coding.setCode(ingredient.ask());
         } else {
-          var coding = new Coding();
-          coding.addExtension(
-              toFhirProperties
-                  .fhir()
-                  .extensions()
-                  .dataAbsentReason()
-                  .setValue(new CodeType("asked-unknown")));
-          ingredientConcept.addCoding(coding);
+          coding
+              .getCodeElement()
+              .addExtension(
+                  toFhirProperties
+                      .fhir()
+                      .extensions()
+                      .dataAbsentReason()
+                      .setValue(new CodeType("as-text")));
         }
 
+        ingredientConcept.addCoding(coding);
         medication.addIngredient().setItem(ingredientConcept);
       }
     } else {

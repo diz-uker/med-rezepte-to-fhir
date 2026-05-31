@@ -116,10 +116,13 @@
       }, {
         "itemCodeableConcept": {
           "coding": [ {
-            "extension": [ {
-              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              "valueCode": "asked-unknown"
-            } ]
+            "system": "http://fhir.de/CodeSystem/ask",
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
           } ],
           "text": "Macrogol 4000000"
         }
@@ -134,10 +137,13 @@
       }, {
         "itemCodeableConcept": {
           "coding": [ {
-            "extension": [ {
-              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-              "valueCode": "asked-unknown"
-            } ]
+            "system": "http://fhir.de/CodeSystem/ask",
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
           } ],
           "text": "Natriumhydroxid zur pH-Wert Einstellung"
         }
