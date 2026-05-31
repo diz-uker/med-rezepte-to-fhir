@@ -1,24 +1,19 @@
 package io.github.dizuker.medrezeptetofhir;
 
 import ca.uhn.fhir.model.api.TemporalPrecisionEnum;
-import com.github.slugify.Slugify;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
 import io.github.dizuker.tofhir.ReferenceUtils;
 import io.github.dizuker.tofhir.TransactionBuilder;
 import io.github.dizuker.tofhir.TransactionBuilder.DataAndProvenanceBundles;
-import io.github.dizuker.tofhir.config.ToFhirProperties;
 import java.time.ZoneId;
-import java.util.Locale;
 import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 import org.hl7.fhir.r4.model.BooleanType;
 import org.hl7.fhir.r4.model.Bundle.BundleType;
-import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.DateTimeType;
 import org.hl7.fhir.r4.model.Identifier;
-import org.hl7.fhir.r4.model.Medication;
 import org.hl7.fhir.r4.model.MedicationRequest;
 import org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestIntent;
 import org.hl7.fhir.r4.model.MedicationRequest.MedicationRequestStatus;
@@ -31,17 +26,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class MedRezeptToFhirBundleMapper {
   private static final Logger LOG = LoggerFactory.getLogger(MedRezeptToFhirBundleMapper.class);
-  private static final Slugify slugifier =
-      Slugify.builder().lowerCase(true).locale(Locale.GERMAN).build();
+
   private final FhirProperties fhirProperties;
-  private final ToFhirProperties toFhirProperties;
   private final DeviceMapper deviceMapper;
+  private final MedRezeptToMedicationMapper medicationMapper;
 
   public MedRezeptToFhirBundleMapper(
-      FhirProperties properties, ToFhirProperties toFhirProperties, DeviceMapper deviceMapper) {
+      FhirProperties properties,
+      DeviceMapper deviceMapper,
+      MedRezeptToMedicationMapper medicationMapper) {
     this.fhirProperties = properties;
-    this.toFhirProperties = toFhirProperties;
     this.deviceMapper = deviceMapper;
+    this.medicationMapper = medicationMapper;
   }
 
   public Optional<DataAndProvenanceBundles> map(MedRezept rezept) {
@@ -71,7 +67,7 @@ public class MedRezeptToFhirBundleMapper {
     request.setId(IdUtils.fromIdentifier(identifier));
     request.getMeta().addProfile(fhirProperties.profiles().miiMedicationRequest());
 
-    request.setStatus(MedicationRequestStatus.ACTIVE);
+    request.setStatus(MedicationRequestStatus.UNKNOWN);
     request.setIntent(MedicationRequestIntent.ORDER);
     request.setReported(new BooleanType(false));
 
@@ -127,7 +123,7 @@ public class MedRezeptToFhirBundleMapper {
       request.setEncounter(encounterReference);
     }
 
-    var medication = mapMedication(rezept);
+    var medication = medicationMapper.map(rezept);
     var medicationReference =
         ReferenceUtils.createReferenceTo(medication).setDisplay(rezept.verschreibung());
     request.setMedication(medicationReference);
@@ -152,49 +148,5 @@ public class MedRezeptToFhirBundleMapper {
             .withProvenance(device, what)
             .addEntries(request, medication);
     return Optional.of(trxBuilder.buildWithSeparateProvenance());
-  }
-
-  private Medication mapMedication(MedRezept rezept) {
-    var medication = new Medication();
-    var medicationIdentifier =
-        new Identifier().setSystem(fhirProperties.systems().identifiers().rezeptMedicationId());
-
-    if (StringUtils.isNotBlank(rezept.pzn())) {
-      medicationIdentifier.setValue(rezept.pzn());
-    } else {
-      medicationIdentifier.setValue(slugifier.slugify(rezept.verschreibung()));
-    }
-
-    medication.addIdentifier(medicationIdentifier);
-    medication.setId(IdUtils.fromIdentifier(medicationIdentifier));
-    medication.getMeta().addProfile(fhirProperties.profiles().miiMedication());
-    var code = new CodeableConcept().setText(rezept.verschreibung());
-
-    if (StringUtils.isNotBlank(rezept.pzn())) {
-      var coding =
-          toFhirProperties
-              .fhir()
-              .codings()
-              .pzn()
-              .setCode(rezept.pzn())
-              .setDisplay(rezept.pznName());
-      code.addCoding(coding);
-    } else {
-      LOG.warn("PZN is blank, not adding PZN coding to medication code.");
-    }
-
-    medication.setCode(code);
-
-    var ingredient = toFhirProperties.fhir().codings().snomed();
-    ingredient
-        .getCodeElement()
-        .addExtension(
-            toFhirProperties
-                .fhir()
-                .extensions()
-                .dataAbsentReason()
-                .setValue(new CodeType("not-applicable")));
-    medication.addIngredient().setItem(new CodeableConcept().addCoding(ingredient));
-    return medication;
   }
 }

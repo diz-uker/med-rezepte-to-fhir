@@ -35,6 +35,7 @@ class MedRezeptToFhirBundleMapperTest {
     "rezept-2.json",
     "rezept-3.json",
     "rezept-4.json",
+    "rezept-5.json",
   })
   void map_withGivenMedRezeptRecord_shouldCreateExpectedFhirBundle(String sourceFile)
       throws IOException {
