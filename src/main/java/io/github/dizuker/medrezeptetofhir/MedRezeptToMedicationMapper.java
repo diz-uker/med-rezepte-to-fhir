@@ -78,12 +78,7 @@ public class MedRezeptToMedicationMapper {
         var ingredientConcept = new CodeableConcept().setText(ingredient.name());
 
         if (StringUtils.isNotBlank(ingredient.ask())) {
-          var coding =
-              fhirProperties
-                  .codings()
-                  .ask()
-                  .setCode(ingredient.ask())
-                  .setDisplay(ingredient.name());
+          var coding = fhirProperties.codings().ask().setCode(ingredient.ask());
           ingredientConcept.addCoding(coding);
         } else {
           var coding = new Coding();
