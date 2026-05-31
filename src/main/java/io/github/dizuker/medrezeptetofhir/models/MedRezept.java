@@ -26,6 +26,5 @@ public record MedRezept(
     @JsonProperty("PACKAGE_NAME") String packageName,
     @JsonProperty("ATC_CODES") @JsonSetter(nulls = Nulls.AS_EMPTY) List<String> atcCodes,
     @JsonProperty("INGREDIENTS") @JsonSetter(nulls = Nulls.AS_EMPTY) List<Ingredient> ingredients) {
-  public static record Ingredient(
-      @JsonProperty("name") String name, @JsonProperty("ask") String ask) {}
+  public static record Ingredient(String name, String ask) {}
 }
