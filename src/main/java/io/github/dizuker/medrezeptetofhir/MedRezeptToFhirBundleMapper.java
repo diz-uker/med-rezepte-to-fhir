@@ -67,7 +67,7 @@ public class MedRezeptToFhirBundleMapper {
     request.setId(IdUtils.fromIdentifier(identifier));
     request.getMeta().addProfile(fhirProperties.profiles().miiMedicationRequest());
 
-    request.setStatus(MedicationRequestStatus.ACTIVE);
+    request.setStatus(MedicationRequestStatus.UNKNOWN);
     request.setIntent(MedicationRequestIntent.ORDER);
     request.setReported(new BooleanType(false));
 

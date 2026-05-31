@@ -64,8 +64,7 @@ public class MedRezeptToMedicationMapper {
     // nesting a bit.
     if (!rezept.atcCodes().isEmpty()) {
       // TODO: need to double-check if we should add multiple ATC codings if there are
-      // multiple ATC
-      // codes.
+      // multiple ATC codes.
       for (var atcCode : rezept.atcCodes()) {
         var atcCoding = toFhirProperties.fhir().codings().atc().setCode(atcCode);
         code.addCoding(atcCoding);
