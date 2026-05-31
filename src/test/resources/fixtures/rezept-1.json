@@ -9,6 +9,7 @@
     "SIGNATUR": "1-0-0 für 10 Tage",
     "REZEPT_POS": "1",
     "PZN": "08806317",
-    "PZN_NAME": null,
-    "PZN_PRESCRIPTION_TEXT": null
+    "PACKAGE_NAME": null,
+    "ATC_CODES": null,
+    "INGREDIENTS": null
 }

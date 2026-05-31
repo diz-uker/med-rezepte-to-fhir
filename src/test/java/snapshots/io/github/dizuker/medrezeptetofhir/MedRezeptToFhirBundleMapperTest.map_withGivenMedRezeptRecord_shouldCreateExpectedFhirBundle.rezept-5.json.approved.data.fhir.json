@@ -1,0 +1,200 @@
+{
+  "resourceType": "Bundle",
+  "id": "2a3d793761bfa40ad5576948c3920faee41f163ef78b9a66d7ec84df9172fc9b",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "MedicationRequest/2a3d793761bfa40ad5576948c3920faee41f163ef78b9a66d7ec84df9172fc9b",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "2a3d793761bfa40ad5576948c3920faee41f163ef78b9a66d7ec84df9172fc9b",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
+        "value": "5_0-1"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "outpatient",
+          "display": "Outpatient"
+        } ]
+      } ],
+      "reportedBoolean": false,
+      "medicationReference": {
+        "reference": "Medication/66ff3657f31503fcd4dfa7a3761e1054f3e3dfaf8f508fef97661fdc331fc508",
+        "display": "POLYSPECTRAN ATO N1 5ml PZN01305374"
+      },
+      "subject": {
+        "reference": "Patient/a47e2bfe81c1c6ab29359d9b02882dc8e9068860208bc7c66daf04ec8f6983ee",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "MR",
+              "display": "Medical record number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
+          "value": "21"
+        }
+      },
+      "encounter": {
+        "reference": "Encounter/566b83a8e4f10eefc72cdd34e295f3ce9b78cf4f0fd81695f2d119992624086b",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "VN",
+              "display": "Visit number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
+          "value": "22"
+        }
+      },
+      "authoredOn": "2002-06-27",
+      "dosageInstruction": [ {
+        "text": "1-0-0 für 10 Tage"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/2a3d793761bfa40ad5576948c3920faee41f163ef78b9a66d7ec84df9172fc9b"
+    }
+  }, {
+    "fullUrl": "Medication/66ff3657f31503fcd4dfa7a3761e1054f3e3dfaf8f508fef97661fdc331fc508",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "66ff3657f31503fcd4dfa7a3761e1054f3e3dfaf8f508fef97661fdc331fc508",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
+        "value": "01305374"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn",
+          "code": "01305374",
+          "display": "Polyspectran® Tropfen, 7500 I.E./ml 3500 I.E./ml 20 µg/ml Augen- und Ohrentropfen, Lösung 5ml N1"
+        }, {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc",
+          "version": "2026",
+          "code": "S03AA23"
+        } ],
+        "text": "POLYSPECTRAN ATO N1 5ml PZN01305374"
+      },
+      "ingredient": [ {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00932",
+            "display": "Benzalkonium chlorid"
+          } ],
+          "text": "Benzalkonium chlorid"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "08440",
+            "display": "Ethanol"
+          } ],
+          "text": "Ethanol"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01738",
+            "display": "Gramicidin"
+          } ],
+          "text": "Gramicidin"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "asked-unknown"
+            } ]
+          } ],
+          "text": "Macrogol 4000000"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00211",
+            "display": "Natriumchlorid"
+          } ],
+          "text": "Natriumchlorid"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "asked-unknown"
+            } ]
+          } ],
+          "text": "Natriumhydroxid zur pH-Wert Einstellung"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01097",
+            "display": "Neomycin sulfat"
+          } ],
+          "text": "Neomycin sulfat"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01725",
+            "display": "Polymyxin-B-sulfat"
+          } ],
+          "text": "Polymyxin-B-sulfat"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "03518",
+            "display": "Polysorbat 20"
+          } ],
+          "text": "Polysorbat 20"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00850",
+            "display": "Propylenglycol"
+          } ],
+          "text": "Propylenglycol"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00341",
+            "display": "Wasser, gereinigtes"
+          } ],
+          "text": "Wasser, gereinigtes"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Medication/66ff3657f31503fcd4dfa7a3761e1054f3e3dfaf8f508fef97661fdc331fc508"
+    }
+  } ]
+}

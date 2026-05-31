@@ -12,6 +12,9 @@ fhir:
       source-system: "https://diz-uker.github.io/source-system"
     medicationrequest-category: "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
     identifier-type: "http://terminology.hl7.org/CodeSystem/v2-0203"
+  codings:
+    ask:
+      system: "http://fhir.de/CodeSystem/ask"
   profiles:
     # MII
     # @ignored

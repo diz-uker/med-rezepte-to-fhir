@@ -3,7 +3,10 @@ package io.github.dizuker.medrezeptetofhir.models;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.Nulls;
 import java.time.Instant;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonFormat(with = JsonFormat.Feature.ACCEPT_CASE_INSENSITIVE_PROPERTIES)
@@ -20,5 +23,9 @@ public record MedRezept(
     @JsonProperty("SIGNATUR") String signatur,
     @JsonProperty("REZEPT_POS") String rezeptPos,
     @JsonProperty("PZN") String pzn,
-    @JsonProperty("PZN_NAME") String pznName,
-    @JsonProperty("PZN_PRESCRIPTION_TEXT") String pznPrescriptionText) {}
+    @JsonProperty("PACKAGE_NAME") String packageName,
+    @JsonProperty("ATC_CODES") @JsonSetter(nulls = Nulls.AS_EMPTY) List<String> atcCodes,
+    @JsonProperty("INGREDIENTS") @JsonSetter(nulls = Nulls.AS_EMPTY) List<Ingredient> ingredients) {
+  public static record Ingredient(
+      @JsonProperty("name") String name, @JsonProperty("ask") String ask) {}
+}
