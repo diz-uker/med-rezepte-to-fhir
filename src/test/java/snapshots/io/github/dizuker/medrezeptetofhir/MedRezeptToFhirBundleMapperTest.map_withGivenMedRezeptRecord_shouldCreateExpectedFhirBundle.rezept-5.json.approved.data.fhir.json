@@ -93,8 +93,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00932",
-            "display": "Benzalkonium chlorid"
+            "code": "00932"
           } ],
           "text": "Benzalkonium chlorid"
         }
@@ -102,8 +101,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "08440",
-            "display": "Ethanol"
+            "code": "08440"
           } ],
           "text": "Ethanol"
         }
@@ -111,8 +109,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "01738",
-            "display": "Gramicidin"
+            "code": "01738"
           } ],
           "text": "Gramicidin"
         }
@@ -130,8 +127,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00211",
-            "display": "Natriumchlorid"
+            "code": "00211"
           } ],
           "text": "Natriumchlorid"
         }
@@ -149,8 +145,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "01097",
-            "display": "Neomycin sulfat"
+            "code": "01097"
           } ],
           "text": "Neomycin sulfat"
         }
@@ -158,8 +153,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "01725",
-            "display": "Polymyxin-B-sulfat"
+            "code": "01725"
           } ],
           "text": "Polymyxin-B-sulfat"
         }
@@ -167,8 +161,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "03518",
-            "display": "Polysorbat 20"
+            "code": "03518"
           } ],
           "text": "Polysorbat 20"
         }
@@ -176,8 +169,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00850",
-            "display": "Propylenglycol"
+            "code": "00850"
           } ],
           "text": "Propylenglycol"
         }
@@ -185,8 +177,7 @@
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00341",
-            "display": "Wasser, gereinigtes"
+            "code": "00341"
           } ],
           "text": "Wasser, gereinigtes"
         }
