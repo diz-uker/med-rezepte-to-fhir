@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.16](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.15...v0.1.16) (2026-06-01)
+
+
+### Features
+
+* update medication display names and dosage instructions in FHIR mapping ([#15](https://github.com/diz-uker/med-rezepte-to-fhir/issues/15)) ([aee047a](https://github.com/diz-uker/med-rezepte-to-fhir/commit/aee047a82cb78aa9c785da4dfc57dacf46d824ea))
+
 ## [0.1.15](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.14...v0.1.15) (2026-05-31)
 
 
