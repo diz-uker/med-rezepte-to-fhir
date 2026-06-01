@@ -46,13 +46,11 @@ public class MedRezeptToMedicationMapper {
     var code = new CodeableConcept().setText(rezept.verschreibung());
 
     if (StringUtils.isNotBlank(rezept.pzn())) {
-      var pznCoding =
-          toFhirProperties
-              .fhir()
-              .codings()
-              .pzn()
-              .setCode(rezept.pzn())
-              .setDisplay(rezept.packageName());
+      var pznCoding = toFhirProperties.fhir().codings().pzn().setCode(rezept.pzn());
+      if (StringUtils.isNotBlank(rezept.packageName())) {
+        pznCoding.setDisplay(rezept.packageName());
+        code.setText(rezept.packageName());
+      }
       code.addCoding(pznCoding);
     } else {
       LOG.warn("PZN is blank, not adding PZN coding to medication code.");
