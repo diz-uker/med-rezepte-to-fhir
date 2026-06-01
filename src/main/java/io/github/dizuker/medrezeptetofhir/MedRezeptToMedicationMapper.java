@@ -54,6 +54,7 @@ public class MedRezeptToMedicationMapper {
               .setCode(rezept.pzn())
               .setDisplay(rezept.packageName());
       code.addCoding(pznCoding);
+      code.setText(rezept.packageName());
     } else {
       LOG.warn("PZN is blank, not adding PZN coding to medication code.");
     }

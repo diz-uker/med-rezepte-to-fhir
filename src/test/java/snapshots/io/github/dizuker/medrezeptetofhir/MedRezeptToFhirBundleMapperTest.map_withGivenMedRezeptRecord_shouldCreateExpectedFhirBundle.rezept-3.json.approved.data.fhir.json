@@ -26,7 +26,7 @@
       "reportedBoolean": false,
       "medicationReference": {
         "reference": "Medication/61cbe435e083102301924d49c6d5deb395bbe7235363d943bc8c3edbd8350032",
-        "display": "TEZSPIRE 210MG ILO PEN 3St PZN17882122"
+        "display": "Tezspire® 210 mg Injektionslösung 3 Fertigpen"
       },
       "subject": {
         "reference": "Patient/1dd14bd4a8837519ac7306fdfac8e204636e56c7d5f6325c1e1d06af4e1840ae",
@@ -83,7 +83,7 @@
           "code": "17882122",
           "display": "Tezspire® 210 mg Injektionslösung 3 Fertigpen"
         } ],
-        "text": "TEZSPIRE 210MG ILO PEN 3St PZN17882122"
+        "text": "Tezspire® 210 mg Injektionslösung 3 Fertigpen"
       },
       "ingredient": [ {
         "itemCodeableConcept": {

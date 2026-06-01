@@ -26,7 +26,7 @@
       "reportedBoolean": false,
       "medicationReference": {
         "reference": "Medication/66ff3657f31503fcd4dfa7a3761e1054f3e3dfaf8f508fef97661fdc331fc508",
-        "display": "POLYSPECTRAN ATO N1 5ml PZN01305374"
+        "display": "Polyspectran® Tropfen, 7500 I.E./ml 3500 I.E./ml 20 µg/ml Augen- und Ohrentropfen, Lösung 5ml N1"
       },
       "subject": {
         "reference": "Patient/a47e2bfe81c1c6ab29359d9b02882dc8e9068860208bc7c66daf04ec8f6983ee",
@@ -87,7 +87,7 @@
           "version": "2026",
           "code": "S03AA23"
         } ],
-        "text": "POLYSPECTRAN ATO N1 5ml PZN01305374"
+        "text": "Polyspectran® Tropfen, 7500 I.E./ml 3500 I.E./ml 20 µg/ml Augen- und Ohrentropfen, Lösung 5ml N1"
       },
       "ingredient": [ {
         "itemCodeableConcept": {

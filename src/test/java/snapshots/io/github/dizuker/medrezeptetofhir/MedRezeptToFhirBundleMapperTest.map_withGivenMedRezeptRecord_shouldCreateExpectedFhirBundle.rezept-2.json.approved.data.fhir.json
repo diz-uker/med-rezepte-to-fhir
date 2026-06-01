@@ -26,7 +26,7 @@
       "reportedBoolean": false,
       "medicationReference": {
         "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
-        "display": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        "display": "Levofloxacin Heumann 500mg 10 Filmtbl. N3"
       },
       "subject": {
         "reference": "Patient/a47e2bfe81c1c6ab29359d9b02882dc8e9068860208bc7c66daf04ec8f6983ee",
@@ -83,7 +83,7 @@
           "code": "08806317",
           "display": "Levofloxacin Heumann 500mg 10 Filmtbl. N3"
         } ],
-        "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
+        "text": "Levofloxacin Heumann 500mg 10 Filmtbl. N3"
       },
       "ingredient": [ {
         "itemCodeableConcept": {

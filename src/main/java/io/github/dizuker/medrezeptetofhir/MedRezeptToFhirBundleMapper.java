@@ -102,7 +102,9 @@ public class MedRezeptToFhirBundleMapper {
       LOG.warn("Rezept Datum is unset");
     }
 
-    request.addDosageInstruction().setText(rezept.signatur());
+    if (StringUtils.isNotBlank(rezept.signatur())) {
+      request.addDosageInstruction().setText(rezept.signatur());
+    }
 
     if (StringUtils.isAllBlank(rezept.fallId())) {
       LOG.warn("Fall ID is unset, not setting encounter reference.");
@@ -125,7 +127,7 @@ public class MedRezeptToFhirBundleMapper {
 
     var medication = medicationMapper.map(rezept);
     var medicationReference =
-        ReferenceUtils.createReferenceTo(medication).setDisplay(rezept.verschreibung());
+        ReferenceUtils.createReferenceTo(medication).setDisplay(medication.getCode().getText());
     request.setMedication(medicationReference);
 
     var device = deviceMapper.map();
