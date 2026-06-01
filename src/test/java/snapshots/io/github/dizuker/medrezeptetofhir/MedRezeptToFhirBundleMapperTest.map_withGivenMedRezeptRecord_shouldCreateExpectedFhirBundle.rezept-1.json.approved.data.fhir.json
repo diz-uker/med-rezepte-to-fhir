@@ -25,7 +25,8 @@
       } ],
       "reportedBoolean": false,
       "medicationReference": {
-        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
+        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+        "display": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
       },
       "subject": {
         "reference": "Patient/e2b9fd4266cffdb4d4becc9f46572c6778599720089accfc7783f7bdde19c7df",
@@ -80,7 +81,8 @@
         "coding": [ {
           "system": "http://fhir.de/CodeSystem/ifa/pzn",
           "code": "08806317"
-        } ]
+        } ],
+        "text": "LEVOFLOXACIN HEUMANN 500MG FTA N3 10St PZN08806317"
       },
       "ingredient": [ {
         "itemCodeableConcept": {
