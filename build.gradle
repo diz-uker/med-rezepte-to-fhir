@@ -2,9 +2,9 @@
 plugins {
     id 'java'
     id 'jacoco'
-    id 'org.springframework.boot' version '4.0.5'
+    id 'org.springframework.boot' version '4.0.6'
     id 'io.spring.dependency-management' version '1.1.7'
-    id 'com.diffplug.spotless' version '8.4.0'
+    id 'com.diffplug.spotless' version '8.6.0'
     id 'net.ltgt.errorprone' version '5.1.0'
 }
 
@@ -24,7 +24,7 @@ repositories {
 
 ext {
     set('springCloudVersion', '2025.1.1')
-    set('hapiVersion', '8.8.1')
+    set('hapiVersion', '8.10.0')
 }
 
 dependencies {
@@ -34,7 +34,7 @@ dependencies {
     implementation 'net.logstash.logback:logstash-logback-encoder:9.0'
     implementation 'org.miracum:kafka-fhir-serializer:3.0.0'
     implementation "ca.uhn.hapi.fhir:hapi-fhir-structures-r4:${hapiVersion}"
-    implementation 'io.github.diz-uker:to-fhir:0.1.13'
+    implementation 'io.github.diz-uker:to-fhir:0.1.14'
     implementation("com.github.slugify:slugify:4.0.0")
 
     testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation:${hapiVersion}"
@@ -42,11 +42,11 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.cloud:spring-cloud-stream-test-binder'
     testImplementation 'org.apache.kafka:kafka-streams-test-utils'
-    testImplementation 'com.approvaltests:approvaltests:30.1.0'
+    testImplementation 'com.approvaltests:approvaltests:30.1.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    errorprone 'com.google.errorprone:error_prone_core:2.48.0'
-    errorprone 'com.uber.nullaway:nullaway:0.13.1'
+    errorprone 'com.google.errorprone:error_prone_core:2.49.0'
+    errorprone 'com.uber.nullaway:nullaway:0.13.4'
 }
 
 dependencyManagement {
