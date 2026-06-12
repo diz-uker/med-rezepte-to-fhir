@@ -46,7 +46,8 @@ public class MedRezeptToMedicationMapper {
     var code = new CodeableConcept().setText(rezept.verschreibung());
 
     if (StringUtils.isNotBlank(rezept.pzn())) {
-      var pznCoding = toFhirProperties.fhir().codings().pzn().setCode(rezept.pzn());
+      var pznCoding =
+          toFhirProperties.fhir().codings().pzn().setCode(rezept.pzn()).setVersion(null);
       if (StringUtils.isNotBlank(rezept.packageName())) {
         pznCoding.setDisplay(rezept.packageName());
         code.setText(rezept.packageName());
