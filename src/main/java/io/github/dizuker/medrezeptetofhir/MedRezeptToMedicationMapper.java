@@ -42,7 +42,7 @@ public class MedRezeptToMedicationMapper {
     var code = new CodeableConcept().setText(rezept.verschreibung());
 
     if (StringUtils.isNotBlank(rezept.pzn())) {
-      var pznCoding = fhirProperties.codings().pzn().setCode(rezept.pzn()).setVersion(null);
+      var pznCoding = fhirProperties.codings().pzn().setCode(rezept.pzn());
       if (StringUtils.isNotBlank(rezept.packageName())) {
         pznCoding.setDisplay(rezept.packageName());
         code.setText(rezept.packageName());
@@ -56,8 +56,6 @@ public class MedRezeptToMedicationMapper {
     // so we could move it to the check above. But this reduces
     // nesting a bit.
     if (!rezept.atcCodes().isEmpty()) {
-      // TODO: need to double-check if we should add multiple ATC codings if there are
-      // multiple ATC codes.
       for (var atcCode : rezept.atcCodes()) {
         var atcCoding = fhirProperties.codings().atc().setCode(atcCode);
         code.addCoding(atcCoding);
