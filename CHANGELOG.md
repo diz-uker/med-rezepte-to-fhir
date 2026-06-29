@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.17](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.16...v0.1.17) (2026-06-29)
+
+
+### Features
+
+* use codegen ([#20](https://github.com/diz-uker/med-rezepte-to-fhir/issues/20)) ([40e1dc4](https://github.com/diz-uker/med-rezepte-to-fhir/commit/40e1dc427d64da2b3be86067a18ad84ce45f8107))
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([#17](https://github.com/diz-uker/med-rezepte-to-fhir/issues/17)) ([3dda564](https://github.com/diz-uker/med-rezepte-to-fhir/commit/3dda56499fd163ca4060912c5bdf1d282b7d75ae))
+
 ## [0.1.16](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.15...v0.1.16) (2026-06-01)
 
 
