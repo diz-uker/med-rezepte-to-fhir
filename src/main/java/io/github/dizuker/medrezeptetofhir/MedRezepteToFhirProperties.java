@@ -21,7 +21,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class MedRezepteToFhirProperties extends FhirProperties {
   private Systems systems = new Systems();
   private Codings codings = new Codings();
-  private Profiles profiles = new Profiles(null, null);
   private String sourceSystemValueTemplate;
 
   /** Used by Spring Boot for property binding. */
@@ -32,11 +31,6 @@ public class MedRezepteToFhirProperties extends FhirProperties {
   /** Used by Spring Boot for property binding. */
   public void setCodings(Codings codings) {
     this.codings = codings;
-  }
-
-  /** Used by Spring Boot for property binding. */
-  public void setProfiles(Profiles profiles) {
-    this.profiles = profiles;
   }
 
   /** Used by Spring Boot for property binding. */
@@ -128,7 +122,4 @@ public class MedRezepteToFhirProperties extends FhirProperties {
       this.ask = ask;
     }
   }
-
-  /** FHIR profiles used by this application. */
-  public record Profiles(String miiMedication, String miiMedicationRequest) {}
 }
