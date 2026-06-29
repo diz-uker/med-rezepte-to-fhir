@@ -1,7 +1,6 @@
 package io.github.dizuker.medrezeptetofhir;
 
 import io.github.dizuker.tofhir.IdUtils;
-import io.github.dizuker.tofhir.config.ToFhirProperties;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem;
 import org.hl7.fhir.r4.model.Device;
@@ -13,9 +12,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class DeviceMapper {
   private final ConfigProperties config;
-  private ToFhirProperties fhirProperties;
+  private final MedRezepteToFhirProperties fhirProperties;
 
-  public DeviceMapper(ToFhirProperties fhirProperties, ConfigProperties config) {
+  public DeviceMapper(MedRezepteToFhirProperties fhirProperties, ConfigProperties config) {
     this.fhirProperties = fhirProperties;
     this.config = config;
   }
@@ -24,7 +23,7 @@ public class DeviceMapper {
     var device = new Device();
     var identifier =
         new Identifier()
-            .setSystem(config.fhir().systems().identifiers().deviceId())
+            .setSystem(fhirProperties.systems().identifiers().deviceId())
             .setValue("med-rezepte-to-fhir-v" + config.appVersion());
     device.addIdentifier(identifier);
     device.setId(IdUtils.fromIdentifier(identifier));
@@ -34,7 +33,6 @@ public class DeviceMapper {
     device.setType(
         new CodeableConcept(
             fhirProperties
-                .fhir()
                 .codings()
                 .snomed()
                 .setCode("706689003")

@@ -27,12 +27,12 @@ import org.springframework.stereotype.Service;
 public class MedRezeptToFhirBundleMapper {
   private static final Logger LOG = LoggerFactory.getLogger(MedRezeptToFhirBundleMapper.class);
 
-  private final FhirProperties fhirProperties;
+  private final MedRezepteToFhirProperties fhirProperties;
   private final DeviceMapper deviceMapper;
   private final MedRezeptToMedicationMapper medicationMapper;
 
   public MedRezeptToFhirBundleMapper(
-      FhirProperties properties,
+      MedRezepteToFhirProperties properties,
       DeviceMapper deviceMapper,
       MedRezeptToMedicationMapper medicationMapper) {
     this.fhirProperties = properties;

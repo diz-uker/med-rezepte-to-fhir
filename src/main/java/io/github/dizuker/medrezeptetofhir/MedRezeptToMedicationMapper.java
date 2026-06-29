@@ -3,7 +3,6 @@ package io.github.dizuker.medrezeptetofhir;
 import com.github.slugify.Slugify;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
-import io.github.dizuker.tofhir.config.ToFhirProperties;
 import java.util.Locale;
 import org.apache.commons.lang3.StringUtils;
 import org.hl7.fhir.r4.model.CodeType;
@@ -20,13 +19,10 @@ public class MedRezeptToMedicationMapper {
   private static final Slugify slugifier =
       Slugify.builder().lowerCase(true).locale(Locale.GERMAN).build();
 
-  private final FhirProperties fhirProperties;
-  private final ToFhirProperties toFhirProperties;
+  private final MedRezepteToFhirProperties fhirProperties;
 
-  public MedRezeptToMedicationMapper(
-      FhirProperties fhirProperties, ToFhirProperties toFhirProperties) {
+  public MedRezeptToMedicationMapper(MedRezepteToFhirProperties fhirProperties) {
     this.fhirProperties = fhirProperties;
-    this.toFhirProperties = toFhirProperties;
   }
 
   public Medication map(MedRezept rezept) {
@@ -46,8 +42,7 @@ public class MedRezeptToMedicationMapper {
     var code = new CodeableConcept().setText(rezept.verschreibung());
 
     if (StringUtils.isNotBlank(rezept.pzn())) {
-      var pznCoding =
-          toFhirProperties.fhir().codings().pzn().setCode(rezept.pzn()).setVersion(null);
+      var pznCoding = fhirProperties.codings().pzn().setCode(rezept.pzn());
       if (StringUtils.isNotBlank(rezept.packageName())) {
         pznCoding.setDisplay(rezept.packageName());
         code.setText(rezept.packageName());
@@ -61,10 +56,8 @@ public class MedRezeptToMedicationMapper {
     // so we could move it to the check above. But this reduces
     // nesting a bit.
     if (!rezept.atcCodes().isEmpty()) {
-      // TODO: need to double-check if we should add multiple ATC codings if there are
-      // multiple ATC codes.
       for (var atcCode : rezept.atcCodes()) {
-        var atcCoding = toFhirProperties.fhir().codings().atc().setCode(atcCode);
+        var atcCoding = fhirProperties.codings().atc().setCode(atcCode);
         code.addCoding(atcCoding);
       }
     }
@@ -82,11 +75,7 @@ public class MedRezeptToMedicationMapper {
           coding
               .getCodeElement()
               .addExtension(
-                  toFhirProperties
-                      .fhir()
-                      .extensions()
-                      .dataAbsentReason()
-                      .setValue(new CodeType("as-text")));
+                  fhirProperties.extensions().dataAbsentReason().setValue(new CodeType("as-text")));
         }
 
         ingredientConcept.addCoding(coding);
@@ -97,8 +86,7 @@ public class MedRezeptToMedicationMapper {
       ingredient
           .addCoding()
           .addExtension(
-              toFhirProperties
-                  .fhir()
+              fhirProperties
                   .extensions()
                   .dataAbsentReason()
                   .setValue(new CodeType("asked-unknown")));
