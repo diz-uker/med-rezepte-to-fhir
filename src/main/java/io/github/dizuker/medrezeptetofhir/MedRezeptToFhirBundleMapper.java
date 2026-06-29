@@ -1,6 +1,7 @@
 package io.github.dizuker.medrezeptetofhir;
 
 import ca.uhn.fhir.model.api.TemporalPrecisionEnum;
+import de.medizininformatikinitiative.kerndatensatz.medikation.Medikation;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
 import io.github.dizuker.tofhir.ReferenceUtils;
@@ -65,7 +66,7 @@ public class MedRezeptToFhirBundleMapper {
             .setValue(identifierValue);
     request.addIdentifier(identifier);
     request.setId(IdUtils.fromIdentifier(identifier));
-    request.getMeta().addProfile(fhirProperties.profiles().miiMedicationRequest());
+    request.getMeta().addProfile(Medikation.Profiles.miiPrMedikationMedicationRequest());
 
     request.setStatus(MedicationRequestStatus.UNKNOWN);
     request.setIntent(MedicationRequestIntent.ORDER);

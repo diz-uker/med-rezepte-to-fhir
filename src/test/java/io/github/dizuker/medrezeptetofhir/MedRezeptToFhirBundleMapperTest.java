@@ -22,6 +22,8 @@ import org.springframework.context.annotation.Import;
 @Import(TestChannelBinderConfiguration.class)
 class MedRezeptToFhirBundleMapperTest {
   private static final FhirContext FHIR_CONTEXT = FhirContext.forR4();
+  protected static final Scrubber PROFILE_VERSION_SCRUBBER =
+      new RegExScrubber("\\|[0-9]+\\.[0-9]+\\.[0-9]+(?=\")", "");
   public static final Scrubber FHIR_DATE_TIME_SCRUBBER =
       Scrubbers.scrubAll(
           new RegExScrubber(
@@ -51,7 +53,7 @@ class MedRezeptToFhirBundleMapperTest {
         fhirParser.encodeResourceToString(mapped.dataBundle()),
         Approvals.NAMES
             .withParameters(sourceFile)
-            .withScrubber(FHIR_DATE_TIME_SCRUBBER)
+            .withScrubber(Scrubbers.scrubAll(FHIR_DATE_TIME_SCRUBBER, PROFILE_VERSION_SCRUBBER))
             .forFile()
             .withExtension(".data.fhir.json"));
 
@@ -59,6 +61,7 @@ class MedRezeptToFhirBundleMapperTest {
         fhirParser.encodeResourceToString(mapped.provenanceBundle()),
         Approvals.NAMES
             .withParameters(sourceFile)
+            .withScrubber(PROFILE_VERSION_SCRUBBER)
             .withScrubber(FHIR_DATE_TIME_SCRUBBER)
             .forFile()
             .withExtension(".provenance.fhir.json"));

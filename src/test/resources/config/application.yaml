@@ -1,5 +1,1 @@
 app-version: 0.0.0-test
-fhir:
-  profiles:
-    versions:
-      mii-medikation: ""

@@ -1,6 +1,7 @@
 package io.github.dizuker.medrezeptetofhir;
 
 import com.github.slugify.Slugify;
+import de.medizininformatikinitiative.kerndatensatz.medikation.Medikation;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
 import java.util.Locale;
@@ -38,7 +39,7 @@ public class MedRezeptToMedicationMapper {
 
     medication.addIdentifier(medicationIdentifier);
     medication.setId(IdUtils.fromIdentifier(medicationIdentifier));
-    medication.getMeta().addProfile(fhirProperties.profiles().miiMedication());
+    medication.getMeta().addProfile(Medikation.Profiles.miiPrMedikationMedication());
     var code = new CodeableConcept().setText(rezept.verschreibung());
 
     if (StringUtils.isNotBlank(rezept.pzn())) {
