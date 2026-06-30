@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.19](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.18...v0.1.19) (2026-06-30)
+
+
+### Bug Fixes
+
+* simply log if a code isn't found ([#23](https://github.com/diz-uker/med-rezepte-to-fhir/issues/23)) ([8ded683](https://github.com/diz-uker/med-rezepte-to-fhir/commit/8ded6831a267ce8a0c5c9ed23637fb1ba6aebdcf))
+
 ## [0.1.18](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.17...v0.1.18) (2026-06-30)
 
 
