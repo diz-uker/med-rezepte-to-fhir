@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.18](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.17...v0.1.18) (2026-06-30)
+
+
+### Features
+
+* added dose form and amount ([#21](https://github.com/diz-uker/med-rezepte-to-fhir/issues/21)) ([9bf31e6](https://github.com/diz-uker/med-rezepte-to-fhir/commit/9bf31e623993e57e49185819bc79c2aa2f3280c9))
+
 ## [0.1.17](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.16...v0.1.17) (2026-06-29)
 
 

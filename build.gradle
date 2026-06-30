@@ -10,7 +10,7 @@ plugins {
 }
 
 group = 'io.github.diz-uker'
-version = '0.1.17' // x-release-please-version
+version = '0.1.18' // x-release-please-version
 description = 'Med Rezepte to FHIR'
 
 java {
