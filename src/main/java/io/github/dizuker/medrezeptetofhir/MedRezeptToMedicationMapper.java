@@ -102,10 +102,15 @@ public class MedRezeptToMedicationMapper {
       var formConcept = new CodeableConcept().setText(rezept.ifaPharmFormCode());
 
       IfaDoseFormMapper.lookup(rezept.ifaPharmFormCode()).ifPresent(formConcept::addCoding);
-      formConcept.addCoding(
-          KbvDarreichungsform.CodeSystems.KbvCsSfhirBmpDarreichungsform.fromValue(
-                  rezept.ifaPharmFormCode())
-              .coding());
+      try {
+        var kbvCoding =
+            KbvDarreichungsform.CodeSystems.KbvCsSfhirBmpDarreichungsform.fromValue(
+                    rezept.ifaPharmFormCode())
+                .coding();
+        formConcept.addCoding(kbvCoding);
+      } catch (IllegalArgumentException e) {
+        LOG.warn("Failed to map form code '{}'' to KBV", rezept.ifaPharmFormCode());
+      }
       medication.setForm(formConcept);
     }
 
