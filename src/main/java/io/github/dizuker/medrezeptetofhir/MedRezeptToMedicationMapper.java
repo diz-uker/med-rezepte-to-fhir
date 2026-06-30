@@ -123,7 +123,7 @@ public class MedRezeptToMedicationMapper {
               },
               () ->
                   LOG.warn(
-                      "No UCUM mapping found for IFA unit code '{}', not setting numerator.",
+                      "No UCUM mapping found for IFA unit code '{}', not setting numerator units.",
                       rezept.packageUnitCode()));
       amount.setNumerator(numerator);
 
