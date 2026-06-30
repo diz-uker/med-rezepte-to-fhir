@@ -1,0 +1,67 @@
+{
+  "REZEPT_ID": "6",
+  "REZEPT_QUELLE": "ACM",
+  "FALL_ID": "6",
+  "PATIENT_ID": "6",
+  "REZEPT_DATUM": 1714600800000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "PHENHYDAN Tabletten N3 200St PZN02519835",
+  "SIGNATUR": "2-0-2",
+  "REZEPT_POS": "2",
+  "PZN": "02519835",
+  "VERSCHREIBUNG_PZN_ID": "0",
+  "PACKAGE_NAME": "Phenhydan® 100 mg 200 Tbl. N3",
+  "PACKAGE_NORM_SIZE_CODE": "3",
+  "IFANAME": "PHENHYDAN",
+  "IFA_PHARM_FORM_CODE": "TAB",
+  "AMOUNT_TEXT": "200 st",
+  "AMOUNT": 200,
+  "FACTOR1": 1,
+  "FACTOR2": 1,
+  "PACKAGE_UNIT_CODE": "ST",
+  "ATC_CODES": [
+    "N03AB02"
+  ],
+  "INGREDIENTS": [
+    {
+      "name": "Phenytoin",
+      "ask": "00114"
+    },
+    {
+      "name": "Wasser, gereinigtes",
+      "ask": "00341"
+    },
+    {
+      "name": "Talkum",
+      "ask": "00315"
+    },
+    {
+      "name": "Siliciumdioxid, hochdisperses",
+      "ask": "15657"
+    },
+    {
+      "name": "Poly(O-carboxymethyl)stärke, Natriumsalz",
+      "ask": "08469"
+    },
+    {
+      "name": "Maisstärke",
+      "ask": "00190"
+    },
+    {
+      "name": "Magnesium stearat",
+      "ask": "15598"
+    },
+    {
+      "name": "Gelatine",
+      "ask": "00131"
+    },
+    {
+      "name": "Siliciumdioxid, gefällt",
+      "ask": "12907"
+    },
+    {
+      "name": "Cellulose, mikrokristalline",
+      "ask": "02798"
+    }
+  ]
+}

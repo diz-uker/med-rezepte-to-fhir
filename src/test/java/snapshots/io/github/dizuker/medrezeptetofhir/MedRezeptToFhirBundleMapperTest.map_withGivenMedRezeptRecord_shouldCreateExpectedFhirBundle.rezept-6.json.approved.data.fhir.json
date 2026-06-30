@@ -1,0 +1,205 @@
+{
+  "resourceType": "Bundle",
+  "id": "95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "MedicationRequest/95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
+        "value": "6-2"
+      } ],
+      "status": "unknown",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "outpatient",
+          "display": "Outpatient"
+        } ]
+      } ],
+      "reportedBoolean": false,
+      "medicationReference": {
+        "reference": "Medication/1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40",
+        "display": "Phenhydan® 100 mg 200 Tbl. N3"
+      },
+      "subject": {
+        "reference": "Patient/f2739728ee9e311234a8a561cf5bd434b6593e8a0fbe1885763c799dbff7c55c",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "MR",
+              "display": "Medical record number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
+          "value": "6"
+        }
+      },
+      "encounter": {
+        "reference": "Encounter/176937d72f7bb43cb1d6331d7a60c532c44b03dd522726bc06fa379bc2a864b0",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "VN",
+              "display": "Visit number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
+          "value": "6"
+        }
+      },
+      "authoredOn": "2024-05-02",
+      "dosageInstruction": [ {
+        "text": "2-0-2"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0"
+    }
+  }, {
+    "fullUrl": "Medication/1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
+        "value": "02519835"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn",
+          "code": "02519835",
+          "display": "Phenhydan® 100 mg 200 Tbl. N3"
+        }, {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc",
+          "version": "2026",
+          "code": "N03AB02"
+        } ],
+        "text": "Phenhydan® 100 mg 200 Tbl. N3"
+      },
+      "form": {
+        "coding": [ {
+          "system": "http://standardterms.edqm.eu",
+          "code": "10219000",
+          "display": "Tablet"
+        }, {
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM",
+          "code": "TAB",
+          "display": "Tabl"
+        } ],
+        "text": "TAB"
+      },
+      "amount": {
+        "numerator": {
+          "value": 200.0,
+          "unit": "{piece}",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        },
+        "denominator": {
+          "value": 1,
+          "unit": "{package}",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        }
+      },
+      "ingredient": [ {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00114"
+          } ],
+          "text": "Phenytoin"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00341"
+          } ],
+          "text": "Wasser, gereinigtes"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00315"
+          } ],
+          "text": "Talkum"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "15657"
+          } ],
+          "text": "Siliciumdioxid, hochdisperses"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "08469"
+          } ],
+          "text": "Poly(O-carboxymethyl)stärke, Natriumsalz"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00190"
+          } ],
+          "text": "Maisstärke"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "15598"
+          } ],
+          "text": "Magnesium stearat"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00131"
+          } ],
+          "text": "Gelatine"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "12907"
+          } ],
+          "text": "Siliciumdioxid, gefällt"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "02798"
+          } ],
+          "text": "Cellulose, mikrokristalline"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Medication/1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40"
+    }
+  } ]
+}

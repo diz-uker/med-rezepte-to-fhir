@@ -19,6 +19,14 @@ java {
     }
 }
 
+// Isolated from sourceSets.main: ig-codegen (javapoet, jackson3, jspecify) is a build-time-only
+// dev tool, not a runtime dependency of the app. See the generateEdqmConstants task below.
+sourceSets {
+    codegen {
+        java.srcDirs = ['src/codegen/java']
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -37,7 +45,9 @@ dependencies {
     implementation "ca.uhn.hapi.fhir:hapi-fhir-structures-r4:${hapiVersion}"
     implementation 'io.github.diz-uker:to-fhir-starter:0.2.3'
     implementation 'io.github.diz-uker:fhir-ig-constants:0.2.3'
-    implementation("com.github.slugify:slugify:4.0.0")
+    implementation 'com.github.slugify:slugify:4.0.0'
+
+    codegenImplementation 'io.github.diz-uker:ig-codegen:0.2.3'
 
     testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation:${hapiVersion}"
     testImplementation "ca.uhn.hapi.fhir:hapi-fhir-validation-resources-r4:${hapiVersion}"
@@ -75,6 +85,23 @@ task printVersion {
     doLast {
         println project.version
     }
+}
+
+// Manually-invoked "generate, review, commit" dev tool - not a build-graph participant. The
+// CodeSystem resources here are one-off local files, not restorable FHIR IG packages, so this
+// uses ig-codegen's lower-level scanner/generator API directly instead of IgCodegen's
+// package.json-driven entry point (see ig-codegen's README for that distinction).
+tasks.register('generateConstants', JavaExec) {
+    group = 'codegen'
+    description = 'Regenerates Java constant classes in src/main/java from CodeSystem JSON files ' +
+        'in src/main/resources (EDQM Standard Terms, KBV Darreichungsform). Review the diff and commit.'
+    classpath = sourceSets.codegen.runtimeClasspath
+    mainClass = 'io.github.dizuker.medrezeptetofhir.codegen.GenerateConstants'
+    args = [
+        layout.projectDirectory.dir('src/main/resources').asFile.path,
+        layout.projectDirectory.dir('src/main/java').asFile.path,
+    ]
+    finalizedBy 'spotlessApply'
 }
 
 jacoco {

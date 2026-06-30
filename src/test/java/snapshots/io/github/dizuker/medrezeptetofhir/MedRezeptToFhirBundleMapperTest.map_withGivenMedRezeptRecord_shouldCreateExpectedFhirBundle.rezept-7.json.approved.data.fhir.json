@@ -1,0 +1,229 @@
+{
+  "resourceType": "Bundle",
+  "id": "aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
+        "value": "2-1"
+      } ],
+      "status": "unknown",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "outpatient",
+          "display": "Outpatient"
+        } ]
+      } ],
+      "reportedBoolean": false,
+      "medicationReference": {
+        "reference": "Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
+        "display": "Daivonex® 50µg/g 30g Creme N1"
+      },
+      "subject": {
+        "reference": "Patient/613da17dafd7596efc58e76e4152c03c3b4deb317662b69ba836dda0e069cd05",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "MR",
+              "display": "Medical record number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
+          "value": "2"
+        }
+      },
+      "encounter": {
+        "reference": "Encounter/0c1695fac46466b1b21b911f149e36da04d2f5390bad3dc61100c8aad70d7e95",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "VN",
+              "display": "Visit number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
+          "value": "2"
+        }
+      },
+      "authoredOn": "2024-05-02",
+      "dosageInstruction": [ {
+        "text": "1x tgl."
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5"
+    }
+  }, {
+    "fullUrl": "Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
+        "value": "06636259"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn",
+          "code": "06636259",
+          "display": "Daivonex® 50µg/g 30g Creme N1"
+        }, {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc",
+          "version": "2026",
+          "code": "D05AX02"
+        } ],
+        "text": "Daivonex® 50µg/g 30g Creme N1"
+      },
+      "form": {
+        "coding": [ {
+          "system": "http://standardterms.edqm.eu",
+          "code": "10502000",
+          "display": "Cream"
+        }, {
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM",
+          "code": "CRE",
+          "display": "Creme"
+        } ],
+        "text": "CRE"
+      },
+      "amount": {
+        "numerator": {
+          "value": 30.0,
+          "unit": "g",
+          "system": "http://unitsofmeasure.org",
+          "code": "g"
+        },
+        "denominator": {
+          "value": 1,
+          "unit": "{package}",
+          "system": "http://unitsofmeasure.org",
+          "code": "1"
+        }
+      },
+      "ingredient": [ {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "29510"
+          } ],
+          "text": "Calcipotriol-1-Wasser"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00341"
+          } ],
+          "text": "Wasser, gereinigtes"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00861"
+          } ],
+          "text": "all-rac-¤a-Tocopherol"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "05680"
+          } ],
+          "text": "2,4-Dichlorbenzylalkohol"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "29838"
+          } ],
+          "text": "Diazolidinylharnstoff"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00067"
+          } ],
+          "text": "Cetylstearylalkohol"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "02908"
+          } ],
+          "text": "Cetomacrogol 1000"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "12816"
+          } ],
+          "text": "Glycerol 85%"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00216"
+          } ],
+          "text": "Natriumhydroxid"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00334"
+          } ],
+          "text": "Vaselin, weißes"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00242"
+          } ],
+          "text": "Paraffin, dickflüssiges"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "12711"
+          } ],
+          "text": "Natriummonohydrogenphosphat dihydrat"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01295"
+          } ],
+          "text": "Natriumedetat"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1"
+    }
+  } ]
+}
