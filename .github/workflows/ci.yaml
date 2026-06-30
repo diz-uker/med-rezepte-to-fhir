@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   build:
-    uses: miracum/.github/.github/workflows/standard-build.yaml@8bd8986d6b656c71b5570f91b5ad96bf606955b4 # v1.20.7
+    uses: miracum/.github/.github/workflows/standard-build.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
     permissions:
       contents: write
       id-token: write
@@ -51,7 +51,7 @@ jobs:
     if: ${{ github.event_name == 'pull_request' }}
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
@@ -87,7 +87,7 @@ jobs:
 
       - name: Add coverage to PR
         id: jacoco
-        uses: madrapps/jacoco-report@50d3aff4548aa991e6753342d9ba291084e63848 # v1.7.2
+        uses: madrapps/jacoco-report@e51ce1f46f7f8b5331593f935e59cbaf44b84920 # v1.8.0
         env:
           GITHUB_WORKSPACE: ${{ github.workspace }}
         with:
@@ -99,7 +99,7 @@ jobs:
           update-comment: true
           title: "## Code Coverage Report"
   lint:
-    uses: miracum/.github/.github/workflows/standard-lint.yaml@8bd8986d6b656c71b5570f91b5ad96bf606955b4 # v1.20.7
+    uses: miracum/.github/.github/workflows/standard-lint.yaml@602a4dd955cee8ab1e7e9c70761b5b4c9d678a95 # v1.21.4
     permissions:
       contents: read
       pull-requests: write
