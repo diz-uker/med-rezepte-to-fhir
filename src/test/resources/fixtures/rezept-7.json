@@ -1,0 +1,79 @@
+{
+  "REZEPT_ID": "2",
+  "REZEPT_QUELLE": "ACM",
+  "FALL_ID": "2",
+  "PATIENT_ID": "2",
+  "REZEPT_DATUM": 1714600800000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "DAIVONEX 50 µg/g Creme N1 30g PZN06636259",
+  "SIGNATUR": "1x tgl.",
+  "REZEPT_POS": "1",
+  "PZN": "06636259",
+  "VERSCHREIBUNG_PZN_ID": "0",
+  "PACKAGE_NAME": "Daivonex® 50µg/g 30g Creme N1",
+  "PACKAGENORMSIZECODE": "1",
+  "IFANAME": "Daivonex Creme",
+  "IFA_PHARM_FORM_CODE": "CRE",
+  "AMOUNT_TEXT": "30 g",
+  "AMOUNT": 30,
+  "FACTOR1": 1,
+  "FACTOR2": 1,
+  "PACKAGE_UNIT_CODE": "G",
+  "ATC_CODES": [
+    "D05AX02"
+  ],
+  "INGREDIENTS": [
+    {
+      "name": "Calcipotriol-1-Wasser",
+      "ask": "29510"
+    },
+    {
+      "name": "Wasser, gereinigtes",
+      "ask": "00341"
+    },
+    {
+      "name": "all-rac-¤a-Tocopherol",
+      "ask": "00861"
+    },
+    {
+      "name": "2,4-Dichlorbenzylalkohol",
+      "ask": "05680"
+    },
+    {
+      "name": "Diazolidinylharnstoff",
+      "ask": "29838"
+    },
+    {
+      "name": "Cetylstearylalkohol",
+      "ask": "00067"
+    },
+    {
+      "name": "Cetomacrogol 1000",
+      "ask": "02908"
+    },
+    {
+      "name": "Glycerol 85%",
+      "ask": "12816"
+    },
+    {
+      "name": "Natriumhydroxid",
+      "ask": "00216"
+    },
+    {
+      "name": "Vaselin, weißes",
+      "ask": "00334"
+    },
+    {
+      "name": "Paraffin, dickflüssiges",
+      "ask": "00242"
+    },
+    {
+      "name": "Natriummonohydrogenphosphat dihydrat",
+      "ask": "12711"
+    },
+    {
+      "name": "Natriumedetat",
+      "ask": "01295"
+    }
+  ]
+}

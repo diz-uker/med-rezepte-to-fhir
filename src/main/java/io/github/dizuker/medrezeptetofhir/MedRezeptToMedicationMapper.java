@@ -2,6 +2,8 @@ package io.github.dizuker.medrezeptetofhir;
 
 import com.github.slugify.Slugify;
 import de.medizininformatikinitiative.kerndatensatz.medikation.Medikation;
+import io.github.dizuker.medrezeptetofhir.edqm.IfaDoseFormMapper;
+import io.github.dizuker.medrezeptetofhir.kbv.KbvDarreichungsform;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.IdUtils;
 import java.util.Locale;
@@ -10,6 +12,8 @@ import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Medication;
+import org.hl7.fhir.r4.model.Quantity;
+import org.hl7.fhir.r4.model.Ratio;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -92,6 +96,46 @@ public class MedRezeptToMedicationMapper {
                   .dataAbsentReason()
                   .setValue(new CodeType("asked-unknown")));
       medication.addIngredient().setItem(ingredient);
+    }
+
+    if (StringUtils.isNotBlank(rezept.ifaPharmFormCode())) {
+      var formConcept = new CodeableConcept().setText(rezept.ifaPharmFormCode());
+
+      IfaDoseFormMapper.lookup(rezept.ifaPharmFormCode()).ifPresent(formConcept::addCoding);
+      formConcept.addCoding(
+          KbvDarreichungsform.CodeSystems.KbvCsSfhirBmpDarreichungsform.fromValue(
+                  rezept.ifaPharmFormCode())
+              .coding());
+      medication.setForm(formConcept);
+    }
+
+    if (rezept.amount() != null) {
+      var amount = new Ratio();
+      var numerator = new Quantity(rezept.amount());
+      IfaUnitMapper.lookup(rezept.packageUnitCode())
+          .ifPresentOrElse(
+              ucumUnit -> {
+                numerator.setSystem(fhirProperties.systems().ucum());
+                numerator.setUnit(ucumUnit.unit());
+                if (ucumUnit.isMapped()) {
+                  numerator.setCode(ucumUnit.code());
+                }
+              },
+              () ->
+                  LOG.warn(
+                      "No UCUM mapping found for IFA unit code '{}', not setting numerator units.",
+                      rezept.packageUnitCode()));
+      amount.setNumerator(numerator);
+
+      var denominator =
+          new Quantity()
+              .setValue(1)
+              .setSystem(fhirProperties.systems().ucum())
+              .setCode("1")
+              .setUnit("{package}");
+      amount.setDenominator(denominator);
+
+      medication.setAmount(amount);
     }
 
     return medication;
