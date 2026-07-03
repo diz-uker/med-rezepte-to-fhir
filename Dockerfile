@@ -9,7 +9,8 @@ set -e
 gradle clean build --info
 gradle jacocoTestReport
 PROJECT_VERSION="$(gradle --no-configuration-cache -q printVersion)"
-java -Djarmode=layertools -jar "build/libs/medrezeptetofhir-${PROJECT_VERSION}.jar" extract
+java -Djarmode=tools -jar "build/libs/medrezeptetofhir-${PROJECT_VERSION}.jar" extract \
+    --layers --launcher --destination ./layers
 EOF
 
 FROM scratch AS test
@@ -34,10 +35,10 @@ ENV SPRING_PROFILES_ACTIVE="prod"
 
 COPY --from=jemalloc /usr/lib/x86_64-linux-gnu/libjemalloc.so.2 /usr/lib/x86_64-linux-gnu/libjemalloc.so.2
 
-COPY --from=build /home/gradle/project/dependencies/ ./
-COPY --from=build /home/gradle/project/spring-boot-loader/ ./
-COPY --from=build /home/gradle/project/snapshot-dependencies/ ./
-COPY --from=build /home/gradle/project/application/ ./
+COPY --from=build /home/gradle/project/layers/dependencies/ ./
+COPY --from=build /home/gradle/project/layers/spring-boot-loader/ ./
+COPY --from=build /home/gradle/project/layers/snapshot-dependencies/ ./
+COPY --from=build /home/gradle/project/layers/application/ ./
 
 USER 65532:65532
 ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
