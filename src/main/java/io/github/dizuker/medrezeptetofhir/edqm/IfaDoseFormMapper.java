@@ -105,14 +105,8 @@ public final class IfaDoseFormMapper {
   private IfaDoseFormMapper() {}
 
   public static Optional<Coding> lookup(String ifaCode) {
-    String edqmCode = IFA_TO_EDQM.get(ifaCode);
-    if (edqmCode == null) {
-      return Optional.empty();
-    }
-    try {
-      return Optional.of(EdqmStandardterms.fromValue(edqmCode).coding());
-    } catch (IllegalArgumentException _) {
-      return Optional.empty();
-    }
+    return Optional.ofNullable(IFA_TO_EDQM.get(ifaCode))
+        .flatMap(EdqmStandardterms::fromValue)
+        .map(c -> c.coding());
   }
 }

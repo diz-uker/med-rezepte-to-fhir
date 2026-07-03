@@ -101,20 +101,6 @@
         } ],
         "text": "CRE"
       },
-      "amount": {
-        "numerator": {
-          "value": 30.0,
-          "unit": "g",
-          "system": "http://unitsofmeasure.org",
-          "code": "g"
-        },
-        "denominator": {
-          "value": 1,
-          "unit": "{package}",
-          "system": "http://unitsofmeasure.org",
-          "code": "1"
-        }
-      },
       "ingredient": [ {
         "itemCodeableConcept": {
           "coding": [ {

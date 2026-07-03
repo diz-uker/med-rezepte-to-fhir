@@ -1,0 +1,95 @@
+{
+  "resourceType": "Bundle",
+  "id": "c6282c5ed83669e73326cc4392c32fb4fd218ddf8373e0e5e673c0ea36b71b45",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
+    "resource": {
+      "resourceType": "Device",
+      "id": "364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/device-id",
+        "value": "med-rezepte-to-fhir-v0.0.0-test"
+      } ],
+      "status": "active",
+      "manufacturer": "https://github.com/diz-uker",
+      "deviceName": [ {
+        "name": "Med Rezepte to FHIR",
+        "type": "user-friendly-name"
+      } ],
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/900000000000207008/version/20250701",
+          "code": "706689003",
+          "display": "Application program software (physical object)"
+        } ]
+      },
+      "version": [ {
+        "value": "0.0.0-test"
+      } ],
+      "contact": [ {
+        "system": "url",
+        "value": "https://github.com/diz-uker/med-rezepte-to-fhir/issues"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
+    }
+  }, {
+    "fullUrl": "Provenance/7109b1133ce8c9376e4383f4fef11d56c2f3a01d0849bdcedc9a4ffc01ac58e4",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "7109b1133ce8c9376e4383f4fef11d56c2f3a01d0849bdcedc9a4ffc01ac58e4",
+      "target": [ {
+        "reference": "MedicationRequest/d5af1d94a7f4988bab77f0fbc17fd1dbe537d8cc4080e670ec806650f86ff419"
+      }, {
+        "reference": "Medication/bed2492d84b00dfe056d2dfee88fadacf1775d60735c90d34a497e7a52c78747"
+      }, {
+        "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
+      } ],
+      "occurredDateTime": "2000-01-01T11:11:11Z",
+      "recorded": "2000-01-01T11:11:11Z",
+      "activity": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code": "CREATE",
+          "display": "create"
+        } ]
+      },
+      "agent": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "assembler",
+            "display": "Assembler"
+          } ]
+        },
+        "role": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+            "code": "AUT",
+            "display": "author"
+          } ]
+        } ],
+        "who": {
+          "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
+        }
+      } ],
+      "entity": [ {
+        "role": "source",
+        "what": {
+          "identifier": {
+            "system": "https://diz-uker.github.io/source-system",
+            "value": "urn:source:diz-uker:db:schema:table:rezept_id=9;rezept_pos=4"
+          }
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Provenance/7109b1133ce8c9376e4383f4fef11d56c2f3a01d0849bdcedc9a4ffc01ac58e4"
+    }
+  } ]
+}
