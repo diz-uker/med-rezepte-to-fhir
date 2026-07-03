@@ -13,9 +13,6 @@ import tools.jackson.databind.ObjectMapper;
  * scanned directly with {@link IgPackageScanner} instead of going through ig-codegen's
  * package.json-driven {@code IgCodegen} entry point. Run via the {@code generateConstants} Gradle
  * task; review the diff and commit.
- *
- * @param args {@code args[0]} = the resources directory to scan, {@code args[1]} = the Java source
- *     root to write the generated classes into
  */
 public final class GenerateConstants {
   private GenerateConstants() {}

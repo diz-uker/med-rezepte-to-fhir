@@ -12,8 +12,6 @@ import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Medication;
-import org.hl7.fhir.r4.model.Quantity;
-import org.hl7.fhir.r4.model.Ratio;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -102,15 +100,11 @@ public class MedRezeptToMedicationMapper {
       var formConcept = new CodeableConcept().setText(rezept.ifaPharmFormCode());
 
       IfaDoseFormMapper.lookup(rezept.ifaPharmFormCode()).ifPresent(formConcept::addCoding);
-      try {
-        var kbvCoding =
-            KbvDarreichungsform.CodeSystems.KbvCsSfhirBmpDarreichungsform.fromValue(
-                    rezept.ifaPharmFormCode())
-                .coding();
-        formConcept.addCoding(kbvCoding);
-      } catch (IllegalArgumentException e) {
-        LOG.warn("Failed to map form code '{}'' to KBV", rezept.ifaPharmFormCode());
-      }
+      KbvDarreichungsform.CodeSystems.KbvCsSfhirBmpDarreichungsform.fromValue(
+              rezept.ifaPharmFormCode())
+          .map(c -> c.coding())
+          .ifPresent(formConcept::addCoding);
+
       medication.setForm(formConcept);
     }
 
