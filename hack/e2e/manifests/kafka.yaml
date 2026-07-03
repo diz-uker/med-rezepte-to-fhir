@@ -1,0 +1,55 @@
+# Minimal single-node, ephemeral-storage Strimzi Kafka cluster used for the
+# e2e test. Mirrors the strimzi-kafka-operator example manifests, trimmed to
+# a single dual-role (controller+broker) node and replication factor 1 since
+# this only needs to survive for the duration of a CI run.
+apiVersion: kafka.strimzi.io/v1
+kind: KafkaNodePool
+metadata:
+  name: dual-role
+  labels:
+    strimzi.io/cluster: my-cluster
+spec:
+  replicas: 1
+  roles:
+    - controller
+    - broker
+  storage:
+    type: jbod
+    volumes:
+      - id: 0
+        type: ephemeral
+        kraftMetadata: shared
+---
+apiVersion: kafka.strimzi.io/v1
+kind: Kafka
+metadata:
+  name: my-cluster
+spec:
+  kafka:
+    version: 4.3.0
+    metadataVersion: 4.3-IV0
+    listeners:
+      # unauthenticated, unencrypted listener used only by the e2e test's own
+      # producer/consumer tooling to seed fixtures and read back results.
+      - name: plain
+        port: 9092
+        type: internal
+        tls: false
+      # TLS listener the app under test connects to, matching the
+      # miracum/charts stream-processors chart's default `securityProtocol: SSL`
+      # wiring (cluster CA + per-processor KafkaUser client cert).
+      - name: tls
+        port: 9093
+        type: internal
+        tls: true
+    config:
+      offsets.topic.replication.factor: 1
+      transaction.state.log.replication.factor: 1
+      transaction.state.log.min.isr: 1
+      default.replication.factor: 1
+      min.insync.replicas: 1
+  entityOperator:
+    topicOperator: {}
+    # required so the chart's KafkaUser resources are reconciled into the
+    # client cert secrets the app deployment mounts.
+    userOperator: {}
