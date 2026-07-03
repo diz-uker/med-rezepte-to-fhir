@@ -1,18 +1,18 @@
 {
   "resourceType": "Bundle",
-  "id": "95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0",
+  "id": "32d31d75d87adf80a0035e218921000c7b6b7b914acba3486a5778186838be1e",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "MedicationRequest/95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0",
+    "fullUrl": "MedicationRequest/32d31d75d87adf80a0035e218921000c7b6b7b914acba3486a5778186838be1e",
     "resource": {
       "resourceType": "MedicationRequest",
-      "id": "95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0",
+      "id": "32d31d75d87adf80a0035e218921000c7b6b7b914acba3486a5778186838be1e",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
-        "value": "6-2"
+        "value": "8-1"
       } ],
       "status": "unknown",
       "intent": "order",
@@ -25,11 +25,11 @@
       } ],
       "reportedBoolean": false,
       "medicationReference": {
-        "reference": "Medication/1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40",
-        "display": "Phenhydan® 100 mg 200 Tbl. N3"
+        "reference": "Medication/edf6d101986bec12a9e37bef6ca2f963e13d07d9b3cab07fe65853745a8f8da6",
+        "display": "NovoRapid® 100 Einheiten/ml, 10ml 5 Durchstechfl. N3"
       },
       "subject": {
-        "reference": "Patient/f2739728ee9e311234a8a561cf5bd434b6593e8a0fbe1885763c799dbff7c55c",
+        "reference": "Patient/f0bc81ec5e4159a649ec1c0648d0a17dfcf8d3e01511c2de3b20c2521df67770",
         "identifier": {
           "type": {
             "coding": [ {
@@ -39,11 +39,11 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
-          "value": "6"
+          "value": "8"
         }
       },
       "encounter": {
-        "reference": "Encounter/176937d72f7bb43cb1d6331d7a60c532c44b03dd522726bc06fa379bc2a864b0",
+        "reference": "Encounter/54d886f347094f9c304aafbe07744309b0c3eb024e6718a599864bb63a1d61a1",
         "identifier": {
           "type": {
             "coding": [ {
@@ -53,139 +53,146 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
-          "value": "6"
+          "value": "8"
         }
       },
-      "authoredOn": "2024-05-02",
-      "dosageInstruction": [ {
-        "text": "2-0-2"
-      } ]
+      "authoredOn": "2021-08-17"
     },
     "request": {
       "method": "PUT",
-      "url": "MedicationRequest/95e5758a4299ea602a96f1c0888b1361cb6ddd7d2c9ee2e8a9a82e62812d54c0"
+      "url": "MedicationRequest/32d31d75d87adf80a0035e218921000c7b6b7b914acba3486a5778186838be1e"
     }
   }, {
-    "fullUrl": "Medication/1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40",
+    "fullUrl": "Medication/edf6d101986bec12a9e37bef6ca2f963e13d07d9b3cab07fe65853745a8f8da6",
     "resource": {
       "resourceType": "Medication",
-      "id": "1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40",
+      "id": "edf6d101986bec12a9e37bef6ca2f963e13d07d9b3cab07fe65853745a8f8da6",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
-        "value": "02519835"
+        "value": "00558647"
       } ],
       "code": {
         "coding": [ {
           "system": "http://fhir.de/CodeSystem/ifa/pzn",
-          "code": "02519835",
-          "display": "Phenhydan® 100 mg 200 Tbl. N3"
+          "code": "00558647",
+          "display": "NovoRapid® 100 Einheiten/ml, 10ml 5 Durchstechfl. N3"
         }, {
           "system": "http://fhir.de/CodeSystem/bfarm/atc",
           "version": "2026",
-          "code": "N03AB02"
+          "code": "A10AB05"
         } ],
-        "text": "Phenhydan® 100 mg 200 Tbl. N3"
+        "text": "NovoRapid® 100 Einheiten/ml, 10ml 5 Durchstechfl. N3"
       },
       "form": {
         "coding": [ {
           "system": "http://standardterms.edqm.eu",
-          "code": "10219000",
-          "display": "Tablet"
+          "code": "30069000",
+          "display": "Vial"
         }, {
           "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM",
-          "code": "TAB",
-          "display": "Tabl"
+          "code": "DFL",
+          "display": "Flasche"
         } ],
-        "text": "TAB"
+        "text": "DFL"
       },
       "ingredient": [ {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00114"
+            "code": "24022"
           } ],
-          "text": "Phenytoin"
+          "text": "Insulin aspart"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00341"
+            "code": "00343"
           } ],
-          "text": "Wasser, gereinigtes"
+          "text": "Wasser für Injektionszwecke"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00315"
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
           } ],
-          "text": "Talkum"
+          "text": "Natriumhydroxid zur pH-Wert Einstellung"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "15657"
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
           } ],
-          "text": "Siliciumdioxid, hochdisperses"
+          "text": "Salzsäure zur pH-Wert-Einstellung"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "08469"
+            "code": "00211"
           } ],
-          "text": "Poly(O-carboxymethyl)stärke, Natriumsalz"
+          "text": "Natriumchlorid"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00190"
+            "code": "12711"
           } ],
-          "text": "Maisstärke"
+          "text": "Natriummonohydrogenphosphat dihydrat"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "15598"
+            "code": "01150"
           } ],
-          "text": "Magnesium stearat"
+          "text": "Zinkchlorid"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00131"
+            "code": "01498"
           } ],
-          "text": "Gelatine"
+          "text": "m-Cresol"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "12907"
+            "code": "00253"
           } ],
-          "text": "Siliciumdioxid, gefällt"
+          "text": "Phenol"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "02798"
+            "code": "00134"
           } ],
-          "text": "Cellulose, mikrokristalline"
+          "text": "Glycerol"
         }
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "Medication/1ffe93f7fc938fc833bac0dd13663b6f443e0869bb8042c93c8aca4620c6bf40"
+      "url": "Medication/edf6d101986bec12a9e37bef6ca2f963e13d07d9b3cab07fe65853745a8f8da6"
     }
   } ]
 }

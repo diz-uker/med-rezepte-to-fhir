@@ -1,0 +1,67 @@
+{
+  "REZEPT_ID": "8",
+  "REZEPT_QUELLE": "ACM",
+  "FALL_ID": "8",
+  "PATIENT_ID": "8",
+  "REZEPT_DATUM": 1629151200000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "NOVORAPID 100E/ML DFL N3 5X1X10ml PZN00558647",
+  "SIGNATUR": " ",
+  "REZEPT_POS": "1",
+  "PZN": "00558647",
+  "VERSCHREIBUNG_PZN_ID": "0",
+  "PACKAGE_NAME": "NovoRapid® 100 Einheiten/ml, 10ml 5 Durchstechfl. N3",
+  "PACKAGE_NORM_SIZE_CODE": "3",
+  "IFA_NAME": "NovoRapid 100E/ml",
+  "IFA_PHARM_FORM_CODE": "DFL",
+  "AMOUNT_TEXT": "5x1x10 ml",
+  "AMOUNT": 10,
+  "FACTOR1": 1,
+  "FACTOR2": 5,
+  "PACKAGE_UNIT_CODE": "ML",
+  "ATC_CODES": [
+    "A10AB05"
+  ],
+  "INGREDIENTS": [
+    {
+      "name": "Insulin aspart",
+      "ask": "24022"
+    },
+    {
+      "name": "Wasser für Injektionszwecke",
+      "ask": "00343"
+    },
+    {
+      "name": "Natriumhydroxid zur pH-Wert Einstellung",
+      "ask": null
+    },
+    {
+      "name": "Salzsäure zur pH-Wert-Einstellung",
+      "ask": null
+    },
+    {
+      "name": "Natriumchlorid",
+      "ask": "00211"
+    },
+    {
+      "name": "Natriummonohydrogenphosphat dihydrat",
+      "ask": "12711"
+    },
+    {
+      "name": "Zinkchlorid",
+      "ask": "01150"
+    },
+    {
+      "name": "m-Cresol",
+      "ask": "01498"
+    },
+    {
+      "name": "Phenol",
+      "ask": "00253"
+    },
+    {
+      "name": "Glycerol",
+      "ask": "00134"
+    }
+  ]
+}

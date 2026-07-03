@@ -1,0 +1,39 @@
+{
+  "REZEPT_ID": "9",
+  "REZEPT_QUELLE": "ACM",
+  "FALL_ID": "9",
+  "PATIENT_ID": "9",
+  "REZEPT_DATUM": 1637881200000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "CPS Pulver N2 15X2X15g PZN03572694",
+  "SIGNATUR": " ",
+  "REZEPT_POS": "4",
+  "PZN": "03572694",
+  "VERSCHREIBUNG_PZN_ID": "0",
+  "PACKAGE_NAME": "CPS Pulver 15 Doppelbtl. zu 2x15g (450g) N2",
+  "PACKAGE_NORM_SIZE_CODE": "2",
+  "IFA_NAME": "CPS",
+  "IFA_PHARM_FORM_CODE": "PUL",
+  "AMOUNT_TEXT": "15x2x15 g",
+  "AMOUNT": 15,
+  "FACTOR1": 2,
+  "FACTOR2": 15,
+  "PACKAGE_UNIT_CODE": "G",
+  "ATC_CODES": [
+    "V03AE01"
+  ],
+  "INGREDIENTS": [
+    {
+      "name": "Poly(styrol-co-divinylbenzol)sulfonsäure (92:8), Calciumsalz",
+      "ask": null
+    },
+    {
+      "name": "Vanillin",
+      "ask": "00332"
+    },
+    {
+      "name": "Natrium cyclamat",
+      "ask": "01161"
+    }
+  ]
+}

@@ -114,35 +114,6 @@ public class MedRezeptToMedicationMapper {
       medication.setForm(formConcept);
     }
 
-    if (rezept.amount() != null) {
-      var amount = new Ratio();
-      var numerator = new Quantity(rezept.amount());
-      IfaUnitMapper.lookup(rezept.packageUnitCode())
-          .ifPresentOrElse(
-              ucumUnit -> {
-                numerator.setSystem(fhirProperties.systems().ucum());
-                numerator.setUnit(ucumUnit.unit());
-                if (ucumUnit.isMapped()) {
-                  numerator.setCode(ucumUnit.code());
-                }
-              },
-              () ->
-                  LOG.warn(
-                      "No UCUM mapping found for IFA unit code '{}', not setting numerator units.",
-                      rezept.packageUnitCode()));
-      amount.setNumerator(numerator);
-
-      var denominator =
-          new Quantity()
-              .setValue(1)
-              .setSystem(fhirProperties.systems().ucum())
-              .setCode("1")
-              .setUnit("{package}");
-      amount.setDenominator(denominator);
-
-      medication.setAmount(amount);
-    }
-
     return medication;
   }
 }
