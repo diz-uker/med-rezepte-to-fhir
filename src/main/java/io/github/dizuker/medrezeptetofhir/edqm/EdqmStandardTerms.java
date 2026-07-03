@@ -22,1967 +22,2962 @@ public final class EdqmStandardTerms {
     }
 
     public enum EdqmStandardterms {
+      /** {@code 14001000} - Cream + pessary */
       _14001000("14001000", "Cream + pessary"),
 
+      /** {@code 14002000} - Cutaneous solution + medicated sponge */
       _14002000("14002000", "Cutaneous solution + medicated sponge"),
 
+      /** {@code 14003000} - Gastro-resistant tablet + rectal suspension */
       _14003000("14003000", "Gastro-resistant tablet + rectal suspension"),
 
+      /** {@code 14004000} - Vaginal capsule, soft + vaginal cream */
       _14004000("14004000", "Vaginal capsule, soft + vaginal cream"),
 
+      /** {@code 14005000} - Vaginal cream + vaginal tablet */
       _14005000("14005000", "Vaginal cream + vaginal tablet"),
 
+      /** {@code 14006000} - Effervescent granules + film-coated tablet */
       _14006000("14006000", "Effervescent granules + film-coated tablet"),
 
+      /** {@code 14007000} - Effervescent tablet + film-coated tablet */
       _14007000("14007000", "Effervescent tablet + film-coated tablet"),
 
+      /** {@code 14008000} - Tablet + vaginal tablet */
       _14008000("14008000", "Tablet + vaginal tablet"),
 
+      /** {@code 14009000} - Cream + vaginal capsule, soft */
       _14009000("14009000", "Cream + vaginal capsule, soft"),
 
+      /** {@code 14010000} - Cream + vaginal tablet */
       _14010000("14010000", "Cream + vaginal tablet"),
 
+      /** {@code 14011000} - Film-coated tablet + pessary */
       _14011000("14011000", "Film-coated tablet + pessary"),
 
+      /** {@code 14012000} - Capsule, soft + tablet */
       _14012000("14012000", "Capsule, soft + tablet"),
 
+      /** {@code 14013000} - Capsule, hard + tablet */
       _14013000("14013000", "Capsule, hard + tablet"),
 
+      /** {@code 14014000} - Film-coated tablet + tablet */
       _14014000("14014000", "Film-coated tablet + tablet"),
 
+      /** {@code 14015000} - Ointment + vaginal tablet */
       _14015000("14015000", "Ointment + vaginal tablet"),
 
+      /** {@code 14016000} - Effervescent granules + gastro-resistant tablet */
       _14016000("14016000", "Effervescent granules + gastro-resistant tablet"),
 
+      /** {@code 14017000} - Eye drops, solution + eye ointment */
       _14017000("14017000", "Eye drops, solution + eye ointment"),
 
+      /** {@code 50001500} - Concentrate and diluent for solution for infusion */
       _50001500("50001500", "Concentrate and diluent for solution for infusion"),
 
+      /** {@code 13086000} - Concentrate and solvent for concentrate for oral spray, suspension */
       _13086000("13086000", "Concentrate and solvent for concentrate for oral spray, suspension"),
 
+      /** {@code 50002000} - Concentrate and solvent for concentrate for solution for infusion */
       _50002000("50002000", "Concentrate and solvent for concentrate for solution for infusion"),
 
+      /** {@code 50003000} - Concentrate and solvent for cutaneous solution */
       _50003000("50003000", "Concentrate and solvent for cutaneous solution"),
 
+      /** {@code 50004000} - Concentrate and solvent for cutaneous use */
       _50004000("50004000", "Concentrate and solvent for cutaneous use"),
 
+      /** {@code 13143000} - Concentrate and solvent for dispersion for injection */
       _13143000("13143000", "Concentrate and solvent for dispersion for injection"),
 
+      /** {@code 13153000} - Concentrate and solvent for emulsion for injection */
       _13153000("13153000", "Concentrate and solvent for emulsion for injection"),
 
+      /** {@code 50005000} - Concentrate and solvent for injection */
       _50005000("50005000", "Concentrate and solvent for injection"),
 
+      /** {@code 13144000} - Concentrate and solvent for intravesical solution */
       _13144000("13144000", "Concentrate and solvent for intravesical solution"),
 
+      /** {@code 13160000} - Concentrate and solvent for oral solution */
       _13160000("13160000", "Concentrate and solvent for oral solution"),
 
+      /** {@code 50006000} - Concentrate and solvent for solution for infusion */
       _50006000("50006000", "Concentrate and solvent for solution for infusion"),
 
+      /** {@code 50007000} - Concentrate and solvent for solution for injection */
       _50007000("50007000", "Concentrate and solvent for solution for injection"),
 
+      /** {@code 50007500} - Concentrate and solvent for solution for injection/infusion */
       _50007500("50007500", "Concentrate and solvent for solution for injection/infusion"),
 
+      /** {@code 50008000} - Concentrate and solvent for suspension for injection */
       _50008000("50008000", "Concentrate and solvent for suspension for injection"),
 
+      /** {@code 10707000} - Ear drops, powder and solvent for suspension */
       _10707000("10707000", "Ear drops, powder and solvent for suspension"),
 
+      /** {@code 13157000} - Effervescent granules and suspension for oral suspension */
       _13157000("13157000", "Effervescent granules and suspension for oral suspension"),
 
+      /** {@code 13119000} - Effervescent powder and powder for oral suspension */
       _13119000("13119000", "Effervescent powder and powder for oral suspension"),
 
+      /** {@code 13150000} - Effervescent powder and suspension for oral suspension */
       _13150000("13150000", "Effervescent powder and suspension for oral suspension"),
 
+      /** {@code 13092000} - Emulsion and lyophilisate for suspension for injection */
       _13092000("13092000", "Emulsion and lyophilisate for suspension for injection"),
 
+      /** {@code 50021500} - Emulsion and suspension for emulsion for injection */
       _50021500("50021500", "Emulsion and suspension for emulsion for injection"),
 
+      /** {@code 11604000} - Endotracheopulmonary instillation, powder and solvent for solution */
       _11604000("11604000", "Endotracheopulmonary instillation, powder and solvent for solution"),
 
+      /** {@code 11605000} - Endotracheopulmonary instillation, powder and solvent for suspension */
       _11605000("11605000", "Endotracheopulmonary instillation, powder and solvent for suspension"),
 
+      /** {@code 10606000} - Eye drops, powder and solvent for solution */
       _10606000("10606000", "Eye drops, powder and solvent for solution"),
 
+      /** {@code 10607000} - Eye drops, powder and solvent for suspension */
       _10607000("10607000", "Eye drops, powder and solvent for suspension"),
 
+      /** {@code 12109500} - Fibrin sealant-powder and solvent for fibrin sealant */
       _12109500("12109500", "Fibrin sealant-powder and solvent for fibrin sealant"),
 
+      /** {@code 50078000} - Gas and solvent for dispersion for injection/infusion */
       _50078000("50078000", "Gas and solvent for dispersion for injection/infusion"),
 
+      /** {@code 13138000} - Gastro-resistant powder and solvent for oral suspension */
       _13138000("13138000", "Gastro-resistant powder and solvent for oral suspension"),
 
+      /** {@code 50026500} - Granules and solvent for oral suspension */
       _50026500("50026500", "Granules and solvent for oral suspension"),
 
+      /** {@code 50027000} - Granules and solvent for suspension for injection */
       _50027000("50027000", "Granules and solvent for suspension for injection"),
 
+      /** {@code 13117000} - Lyophilisate and solvent for emulsion for injection */
       _13117000("13117000", "Lyophilisate and solvent for emulsion for injection"),
 
+      /** {@code 13088000} - Lyophilisate and solvent for oculonasal suspension */
       _13088000("13088000", "Lyophilisate and solvent for oculonasal suspension"),
 
+      /** {@code 13093000} - Lyophilisate and solvent for oral suspension */
       _13093000("13093000", "Lyophilisate and solvent for oral suspension"),
 
+      /** {@code 11214500} - Lyophilisate and solvent for solution for injection */
       _11214500("11214500", "Lyophilisate and solvent for solution for injection"),
 
+      /** {@code 50034500} - Lyophilisate and solvent for suspension for injection */
       _50034500("50034500", "Lyophilisate and solvent for suspension for injection"),
 
+      /** {@code 11214700} - Lyophilisate and suspension for suspension for injection */
       _11214700("11214700", "Lyophilisate and suspension for suspension for injection"),
 
+      /** {@code 10800500} - Nasal drops, lyophilisate and solvent for suspension */
       _10800500("10800500", "Nasal drops, lyophilisate and solvent for suspension"),
 
+      /** {@code 50047650} - Nasal drops, powder and solvent for solution */
       _50047650("50047650", "Nasal drops, powder and solvent for solution"),
 
+      /** {@code 13097000} - Nasal spray, lyophilisate and solvent for suspension */
       _13097000("13097000", "Nasal spray, lyophilisate and solvent for suspension"),
 
+      /** {@code 50041200} - Powder and gel for gel */
       _50041200("50041200", "Powder and gel for gel"),
 
+      /** {@code 13101000} - Powder and solution for bee-hive dispersion */
       _13101000("13101000", "Powder and solution for bee-hive dispersion"),
 
+      /** {@code 13081000} - Powder and solution for bee-hive solution */
       _13081000("13081000", "Powder and solution for bee-hive solution"),
 
+      /** {@code 10412000} - Powder and solution for dental cement */
       _10412000("10412000", "Powder and solution for dental cement"),
 
+      /** {@code 50041500} - Powder and solution for solution for injection */
       _50041500("50041500", "Powder and solution for solution for injection"),
 
+      /** {@code 13121000} - Powder and solution for suspension for injection */
       _13121000("13121000", "Powder and solution for suspension for injection"),
 
+      /** {@code 50042000} - Powder and solvent for concentrate for solution for infusion */
       _50042000("50042000", "Powder and solvent for concentrate for solution for infusion"),
 
+      /** {@code 50044000} - Powder and solvent for cutaneous solution */
       _50044000("50044000", "Powder and solvent for cutaneous solution"),
 
+      /** {@code 50071000} - Powder and solvent for dental gel */
       _50071000("50071000", "Powder and solvent for dental gel"),
 
+      /** {@code 50044500} - Powder and solvent for dispersion for injection */
       _50044500("50044500", "Powder and solvent for dispersion for injection"),
 
+      /** {@code 50044700} - Powder and solvent for emulsion for injection */
       _50044700("50044700", "Powder and solvent for emulsion for injection"),
 
+      /** {@code 11702000} - Powder and solvent for endocervical gel */
       _11702000("11702000", "Powder and solvent for endocervical gel"),
 
+      /** {@code 50045000} - Powder and solvent for endosinusial solution */
       _50045000("50045000", "Powder and solvent for endosinusial solution"),
 
+      /** {@code 50045500} - Powder and solvent for epilesional solution */
       _50045500("50045500", "Powder and solvent for epilesional solution"),
 
+      /** {@code 50046000} - Powder and solvent for gingival gel */
       _50046000("50046000", "Powder and solvent for gingival gel"),
 
+      /** {@code 11304000} - Powder and solvent for implantation paste */
       _11304000("11304000", "Powder and solvent for implantation paste"),
 
+      /** {@code 50047000} - Powder and solvent for intraocular instillation solution */
       _50047000("50047000", "Powder and solvent for intraocular instillation solution"),
 
+      /** {@code 50047500} - Powder and solvent for intravesical solution */
       _50047500("50047500", "Powder and solvent for intravesical solution"),
 
+      /** {@code 50047600} - Powder and solvent for intravesical suspension */
       _50047600("50047600", "Powder and solvent for intravesical suspension"),
 
+      /** {@code 50047700} - Powder and solvent for nebuliser solution */
       _50047700("50047700", "Powder and solvent for nebuliser solution"),
 
+      /** {@code 10114000} - Powder and solvent for oral solution */
       _10114000("10114000", "Powder and solvent for oral solution"),
 
+      /** {@code 10115000} - Powder and solvent for oral suspension */
       _10115000("10115000", "Powder and solvent for oral suspension"),
 
+      /** {@code 50048000} - Powder and solvent for prolonged-release suspension for injection */
       _50048000("50048000", "Powder and solvent for prolonged-release suspension for injection"),
 
+      /** {@code 12116000} - Powder and solvent for sealant */
       _12116000("12116000", "Powder and solvent for sealant"),
 
+      /** {@code 11214000} - Powder and solvent for solution for infusion */
       _11214000("11214000", "Powder and solvent for solution for infusion"),
 
+      /** {@code 11207000} - Powder and solvent for solution for injection */
       _11207000("11207000", "Powder and solvent for solution for injection"),
 
+      /** {@code 50080000} - Powder and solvent for solution for injection/infusion */
       _50080000("50080000", "Powder and solvent for solution for injection/infusion"),
 
+      /** {@code 50048270} - Powder and solvent for solution for injection/skin-prick test */
       _50048270("50048270", "Powder and solvent for solution for injection/skin-prick test"),
 
+      /** {@code 11208000} - Powder and solvent for suspension for injection */
       _11208000("11208000", "Powder and solvent for suspension for injection"),
 
+      /** {@code 10115500} - Powder and solvent for syrup */
       _10115500("10115500", "Powder and solvent for syrup"),
 
+      /** {@code 50048500} - Powder and suspension for suspension for injection */
       _50048500("50048500", "Powder and suspension for suspension for injection"),
 
+      /** {@code 13062000} - Powder for concentrate and solution for solution for infusion */
       _13062000("13062000", "Powder for concentrate and solution for solution for infusion"),
 
+      /**
+       * {@code 50048600} - Powder, dispersion and solvent for concentrate for dispersion for
+       * infusion
+       */
       _50048600(
           "50048600", "Powder, dispersion and solvent for concentrate for dispersion for infusion"),
 
+      /** {@code 50055350} - Powder, solvent and matrix for implantation matrix */
       _50055350("50055350", "Powder, solvent and matrix for implantation matrix"),
 
+      /** {@code 50062000} - Suspension and effervescent granules for oral suspension */
       _50062000("50062000", "Suspension and effervescent granules for oral suspension"),
 
+      /** {@code 50062500} - Suspension and solution for spray */
       _50062500("50062500", "Suspension and solution for spray"),
 
+      /** {@code 50062750} - Suspension and solvent for suspension for injection */
       _50062750("50062750", "Suspension and solvent for suspension for injection"),
 
+      /** {@code 50065000} - Tablet and powder for oral solution */
       _50065000("50065000", "Tablet and powder for oral solution"),
 
+      /** {@code 50064000} - Tablet and solvent for rectal suspension */
       _50064000("50064000", "Tablet and solvent for rectal suspension"),
 
+      /** {@code 11210500} - Solution for infusion in administration system */
       _11210500("11210500", "Solution for infusion in administration system"),
 
+      /** {@code 13053000} - Solution for injection in administration system */
       _13053000("13053000", "Solution for injection in administration system"),
 
+      /**
+       * {@code 13057000} - Powder and solvent for prolonged-release suspension for injection in
+       * pre-filled syringe
+       */
       _13057000(
           "13057000",
           "Powder and solvent for prolonged-release suspension for injection in pre-filled syringe"),
 
+      /** {@code 13060000} - Powder for oral/rectal suspension in sachet */
       _13060000("13060000", "Powder for oral/rectal suspension in sachet"),
 
+      /** {@code 13064000} - Suspension for injection in pre-filled injector */
       _13064000("13064000", "Suspension for injection in pre-filled injector"),
 
+      /** {@code 13068000} - Solution for injection in pre-filled injector */
       _13068000("13068000", "Solution for injection in pre-filled injector"),
 
+      /** {@code 13069000} - Gel in sachet */
       _13069000("13069000", "Gel in sachet"),
 
+      /** {@code 13071000} - Solution for injection in dose-dispenser cartridge */
       _13071000("13071000", "Solution for injection in dose-dispenser cartridge"),
 
+      /** {@code 13075000} - Oral suspension in pre-filled oral applicator */
       _13075000("13075000", "Oral suspension in pre-filled oral applicator"),
 
+      /** {@code 13083000} - Bee-hive dispersion in sachet */
       _13083000("13083000", "Bee-hive dispersion in sachet"),
 
+      /** {@code 13090000} - Granules in single-dose container */
       _13090000("13090000", "Granules in single-dose container"),
 
+      /** {@code 13094000} - Syrup in sachet */
       _13094000("13094000", "Syrup in sachet"),
 
+      /** {@code 13095000} - Emulsion for infusion in administration system */
       _13095000("13095000", "Emulsion for infusion in administration system"),
 
+      /** {@code 13103000} - Cutaneous solution in single-dose container */
       _13103000("13103000", "Cutaneous solution in single-dose container"),
 
+      /** {@code 13104000} - Eye drops, emulsion in single-dose container */
       _13104000("13104000", "Eye drops, emulsion in single-dose container"),
 
+      /**
+       * {@code 13108000} - Powder and solvent for suspension for injection in multidose container
+       */
       _13108000(
           "13108000", "Powder and solvent for suspension for injection in multidose container"),
 
+      /** {@code 13109000} - Solution for injection in multidose container */
       _13109000("13109000", "Solution for injection in multidose container"),
 
+      /** {@code 13110000} - Suspension for injection in multidose container */
       _13110000("13110000", "Suspension for injection in multidose container"),
 
+      /** {@code 13112000} - Prolonged-release suspension for injection in pre-filled pen */
       _13112000("13112000", "Prolonged-release suspension for injection in pre-filled pen"),
 
+      /** {@code 13120000} - Nasal powder in single-dose container */
       _13120000("13120000", "Nasal powder in single-dose container"),
 
+      /** {@code 13122000} - Solution for infusion in cartridge */
       _13122000("13122000", "Solution for infusion in cartridge"),
 
+      /** {@code 13130000} - Oral powder in single-dose container */
       _13130000("13130000", "Oral powder in single-dose container"),
 
+      /** {@code 13137000} - Transdermal gel in sachet */
       _13137000("13137000", "Transdermal gel in sachet"),
 
+      /** {@code 13146000} - Oral solution in multidose container with metering pump */
       _13146000("13146000", "Oral solution in multidose container with metering pump"),
 
+      /** {@code 13147000} - Powder for oral suspension in sachet */
       _13147000("13147000", "Powder for oral suspension in sachet"),
 
+      /** {@code 13155000} - Film-coated granules in single-dose container */
       _13155000("13155000", "Film-coated granules in single-dose container"),
 
+      /** {@code 13161000} - Dispersion for injection in pre-filled syringe */
       _13161000("13161000", "Dispersion for injection in pre-filled syringe"),
 
+      /** {@code 50001250} - Coated granules in sachet */
       _50001250("50001250", "Coated granules in sachet"),
 
+      /** {@code 50017200} - Ear drops, solution in single-dose container */
       _50017200("50017200", "Ear drops, solution in single-dose container"),
 
+      /** {@code 50017550} - Ear drops, suspension in single-dose container */
       _50017550("50017550", "Ear drops, suspension in single-dose container"),
 
+      /** {@code 50021250} - Emulsion for injection/infusion in pre-filled syringe */
       _50021250("50021250", "Emulsion for injection/infusion in pre-filled syringe"),
 
+      /** {@code 50022500} - Eye drops, prolonged-release solution in single-dose container */
       _50022500("50022500", "Eye drops, prolonged-release solution in single-dose container"),
 
+      /** {@code 50023000} - Eye drops, solution in single-dose container */
       _50023000("50023000", "Eye drops, solution in single-dose container"),
 
+      /** {@code 50023100} - Eye drops, suspension in single-dose container */
       _50023100("50023100", "Eye drops, suspension in single-dose container"),
 
+      /** {@code 50023300} - Eye gel in single-dose container */
       _50023300("50023300", "Eye gel in single-dose container"),
 
+      /** {@code 50023400} - Eye ointment in single-dose container */
       _50023400("50023400", "Eye ointment in single-dose container"),
 
+      /** {@code 50023700} - Film-coated tablet and gastro-resistant granules in sachet */
       _50023700("50023700", "Film-coated tablet and gastro-resistant granules in sachet"),
 
+      /** {@code 50026150} - Gastro-resistant granules for oral suspension in sachet */
       _50026150("50026150", "Gastro-resistant granules for oral suspension in sachet"),
 
+      /** {@code 50026400} - Gel in pressurised container */
       _50026400("50026400", "Gel in pressurised container"),
 
+      /** {@code 50029170} - Granules for oral solution in sachet */
       _50029170("50029170", "Granules for oral solution in sachet"),
 
+      /** {@code 50029200} - Granules for oral suspension in sachet */
       _50029200("50029200", "Granules for oral suspension in sachet"),
 
+      /** {@code 50029550} - Granules in sachet */
       _50029550("50029550", "Granules in sachet"),
 
+      /** {@code 50029700} - Herbal tea in bag */
       _50029700("50029700", "Herbal tea in bag"),
 
+      /** {@code 50029750} - Implant in pre-filled syringe */
       _50029750("50029750", "Implant in pre-filled syringe"),
 
+      /** {@code 50033500} - Intravitreal implant in applicator */
       _50033500("50033500", "Intravitreal implant in applicator"),
 
+      /** {@code 50036200} - Nasal drops, solution in single-dose container */
       _50036200("50036200", "Nasal drops, solution in single-dose container"),
 
+      /** {@code 50037250} - Nasal spray, solution in single-dose container */
       _50037250("50037250", "Nasal spray, solution in single-dose container"),
 
+      /** {@code 50037450} - Nebuliser solution in single-dose container */
       _50037450("50037450", "Nebuliser solution in single-dose container"),
 
+      /** {@code 50037600} - Oral emulsion in sachet */
       _50037600("50037600", "Oral emulsion in sachet"),
 
+      /** {@code 50037700} - Oral paste in sachet */
       _50037700("50037700", "Oral paste in sachet"),
 
+      /** {@code 50037800} - Oral powder in sachet */
       _50037800("50037800", "Oral powder in sachet"),
 
+      /** {@code 50038600} - Oral solution in sachet */
       _50038600("50038600", "Oral solution in sachet"),
 
+      /** {@code 50038650} - Oral solution in single-dose container */
       _50038650("50038650", "Oral solution in single-dose container"),
 
+      /** {@code 50038700} - Oral suspension in sachet */
       _50038700("50038700", "Oral suspension in sachet"),
 
+      /** {@code 50039300} - Oromucosal powder in pouch */
       _50039300("50039300", "Oromucosal powder in pouch"),
 
+      /** {@code 50041000} - Pillules in single-dose container */
       _50041000("50041000", "Pillules in single-dose container"),
 
+      /**
+       * {@code 50048010} - Powder and solvent for prolonged-release suspension for injection in
+       * pre-filled pen
+       */
       _50048010(
           "50048010",
           "Powder and solvent for prolonged-release suspension for injection in pre-filled pen"),
 
+      /** {@code 50048050} - Powder and solvent for solution for injection in cartridge */
       _50048050("50048050", "Powder and solvent for solution for injection in cartridge"),
 
+      /** {@code 50048150} - Powder and solvent for solution for injection in pre-filled pen */
       _50048150("50048150", "Powder and solvent for solution for injection in pre-filled pen"),
 
+      /** {@code 50048250} - Powder and solvent for solution for injection in pre-filled syringe */
       _50048250("50048250", "Powder and solvent for solution for injection in pre-filled syringe"),
 
+      /**
+       * {@code 50048300} - Powder and solvent for suspension for injection in pre-filled syringe
+       */
       _50048300(
           "50048300", "Powder and solvent for suspension for injection in pre-filled syringe"),
 
+      /** {@code 50048400} - Powder and solvent in pre-filled syringe for solution for injection */
       _50048400("50048400", "Powder and solvent in pre-filled syringe for solution for injection"),
 
+      /** {@code 50052500} - Powder for oral solution in sachet */
       _50052500("50052500", "Powder for oral solution in sachet"),
 
+      /** {@code 50056150} - Prolonged-release granules for oral suspension in sachet */
       _50056150("50056150", "Prolonged-release granules for oral suspension in sachet"),
 
+      /** {@code 50056200} - Prolonged-release granules in sachet */
       _50056200("50056200", "Prolonged-release granules in sachet"),
 
+      /** {@code 50056250} - Prolonged-release suspension for injection in pre-filled syringe */
       _50056250("50056250", "Prolonged-release suspension for injection in pre-filled syringe"),
 
+      /**
+       * {@code 50056600} - Solution and suspension for suspension for injection in pre-filled
+       * syringe
+       */
       _50056600(
           "50056600", "Solution and suspension for suspension for injection in pre-filled syringe"),
 
+      /** {@code 50058500} - Solution for infusion in pre-filled syringe */
       _50058500("50058500", "Solution for infusion in pre-filled syringe"),
 
+      /** {@code 50060100} - Solution for injection in cartridge */
       _50060100("50060100", "Solution for injection in cartridge"),
 
+      /** {@code 50060150} - Solution for injection in needle-free injector */
       _50060150("50060150", "Solution for injection in needle-free injector"),
 
+      /** {@code 50060200} - Solution for injection in pre-filled pen */
       _50060200("50060200", "Solution for injection in pre-filled pen"),
 
+      /** {@code 50060300} - Solution for injection in pre-filled syringe */
       _50060300("50060300", "Solution for injection in pre-filled syringe"),
 
+      /**
+       * {@code 50060400} - Solution for injection in pre-filled syringe with automatic needle guard
+       */
       _50060400(
           "50060400", "Solution for injection in pre-filled syringe with automatic needle guard"),
 
+      /** {@code 50060500} - Solution for injection/infusion in pre-filled syringe */
       _50060500("50060500", "Solution for injection/infusion in pre-filled syringe"),
 
+      /** {@code 50063100} - Suspension for injection in cartridge */
       _50063100("50063100", "Suspension for injection in cartridge"),
 
+      /** {@code 50063200} - Suspension for injection in pre-filled pen */
       _50063200("50063200", "Suspension for injection in pre-filled pen"),
 
+      /** {@code 50063300} - Suspension for injection in pre-filled syringe */
       _50063300("50063300", "Suspension for injection in pre-filled syringe"),
 
+      /** {@code 30001000} - Ampoule */
       _30001000("30001000", "Ampoule"),
 
+      /** {@code 30002000} - Applicator */
       _30002000("30002000", "Applicator"),
 
+      /** {@code 30003000} - Automatic injection device */
       _30003000("30003000", "Automatic injection device"),
 
+      /** {@code 30004000} - Bag */
       _30004000("30004000", "Bag"),
 
+      /** {@code 30005000} - Balling gun */
       _30005000("30005000", "Balling gun"),
 
+      /** {@code 30006000} - Barrel */
       _30006000("30006000", "Barrel"),
 
+      /** {@code 30007000} - Blister */
       _30007000("30007000", "Blister"),
 
+      /** {@code 30008000} - Bottle */
       _30008000("30008000", "Bottle"),
 
+      /** {@code 30009000} - Box */
       _30009000("30009000", "Box"),
 
+      /** {@code 30010000} - Brush */
       _30010000("30010000", "Brush"),
 
+      /** {@code 30011000} - Brush applicator */
       _30011000("30011000", "Brush applicator"),
 
+      /** {@code 30012000} - Cannula */
       _30012000("30012000", "Cannula"),
 
+      /** {@code 30013000} - Cap */
       _30013000("30013000", "Cap"),
 
+      /** {@code 30014000} - Cartridge */
       _30014000("30014000", "Cartridge"),
 
+      /** {@code 30015000} - Child-resistant closure */
       _30015000("30015000", "Child-resistant closure"),
 
+      /** {@code 30016000} - Cup */
       _30016000("30016000", "Cup"),
 
+      /** {@code 30017000} - Dabbing applicator */
       _30017000("30017000", "Dabbing applicator"),
 
+      /** {@code 30018000} - Dart */
       _30018000("30018000", "Dart"),
 
+      /** {@code 30019000} - Dredging applicator */
       _30019000("30019000", "Dredging applicator"),
 
+      /** {@code 30020000} - Dredging container */
       _30020000("30020000", "Dredging container"),
 
+      /** {@code 30021000} - Drench gun */
       _30021000("30021000", "Drench gun"),
 
+      /** {@code 30022000} - Dropper applicator */
       _30022000("30022000", "Dropper applicator"),
 
+      /** {@code 30023000} - Dropper container */
       _30023000("30023000", "Dropper container"),
 
+      /** {@code 30023005} - Fixed cryogenic vessel */
       _30023005("30023005", "Fixed cryogenic vessel"),
 
+      /** {@code 30024000} - Gas cylinder */
       _30024000("30024000", "Gas cylinder"),
 
+      /** {@code 30025000} - High pressure transdermal delivery device */
       _30025000("30025000", "High pressure transdermal delivery device"),
 
+      /** {@code 30026000} - Implanter */
       _30026000("30026000", "Implanter"),
 
+      /** {@code 30026500} - Inhaler */
       _30026500("30026500", "Inhaler"),
 
+      /** {@code 30027000} - In-ovo injection device */
       _30027000("30027000", "In-ovo injection device"),
 
+      /** {@code 30028000} - Injection needle */
       _30028000("30028000", "Injection needle"),
 
+      /** {@code 30029000} - Injection syringe */
       _30029000("30029000", "Injection syringe"),
 
+      /** {@code 30030000} - Internal graduated calibration chamber */
       _30030000("30030000", "Internal graduated calibration chamber"),
 
+      /** {@code 30031000} - Intramammary syringe */
       _30031000("30031000", "Intramammary syringe"),
 
+      /** {@code 30032000} - Jar */
       _30032000("30032000", "Jar"),
 
+      /** {@code 30033000} - Measuring device */
       _30033000("30033000", "Measuring device"),
 
+      /** {@code 30034000} - Measuring spoon */
       _30034000("30034000", "Measuring spoon"),
 
+      /** {@code 30035000} - Metering pump */
       _30035000("30035000", "Metering pump"),
 
+      /** {@code 30036000} - Metering valve */
       _30036000("30036000", "Metering valve"),
 
+      /** {@code 30036005} - Mobile cryogenic vessel */
       _30036005("30036005", "Mobile cryogenic vessel"),
 
+      /** {@code 30037000} - Mouthpiece */
       _30037000("30037000", "Mouthpiece"),
 
+      /** {@code 30038000} - Multidose container */
       _30038000("30038000", "Multidose container"),
 
+      /** {@code 30039000} - Multidose container with airless pump */
       _30039000("30039000", "Multidose container with airless pump"),
 
+      /** {@code 30040000} - Multipuncturer */
       _30040000("30040000", "Multipuncturer"),
 
+      /** {@code 30041000} - Nasal applicator */
       _30041000("30041000", "Nasal applicator"),
 
+      /** {@code 30042000} - Nebuliser */
       _30042000("30042000", "Nebuliser"),
 
+      /** {@code 30043000} - Needle applicator */
       _30043000("30043000", "Needle applicator"),
 
+      /** {@code 30044000} - Nozzle */
       _30044000("30044000", "Nozzle"),
 
+      /** {@code 30045000} - Oral syringe */
       _30045000("30045000", "Oral syringe"),
 
+      /** {@code 30046000} - Pipette */
       _30046000("30046000", "Pipette"),
 
+      /** {@code 30047000} - Pipette applicator */
       _30047000("30047000", "Pipette applicator"),
 
+      /** {@code 13142000} - Pouch */
       _13142000("13142000", "Pouch"),
 
+      /** {@code 30048000} - Pour-on container */
       _30048000("30048000", "Pour-on container"),
 
+      /** {@code 30049000} - Pre-filled gastroenteral tube */
       _30049000("30049000", "Pre-filled gastroenteral tube"),
 
+      /** {@code 30050000} - Pre-filled pen */
       _30050000("30050000", "Pre-filled pen"),
 
+      /** {@code 30051000} - Pre-filled syringe */
       _30051000("30051000", "Pre-filled syringe"),
 
+      /** {@code 30052000} - Pressurised container */
       _30052000("30052000", "Pressurised container"),
 
+      /** {@code 30053000} - Prick test applicator */
       _30053000("30053000", "Prick test applicator"),
 
+      /** {@code 30054000} - Sachet */
       _30054000("30054000", "Sachet"),
 
+      /** {@code 30055000} - Scarifier */
       _30055000("30055000", "Scarifier"),
 
+      /** {@code 30056000} - Screw cap */
       _30056000("30056000", "Screw cap"),
 
+      /** {@code 30057000} - Single-dose container */
       _30057000("30057000", "Single-dose container"),
 
+      /** {@code 30058000} - Spatula */
       _30058000("30058000", "Spatula"),
 
+      /** {@code 30059000} - Spot-on applicator */
       _30059000("30059000", "Spot-on applicator"),
 
+      /** {@code 30060000} - Spray container */
       _30060000("30060000", "Spray container"),
 
+      /** {@code 30061000} - Spray pump */
       _30061000("30061000", "Spray pump"),
 
+      /** {@code 30062000} - Spray valve */
       _30062000("30062000", "Spray valve"),
 
+      /** {@code 30063000} - Stab vaccinator */
       _30063000("30063000", "Stab vaccinator"),
 
+      /** {@code 30064000} - Stopper */
       _30064000("30064000", "Stopper"),
 
+      /** {@code 30064500} - Straw */
       _30064500("30064500", "Straw"),
 
+      /** {@code 30065000} - Strip */
       _30065000("30065000", "Strip"),
 
+      /** {@code 30066000} - Tablet container */
       _30066000("30066000", "Tablet container"),
 
+      /** {@code 30067000} - Tube */
       _30067000("30067000", "Tube"),
 
+      /** {@code 30068000} - Vaginal sponge applicator */
       _30068000("30068000", "Vaginal sponge applicator"),
 
+      /** {@code 30069000} - Vial */
       _30069000("30069000", "Vial"),
 
+      /** {@code 30000500} - Administration system */
       _30000500("30000500", "Administration system"),
 
+      /** {@code 30011500} - Calendar package */
       _30011500("30011500", "Calendar package"),
 
+      /** {@code 30043500} - Needle-free injector */
       _30043500("30043500", "Needle-free injector"),
 
+      /** {@code 30053500} - Roll-on container */
       _30053500("30053500", "Roll-on container"),
 
+      /** {@code 30039500} - Multidose container with pump */
       _30039500("30039500", "Multidose container with pump"),
 
+      /** {@code 30015500} - Container */
       _30015500("30015500", "Container"),
 
+      /** {@code 30039400} - Multidose container with metering pump */
       _30039400("30039400", "Multidose container with metering pump"),
 
+      /** {@code 30045500} - Pack */
       _30045500("30045500", "Pack"),
 
+      /** {@code 13070000} - Valve */
       _13070000("13070000", "Valve"),
 
+      /** {@code 13072000} - Oral applicator */
       _13072000("13072000", "Oral applicator"),
 
+      /** {@code 30018200} - Dose dispenser */
       _30018200("30018200", "Dose dispenser"),
 
+      /** {@code 13059000} - Unit-dose blister */
       _13059000("13059000", "Unit-dose blister"),
 
+      /** {@code 13063000} - Pre-filled injector */
       _13063000("13063000", "Pre-filled injector"),
 
+      /** {@code 13073000} - Pre-filled oral syringe */
       _13073000("13073000", "Pre-filled oral syringe"),
 
+      /** {@code 13074000} - Pre-filled oral applicator */
       _13074000("13074000", "Pre-filled oral applicator"),
 
+      /** {@code 30018300} - Dose-dispenser cartridge */
       _30018300("30018300", "Dose-dispenser cartridge"),
 
+      /** {@code 13114000} - Pen */
       _13114000("13114000", "Pen"),
 
+      /** {@code 13125000} - Wrapper */
       _13125000("13125000", "Wrapper"),
 
+      /** {@code 13132000} - Lid */
       _13132000("13132000", "Lid"),
 
+      /** {@code 13131000} - Capsule for opening */
       _13131000("13131000", "Capsule for opening"),
 
+      /** {@code 13151000} - Tablet tube */
       _13151000("13151000", "Tablet tube"),
 
+      /** {@code 13156000} - Gas cylinder bundle */
       _13156000("13156000", "Gas cylinder bundle"),
 
+      /** {@code 15001000} - Actuation */
       _15001000("15001000", "Actuation"),
 
+      /** {@code 15002000} - Ampoule */
       _15002000("15002000", "Ampoule"),
 
+      /** {@code 15004000} - Applicator */
       _15004000("15004000", "Applicator"),
 
+      /** {@code 15005000} - Bag */
       _15005000("15005000", "Bag"),
 
+      /** {@code 15006000} - Barrel */
       _15006000("15006000", "Barrel"),
 
+      /** {@code 15007000} - Blister */
       _15007000("15007000", "Blister"),
 
+      /** {@code 15008000} - Block */
       _15008000("15008000", "Block"),
 
+      /** {@code 15009000} - Bottle */
       _15009000("15009000", "Bottle"),
 
+      /** {@code 15011000} - Cachet */
       _15011000("15011000", "Cachet"),
 
+      /** {@code 15012000} - Capsule */
       _15012000("15012000", "Capsule"),
 
+      /** {@code 15013000} - Cartridge */
       _15013000("15013000", "Cartridge"),
 
+      /** {@code 15024000} - Chewing gum */
       _15024000("15024000", "Chewing gum"),
 
+      /** {@code 15015000} - Collar */
       _15015000("15015000", "Collar"),
 
+      /** {@code 15016000} - Container */
       _15016000("15016000", "Container"),
 
+      /** {@code 15017000} - Cup */
       _15017000("15017000", "Cup"),
 
+      /** {@code 15018000} - Cylinder */
       _15018000("15018000", "Cylinder"),
 
+      /** {@code 15019000} - Dart */
       _15019000("15019000", "Dart"),
 
+      /** {@code 15021000} - Dressing */
       _15021000("15021000", "Dressing"),
 
+      /** {@code 15022000} - Drop */
       _15022000("15022000", "Drop"),
 
+      /** {@code 15023000} - Film */
       _15023000("15023000", "Film"),
 
+      /** {@code 15025000} - Implant */
       _15025000("15025000", "Implant"),
 
+      /** {@code 15026000} - Inhaler */
       _15026000("15026000", "Inhaler"),
 
+      /** {@code 15027000} - Insert */
       _15027000("15027000", "Insert"),
 
+      /** {@code 15028000} - Jar */
       _15028000("15028000", "Jar"),
 
+      /** {@code 15029000} - Lozenge */
       _15029000("15029000", "Lozenge"),
 
+      /** {@code 15030000} - Lyophilisate */
       _15030000("15030000", "Lyophilisate"),
 
+      /** {@code 15031000} - Matrix */
       _15031000("15031000", "Matrix"),
 
+      /** {@code 15033000} - Pad */
       _15033000("15033000", "Pad"),
 
+      /** {@code 15034000} - Paper */
       _15034000("15034000", "Paper"),
 
+      /** {@code 15035000} - Pastille */
       _15035000("15035000", "Pastille"),
 
+      /** {@code 15036000} - Patch */
       _15036000("15036000", "Patch"),
 
+      /** {@code 15037000} - Pen */
       _15037000("15037000", "Pen"),
 
+      /** {@code 15038000} - Pendant */
       _15038000("15038000", "Pendant"),
 
+      /** {@code 15039000} - Pessary */
       _15039000("15039000", "Pessary"),
 
+      /** {@code 15040000} - Pillule */
       _15040000("15040000", "Pillule"),
 
+      /** {@code 15041000} - Pipette */
       _15041000("15041000", "Pipette"),
 
+      /** {@code 15042000} - Plaster */
       _15042000("15042000", "Plaster"),
 
+      /** {@code 15043000} - Plug */
       _15043000("15043000", "Plug"),
 
+      /** {@code 15044000} - Pouch */
       _15044000("15044000", "Pouch"),
 
+      /** {@code 15061000} - Puff */
       _15061000("15061000", "Puff"),
 
+      /** {@code 15045000} - Sachet */
       _15045000("15045000", "Sachet"),
 
+      /** {@code 15046000} - Sponge */
       _15046000("15046000", "Sponge"),
 
+      /** {@code 15047000} - Spoonful */
       _15047000("15047000", "Spoonful"),
 
+      /** {@code 15048000} - Stick */
       _15048000("15048000", "Stick"),
 
+      /** {@code 15049000} - Straw */
       _15049000("15049000", "Straw"),
 
+      /** {@code 15050000} - Strip */
       _15050000("15050000", "Strip"),
 
+      /** {@code 15051000} - Suppository */
       _15051000("15051000", "Suppository"),
 
+      /** {@code 15062000} - Swab */
       _15062000("15062000", "Swab"),
 
+      /** {@code 15052000} - Syringe */
       _15052000("15052000", "Syringe"),
 
+      /** {@code 15053000} - System */
       _15053000("15053000", "System"),
 
+      /** {@code 15054000} - Tablet */
       _15054000("15054000", "Tablet"),
 
+      /** {@code 15055000} - Tag */
       _15055000("15055000", "Tag"),
 
+      /** {@code 15056000} - Tampon */
       _15056000("15056000", "Tampon"),
 
+      /** {@code 15057000} - Thread */
       _15057000("15057000", "Thread"),
 
+      /** {@code 15058000} - Tube */
       _15058000("15058000", "Tube"),
 
+      /** {@code 15059000} - Vessel */
       _15059000("15059000", "Vessel"),
 
+      /** {@code 15060000} - Vial */
       _15060000("15060000", "Vial"),
 
+      /** {@code 10100500} - Concentrate for oral suspension */
       _10100500("10100500", "Concentrate for oral suspension"),
 
+      /** {@code 10101000} - Oral drops, solution */
       _10101000("10101000", "Oral drops, solution"),
 
+      /** {@code 10102000} - Oral drops, suspension */
       _10102000("10102000", "Oral drops, suspension"),
 
+      /** {@code 10103000} - Oral drops, emulsion */
       _10103000("10103000", "Oral drops, emulsion"),
 
+      /** {@code 10104000} - Oral liquid */
       _10104000("10104000", "Oral liquid"),
 
+      /** {@code 10105000} - Oral solution */
       _10105000("10105000", "Oral solution"),
 
+      /** {@code 10106000} - Oral suspension */
       _10106000("10106000", "Oral suspension"),
 
+      /** {@code 10107000} - Oral emulsion */
       _10107000("10107000", "Oral emulsion"),
 
+      /** {@code 10108000} - Oral gel */
       _10108000("10108000", "Oral gel"),
 
+      /** {@code 10109000} - Oral paste */
       _10109000("10109000", "Oral paste"),
 
+      /** {@code 10110000} - Powder for oral solution */
       _10110000("10110000", "Powder for oral solution"),
 
+      /** {@code 10111000} - Powder for oral suspension */
       _10111000("10111000", "Powder for oral suspension"),
 
+      /** {@code 10112000} - Granules for oral solution */
       _10112000("10112000", "Granules for oral solution"),
 
+      /** {@code 10113000} - Granules for oral suspension */
       _10113000("10113000", "Granules for oral suspension"),
 
+      /** {@code 10116000} - Lyophilisate for suspension */
       _10116000("10116000", "Lyophilisate for suspension"),
 
+      /** {@code 10117000} - Syrup */
       _10117000("10117000", "Syrup"),
 
+      /** {@code 10118000} - Powder for syrup */
       _10118000("10118000", "Powder for syrup"),
 
+      /** {@code 10119000} - Granules for syrup */
       _10119000("10119000", "Granules for syrup"),
 
+      /** {@code 10120000} - Soluble tablet */
       _10120000("10120000", "Soluble tablet"),
 
+      /** {@code 10121000} - Dispersible tablet */
       _10121000("10121000", "Dispersible tablet"),
 
+      /** {@code 10121500} - Dispersible tablets for dose dispenser */
       _10121500("10121500", "Dispersible tablets for dose dispenser"),
 
+      /** {@code 10122000} - Herbal tea */
       _10122000("10122000", "Herbal tea"),
 
+      /** {@code 10201000} - Oral powder */
       _10201000("10201000", "Oral powder"),
 
+      /** {@code 10202000} - Instant herbal tea */
       _10202000("10202000", "Instant herbal tea"),
 
+      /** {@code 10203000} - Effervescent powder */
       _10203000("10203000", "Effervescent powder"),
 
+      /** {@code 10204000} - Granules */
       _10204000("10204000", "Granules"),
 
+      /** {@code 10205000} - Effervescent granules */
       _10205000("10205000", "Effervescent granules"),
 
+      /** {@code 10206000} - Gastro-resistant granules */
       _10206000("10206000", "Gastro-resistant granules"),
 
+      /** {@code 10207000} - Prolonged-release granules */
       _10207000("10207000", "Prolonged-release granules"),
 
+      /** {@code 10208000} - Modified-release granules */
       _10208000("10208000", "Modified-release granules"),
 
+      /** {@code 10209000} - Cachet */
       _10209000("10209000", "Cachet"),
 
+      /** {@code 10210000} - Capsule, hard */
       _10210000("10210000", "Capsule, hard"),
 
+      /** {@code 10211000} - Capsule, soft */
       _10211000("10211000", "Capsule, soft"),
 
+      /** {@code 10212000} - Gastro-resistant capsule, hard */
       _10212000("10212000", "Gastro-resistant capsule, hard"),
 
+      /** {@code 10213000} - Gastro-resistant capsule, soft */
       _10213000("10213000", "Gastro-resistant capsule, soft"),
 
+      /** {@code 10214000} - Chewable capsule, soft */
       _10214000("10214000", "Chewable capsule, soft"),
 
+      /** {@code 10215000} - Prolonged-release capsule, hard */
       _10215000("10215000", "Prolonged-release capsule, hard"),
 
+      /** {@code 10216000} - Prolonged-release capsule, soft */
       _10216000("10216000", "Prolonged-release capsule, soft"),
 
+      /** {@code 10217000} - Modified-release capsule, hard */
       _10217000("10217000", "Modified-release capsule, hard"),
 
+      /** {@code 10218000} - Modified-release capsule, soft */
       _10218000("10218000", "Modified-release capsule, soft"),
 
+      /** {@code 10219000} - Tablet */
       _10219000("10219000", "Tablet"),
 
+      /** {@code 10220000} - Coated tablet */
       _10220000("10220000", "Coated tablet"),
 
+      /** {@code 10221000} - Film-coated tablet */
       _10221000("10221000", "Film-coated tablet"),
 
+      /** {@code 10222000} - Effervescent tablet */
       _10222000("10222000", "Effervescent tablet"),
 
+      /** {@code 10223000} - Orodispersible tablet */
       _10223000("10223000", "Orodispersible tablet"),
 
+      /** {@code 10224000} - Oral lyophilisate */
       _10224000("10224000", "Oral lyophilisate"),
 
+      /** {@code 10225000} - Gastro-resistant tablet */
       _10225000("10225000", "Gastro-resistant tablet"),
 
+      /** {@code 10226000} - Prolonged-release tablet */
       _10226000("10226000", "Prolonged-release tablet"),
 
+      /** {@code 10227000} - Modified-release tablet */
       _10227000("10227000", "Modified-release tablet"),
 
+      /** {@code 10228000} - Chewable tablet */
       _10228000("10228000", "Chewable tablet"),
 
+      /** {@code 10229000} - Medicated chewing-gum */
       _10229000("10229000", "Medicated chewing-gum"),
 
+      /** {@code 10230000} - Oral gum */
       _10230000("10230000", "Oral gum"),
 
+      /** {@code 10230500} - Pill */
       _10230500("10230500", "Pill"),
 
+      /** {@code 10231000} - Pillules */
       _10231000("10231000", "Pillules"),
 
+      /** {@code 10232000} - Continuous-release intraruminal device */
       _10232000("10232000", "Continuous-release intraruminal device"),
 
+      /** {@code 10233000} - Pulsatile-release intraruminal device */
       _10233000("10233000", "Pulsatile-release intraruminal device"),
 
+      /** {@code 10234000} - Lick block */
       _10234000("10234000", "Lick block"),
 
+      /** {@code 10235000} - Premix for medicated feeding stuff */
       _10235000("10235000", "Premix for medicated feeding stuff"),
 
+      /** {@code 10236000} - Medicated pellets */
       _10236000("10236000", "Medicated pellets"),
 
+      /** {@code 10236100} - Orodispersible film */
       _10236100("10236100", "Orodispersible film"),
 
+      /** {@code 10301000} - Gargle */
       _10301000("10301000", "Gargle"),
 
+      /** {@code 10302000} - Concentrate for gargle */
       _10302000("10302000", "Concentrate for gargle"),
 
+      /** {@code 10303000} - Gargle, powder for solution */
       _10303000("10303000", "Gargle, powder for solution"),
 
+      /** {@code 10304000} - Gargle, tablet for solution */
       _10304000("10304000", "Gargle, tablet for solution"),
 
+      /** {@code 10305000} - Oromucosal solution */
       _10305000("10305000", "Oromucosal solution"),
 
+      /** {@code 10306000} - Oromucosal suspension */
       _10306000("10306000", "Oromucosal suspension"),
 
+      /** {@code 10307000} - Oromucosal drops */
       _10307000("10307000", "Oromucosal drops"),
 
+      /** {@code 10308000} - Oromucosal spray */
       _10308000("10308000", "Oromucosal spray"),
 
+      /** {@code 10308100} - Oromucosal spray, emulsion */
       _10308100("10308100", "Oromucosal spray, emulsion"),
 
+      /** {@code 10308200} - Oromucosal spray, solution */
       _10308200("10308200", "Oromucosal spray, solution"),
 
+      /** {@code 10308300} - Oromucosal spray, suspension */
       _10308300("10308300", "Oromucosal spray, suspension"),
 
+      /** {@code 10309000} - Sublingual spray */
       _10309000("10309000", "Sublingual spray"),
 
+      /** {@code 10309100} - Sublingual spray, emulsion */
       _10309100("10309100", "Sublingual spray, emulsion"),
 
+      /** {@code 10309200} - Sublingual spray, solution */
       _10309200("10309200", "Sublingual spray, solution"),
 
+      /** {@code 10309300} - Sublingual spray, suspension */
       _10309300("10309300", "Sublingual spray, suspension"),
 
+      /** {@code 10310000} - Mouthwash */
       _10310000("10310000", "Mouthwash"),
 
+      /** {@code 10311000} - Mouthwash, tablet for solution */
       _10311000("10311000", "Mouthwash, tablet for solution"),
 
+      /** {@code 10312000} - Gingival solution */
       _10312000("10312000", "Gingival solution"),
 
+      /** {@code 10313000} - Oromucosal gel */
       _10313000("10313000", "Oromucosal gel"),
 
+      /** {@code 10314000} - Oromucosal paste */
       _10314000("10314000", "Oromucosal paste"),
 
+      /** {@code 10314005} - Oromucosal ointment */
       _10314005("10314005", "Oromucosal ointment"),
 
+      /** {@code 10314010} - Oromucosal cream */
       _10314010("10314010", "Oromucosal cream"),
 
+      /** {@code 10314011} - Buccal film */
       _10314011("10314011", "Buccal film"),
 
+      /** {@code 10315000} - Gingival gel */
       _10315000("10315000", "Gingival gel"),
 
+      /** {@code 10316000} - Gingival paste */
       _10316000("10316000", "Gingival paste"),
 
+      /** {@code 10317000} - Oromucosal capsule */
       _10317000("10317000", "Oromucosal capsule"),
 
+      /** {@code 10317500} - Sublingual film */
       _10317500("10317500", "Sublingual film"),
 
+      /** {@code 10318000} - Sublingual tablet */
       _10318000("10318000", "Sublingual tablet"),
 
+      /** {@code 10319000} - Muco-adhesive buccal tablet */
       _10319000("10319000", "Muco-adhesive buccal tablet"),
 
+      /** {@code 10320000} - Buccal tablet */
       _10320000("10320000", "Buccal tablet"),
 
+      /** {@code 10321000} - Lozenge */
       _10321000("10321000", "Lozenge"),
 
+      /** {@code 10322000} - Compressed lozenge */
       _10322000("10322000", "Compressed lozenge"),
 
+      /** {@code 10323000} - Pastille */
       _10323000("10323000", "Pastille"),
 
+      /** {@code 10401000} - Periodontal powder */
       _10401000("10401000", "Periodontal powder"),
 
+      /** {@code 10401500} - Dental cement */
       _10401500("10401500", "Dental cement"),
 
+      /** {@code 10402000} - Dental gel */
       _10402000("10402000", "Dental gel"),
 
+      /** {@code 10403000} - Dental stick */
       _10403000("10403000", "Dental stick"),
 
+      /** {@code 10404000} - Dental insert */
       _10404000("10404000", "Dental insert"),
 
+      /** {@code 10405000} - Dental powder */
       _10405000("10405000", "Dental powder"),
 
+      /** {@code 10406000} - Dental solution */
       _10406000("10406000", "Dental solution"),
 
+      /** {@code 10407000} - Dental suspension */
       _10407000("10407000", "Dental suspension"),
 
+      /** {@code 10408000} - Dental emulsion */
       _10408000("10408000", "Dental emulsion"),
 
+      /** {@code 10409000} - Toothpaste */
       _10409000("10409000", "Toothpaste"),
 
+      /** {@code 10410000} - Periodontal gel */
       _10410000("10410000", "Periodontal gel"),
 
+      /** {@code 10411000} - Periodontal insert */
       _10411000("10411000", "Periodontal insert"),
 
+      /** {@code 10413000} - Powder for dental cement */
       _10413000("10413000", "Powder for dental cement"),
 
+      /** {@code 10414000} - Solution for dental cement */
       _10414000("10414000", "Solution for dental cement"),
 
+      /** {@code 10501000} - Bath additive */
       _10501000("10501000", "Bath additive"),
 
+      /** {@code 10502000} - Cream */
       _10502000("10502000", "Cream"),
 
+      /** {@code 10503000} - Gel */
       _10503000("10503000", "Gel"),
 
+      /** {@code 10504000} - Ointment */
       _10504000("10504000", "Ointment"),
 
+      /** {@code 10505000} - Cutaneous paste */
       _10505000("10505000", "Cutaneous paste"),
 
+      /** {@code 10506000} - Medicated plaster */
       _10506000("10506000", "Medicated plaster"),
 
+      /** {@code 10507000} - Cutaneous foam */
       _10507000("10507000", "Cutaneous foam"),
 
+      /** {@code 10508000} - Shampoo */
       _10508000("10508000", "Shampoo"),
 
+      /** {@code 10509000} - Cutaneous spray, solution */
       _10509000("10509000", "Cutaneous spray, solution"),
 
+      /** {@code 10510000} - Cutaneous spray, suspension */
       _10510000("10510000", "Cutaneous spray, suspension"),
 
+      /** {@code 10511000} - Cutaneous spray, powder */
       _10511000("10511000", "Cutaneous spray, powder"),
 
+      /** {@code 10512000} - Cutaneous liquid */
       _10512000("10512000", "Cutaneous liquid"),
 
+      /** {@code 10513000} - Cutaneous solution */
       _10513000("10513000", "Cutaneous solution"),
 
+      /** {@code 10514000} - Concentrate for cutaneous solution */
       _10514000("10514000", "Concentrate for cutaneous solution"),
 
+      /** {@code 10514500} - Powder for cutaneous solution */
       _10514500("10514500", "Powder for cutaneous solution"),
 
+      /** {@code 10515000} - Cutaneous suspension */
       _10515000("10515000", "Cutaneous suspension"),
 
+      /** {@code 10516000} - Cutaneous emulsion */
       _10516000("10516000", "Cutaneous emulsion"),
 
+      /** {@code 10517000} - Cutaneous powder */
       _10517000("10517000", "Cutaneous powder"),
 
+      /** {@code 10517500} - Cutaneous patch */
       _10517500("10517500", "Cutaneous patch"),
 
+      /** {@code 10518000} - Solution for iontophoresis */
       _10518000("10518000", "Solution for iontophoresis"),
 
+      /** {@code 10518500} - Powder for solution for iontophoresis */
       _10518500("10518500", "Powder for solution for iontophoresis"),
 
+      /** {@code 10519000} - Transdermal patch */
       _10519000("10519000", "Transdermal patch"),
 
+      /** {@code 10520000} - Collodion */
       _10520000("10520000", "Collodion"),
 
+      /** {@code 10521000} - Medicated nail lacquer */
       _10521000("10521000", "Medicated nail lacquer"),
 
+      /** {@code 10521500} - Nail solution */
       _10521500("10521500", "Nail solution"),
 
+      /** {@code 10522000} - Poultice */
       _10522000("10522000", "Poultice"),
 
+      /** {@code 10523000} - Cutaneous stick */
       _10523000("10523000", "Cutaneous stick"),
 
+      /** {@code 10524000} - Cutaneous sponge */
       _10524000("10524000", "Cutaneous sponge"),
 
+      /** {@code 10525000} - Impregnated dressing */
       _10525000("10525000", "Impregnated dressing"),
 
+      /** {@code 10526000} - Collar */
       _10526000("10526000", "Collar"),
 
+      /** {@code 10526500} - Medicated collar */
       _10526500("10526500", "Medicated collar"),
 
+      /** {@code 10527000} - Medicated pendant */
       _10527000("10527000", "Medicated pendant"),
 
+      /** {@code 10528000} - Ear tag */
       _10528000("10528000", "Ear tag"),
 
+      /** {@code 10529000} - Dip solution */
       _10529000("10529000", "Dip solution"),
 
+      /** {@code 10530000} - Dip suspension */
       _10530000("10530000", "Dip suspension"),
 
+      /** {@code 10531000} - Dip emulsion */
       _10531000("10531000", "Dip emulsion"),
 
+      /** {@code 10532000} - Concentrate for dip solution */
       _10532000("10532000", "Concentrate for dip solution"),
 
+      /** {@code 10533000} - Concentrate for dip suspension */
       _10533000("10533000", "Concentrate for dip suspension"),
 
+      /** {@code 10534000} - Concentrate for dip emulsion */
       _10534000("10534000", "Concentrate for dip emulsion"),
 
+      /** {@code 10534500} - Powder for dip solution */
       _10534500("10534500", "Powder for dip solution"),
 
+      /** {@code 10535000} - Concentrate for solution for fish treatment */
       _10535000("10535000", "Concentrate for solution for fish treatment"),
 
+      /** {@code 10536000} - Powder for suspension for fish treatment */
       _10536000("10536000", "Powder for suspension for fish treatment"),
 
+      /** {@code 10537000} - Pour-on solution */
       _10537000("10537000", "Pour-on solution"),
 
+      /** {@code 10538000} - Pour-on suspension */
       _10538000("10538000", "Pour-on suspension"),
 
+      /** {@code 10539000} - Pour-on emulsion */
       _10539000("10539000", "Pour-on emulsion"),
 
+      /** {@code 10539250} - Scalp solution */
       _10539250("10539250", "Scalp solution"),
 
+      /** {@code 10539500} - Scrub */
       _10539500("10539500", "Scrub"),
 
+      /** {@code 10540000} - Spot-on solution */
       _10540000("10540000", "Spot-on solution"),
 
+      /** {@code 10541000} - Spot-on suspension */
       _10541000("10541000", "Spot-on suspension"),
 
+      /** {@code 10542000} - Spot-on emulsion */
       _10542000("10542000", "Spot-on emulsion"),
 
+      /** {@code 10543000} - Teat dip solution */
       _10543000("10543000", "Teat dip solution"),
 
+      /** {@code 10544000} - Teat dip suspension */
       _10544000("10544000", "Teat dip suspension"),
 
+      /** {@code 10545000} - Teat dip emulsion */
       _10545000("10545000", "Teat dip emulsion"),
 
+      /** {@code 10546000} - Teat spray solution */
       _10546000("10546000", "Teat spray solution"),
 
+      /** {@code 10546250} - Transdermal gel */
       _10546250("10546250", "Transdermal gel"),
 
+      /** {@code 10546400} - Transdermal solution */
       _10546400("10546400", "Transdermal solution"),
 
+      /** {@code 10546500} - Transdermal spray, solution */
       _10546500("10546500", "Transdermal spray, solution"),
 
+      /** {@code 10547000} - Transdermal system */
       _10547000("10547000", "Transdermal system"),
 
+      /** {@code 10548000} - Solution for skin-prick test */
       _10548000("10548000", "Solution for skin-prick test"),
 
+      /** {@code 10549000} - Solution for skin-scratch test */
       _10549000("10549000", "Solution for skin-scratch test"),
 
+      /** {@code 10550000} - Plaster for provocation test */
       _10550000("10550000", "Plaster for provocation test"),
 
+      /** {@code 10600500} - Concentrate for solution for intraocular irrigation */
       _10600500("10600500", "Concentrate for solution for intraocular irrigation"),
 
+      /** {@code 10601000} - Eye cream */
       _10601000("10601000", "Eye cream"),
 
+      /** {@code 10602000} - Eye gel */
       _10602000("10602000", "Eye gel"),
 
+      /** {@code 10603000} - Eye ointment */
       _10603000("10603000", "Eye ointment"),
 
+      /** {@code 10604000} - Eye drops, solution */
       _10604000("10604000", "Eye drops, solution"),
 
+      /** {@code 10604500} - Eye drops, emulsion */
       _10604500("10604500", "Eye drops, emulsion"),
 
+      /** {@code 10605000} - Eye drops, suspension */
       _10605000("10605000", "Eye drops, suspension"),
 
+      /** {@code 10608000} - Eye drops, solvent for reconstitution */
       _10608000("10608000", "Eye drops, solvent for reconstitution"),
 
+      /** {@code 10609000} - Eye drops, prolonged-release */
       _10609000("10609000", "Eye drops, prolonged-release"),
 
+      /** {@code 10610000} - Eye lotion */
       _10610000("10610000", "Eye lotion"),
 
+      /** {@code 10611000} - Eye lotion, solvent for reconstitution */
       _10611000("10611000", "Eye lotion, solvent for reconstitution"),
 
+      /** {@code 10612000} - Ophthalmic insert */
       _10612000("10612000", "Ophthalmic insert"),
 
+      /** {@code 10613000} - Ophthalmic strip */
       _10613000("10613000", "Ophthalmic strip"),
 
+      /** {@code 10701000} - Ear cream */
       _10701000("10701000", "Ear cream"),
 
+      /** {@code 10702000} - Ear gel */
       _10702000("10702000", "Ear gel"),
 
+      /** {@code 10703000} - Ear ointment */
       _10703000("10703000", "Ear ointment"),
 
+      /** {@code 10704000} - Ear drops, solution */
       _10704000("10704000", "Ear drops, solution"),
 
+      /** {@code 10705000} - Ear drops, suspension */
       _10705000("10705000", "Ear drops, suspension"),
 
+      /** {@code 10706000} - Ear drops, emulsion */
       _10706000("10706000", "Ear drops, emulsion"),
 
+      /** {@code 10708000} - Ear powder */
       _10708000("10708000", "Ear powder"),
 
+      /** {@code 10709000} - Ear spray, solution */
       _10709000("10709000", "Ear spray, solution"),
 
+      /** {@code 10710000} - Ear spray, suspension */
       _10710000("10710000", "Ear spray, suspension"),
 
+      /** {@code 10711000} - Ear spray, emulsion */
       _10711000("10711000", "Ear spray, emulsion"),
 
+      /** {@code 10712000} - Ear wash, solution */
       _10712000("10712000", "Ear wash, solution"),
 
+      /** {@code 10713000} - Ear wash, emulsion */
       _10713000("10713000", "Ear wash, emulsion"),
 
+      /** {@code 10714000} - Ear tampon */
       _10714000("10714000", "Ear tampon"),
 
+      /** {@code 10715000} - Ear stick */
       _10715000("10715000", "Ear stick"),
 
+      /** {@code 10801000} - Nasal cream */
       _10801000("10801000", "Nasal cream"),
 
+      /** {@code 10802000} - Nasal gel */
       _10802000("10802000", "Nasal gel"),
 
+      /** {@code 10803000} - Nasal ointment */
       _10803000("10803000", "Nasal ointment"),
 
+      /** {@code 10804000} - Nasal drops, solution */
       _10804000("10804000", "Nasal drops, solution"),
 
+      /** {@code 10805000} - Nasal drops, suspension */
       _10805000("10805000", "Nasal drops, suspension"),
 
+      /** {@code 10806000} - Nasal drops, emulsion */
       _10806000("10806000", "Nasal drops, emulsion"),
 
+      /** {@code 10807000} - Nasal powder */
       _10807000("10807000", "Nasal powder"),
 
+      /** {@code 10808000} - Nasal spray, solution */
       _10808000("10808000", "Nasal spray, solution"),
 
+      /** {@code 10809000} - Nasal spray, suspension */
       _10809000("10809000", "Nasal spray, suspension"),
 
+      /** {@code 10810000} - Nasal spray, emulsion */
       _10810000("10810000", "Nasal spray, emulsion"),
 
+      /** {@code 10811000} - Nasal wash */
       _10811000("10811000", "Nasal wash"),
 
+      /** {@code 10812000} - Nasal stick */
       _10812000("10812000", "Nasal stick"),
 
+      /** {@code 10900500} - Intravaginal ring */
       _10900500("10900500", "Intravaginal ring"),
 
+      /** {@code 10901000} - Vaginal cream */
       _10901000("10901000", "Vaginal cream"),
 
+      /** {@code 10902000} - Vaginal gel */
       _10902000("10902000", "Vaginal gel"),
 
+      /** {@code 10903000} - Vaginal ointment */
       _10903000("10903000", "Vaginal ointment"),
 
+      /** {@code 10904000} - Vaginal foam */
       _10904000("10904000", "Vaginal foam"),
 
+      /** {@code 10905000} - Vaginal solution */
       _10905000("10905000", "Vaginal solution"),
 
+      /** {@code 10906000} - Vaginal suspension */
       _10906000("10906000", "Vaginal suspension"),
 
+      /** {@code 10907000} - Vaginal emulsion */
       _10907000("10907000", "Vaginal emulsion"),
 
+      /** {@code 10908000} - Tablet for vaginal solution */
       _10908000("10908000", "Tablet for vaginal solution"),
 
+      /** {@code 10909000} - Pessary */
       _10909000("10909000", "Pessary"),
 
+      /** {@code 10910000} - Vaginal capsule, hard */
       _10910000("10910000", "Vaginal capsule, hard"),
 
+      /** {@code 10911000} - Vaginal capsule, soft */
       _10911000("10911000", "Vaginal capsule, soft"),
 
+      /** {@code 10912000} - Vaginal tablet */
       _10912000("10912000", "Vaginal tablet"),
 
+      /** {@code 10913000} - Effervescent vaginal tablet */
       _10913000("10913000", "Effervescent vaginal tablet"),
 
+      /** {@code 10914000} - Medicated vaginal tampon */
       _10914000("10914000", "Medicated vaginal tampon"),
 
+      /** {@code 10915000} - Vaginal delivery system */
       _10915000("10915000", "Vaginal delivery system"),
 
+      /** {@code 10916000} - Vaginal sponge */
       _10916000("10916000", "Vaginal sponge"),
 
+      /** {@code 11001000} - Rectal cream */
       _11001000("11001000", "Rectal cream"),
 
+      /** {@code 11002000} - Rectal gel */
       _11002000("11002000", "Rectal gel"),
 
+      /** {@code 11003000} - Rectal ointment */
       _11003000("11003000", "Rectal ointment"),
 
+      /** {@code 11004000} - Rectal foam */
       _11004000("11004000", "Rectal foam"),
 
+      /** {@code 11005000} - Rectal solution */
       _11005000("11005000", "Rectal solution"),
 
+      /** {@code 11006000} - Rectal suspension */
       _11006000("11006000", "Rectal suspension"),
 
+      /** {@code 11007000} - Rectal emulsion */
       _11007000("11007000", "Rectal emulsion"),
 
+      /** {@code 11008000} - Concentrate for rectal solution */
       _11008000("11008000", "Concentrate for rectal solution"),
 
+      /** {@code 11009000} - Powder for rectal solution */
       _11009000("11009000", "Powder for rectal solution"),
 
+      /** {@code 11010000} - Powder for rectal suspension */
       _11010000("11010000", "Powder for rectal suspension"),
 
+      /** {@code 11011000} - Tablet for rectal solution */
       _11011000("11011000", "Tablet for rectal solution"),
 
+      /** {@code 11012000} - Tablet for rectal suspension */
       _11012000("11012000", "Tablet for rectal suspension"),
 
+      /** {@code 11013000} - Suppository */
       _11013000("11013000", "Suppository"),
 
+      /** {@code 11014000} - Rectal capsule */
       _11014000("11014000", "Rectal capsule"),
 
+      /** {@code 11015000} - Rectal tampon */
       _11015000("11015000", "Rectal tampon"),
 
+      /** {@code 11100500} - Aerosol */
       _11100500("11100500", "Aerosol"),
 
+      /** {@code 11101000} - Nebuliser solution */
       _11101000("11101000", "Nebuliser solution"),
 
+      /** {@code 11102000} - Nebuliser suspension */
       _11102000("11102000", "Nebuliser suspension"),
 
+      /** {@code 11103000} - Powder for nebuliser suspension */
       _11103000("11103000", "Powder for nebuliser suspension"),
 
+      /** {@code 11104000} - Powder for nebuliser solution */
       _11104000("11104000", "Powder for nebuliser solution"),
 
+      /** {@code 11105000} - Nebuliser emulsion */
       _11105000("11105000", "Nebuliser emulsion"),
 
+      /** {@code 11106000} - Pressurised inhalation, solution */
       _11106000("11106000", "Pressurised inhalation, solution"),
 
+      /** {@code 11107000} - Pressurised inhalation, suspension */
       _11107000("11107000", "Pressurised inhalation, suspension"),
 
+      /** {@code 11108000} - Pressurised inhalation, emulsion */
       _11108000("11108000", "Pressurised inhalation, emulsion"),
 
+      /** {@code 11109000} - Inhalation powder */
       _11109000("11109000", "Inhalation powder"),
 
+      /** {@code 11110000} - Inhalation powder, hard capsule */
       _11110000("11110000", "Inhalation powder, hard capsule"),
 
+      /** {@code 11111000} - Inhalation powder, pre-dispensed */
       _11111000("11111000", "Inhalation powder, pre-dispensed"),
 
+      /** {@code 11112000} - Inhalation vapour, powder */
       _11112000("11112000", "Inhalation vapour, powder"),
 
+      /** {@code 11113000} - Inhalation vapour, capsule */
       _11113000("11113000", "Inhalation vapour, capsule"),
 
+      /** {@code 11114000} - Inhalation vapour, solution */
       _11114000("11114000", "Inhalation vapour, solution"),
 
+      /** {@code 11115000} - Inhalation vapour, tablet */
       _11115000("11115000", "Inhalation vapour, tablet"),
 
+      /** {@code 11116000} - Inhalation vapour, ointment */
       _11116000("11116000", "Inhalation vapour, ointment"),
 
+      /** {@code 11117000} - Inhalation vapour, liquid */
       _11117000("11117000", "Inhalation vapour, liquid"),
 
+      /** {@code 11118000} - Inhalation gas */
       _11118000("11118000", "Inhalation gas"),
 
+      /** {@code 11201000} - Solution for injection */
       _11201000("11201000", "Solution for injection"),
 
+      /** {@code 11202000} - Suspension for injection */
       _11202000("11202000", "Suspension for injection"),
 
+      /** {@code 11203000} - Emulsion for injection */
       _11203000("11203000", "Emulsion for injection"),
 
+      /** {@code 11204000} - Gel for injection */
       _11204000("11204000", "Gel for injection"),
 
+      /** {@code 11205000} - Powder for solution for injection */
       _11205000("11205000", "Powder for solution for injection"),
 
+      /** {@code 11206000} - Powder for suspension for injection */
       _11206000("11206000", "Powder for suspension for injection"),
 
+      /** {@code 11208400} - Powder for prolonged-release suspension for injection */
       _11208400("11208400", "Powder for prolonged-release suspension for injection"),
 
+      /** {@code 11208500} - Prolonged-release suspension for injection */
       _11208500("11208500", "Prolonged-release suspension for injection"),
 
+      /** {@code 11209000} - Concentrate for solution for injection */
       _11209000("11209000", "Concentrate for solution for injection"),
 
+      /** {@code 11209500} - Solution for cardioplegia */
       _11209500("11209500", "Solution for cardioplegia"),
 
+      /** {@code 11210000} - Solution for infusion */
       _11210000("11210000", "Solution for infusion"),
 
+      /** {@code 11211000} - Emulsion for infusion */
       _11211000("11211000", "Emulsion for infusion"),
 
+      /** {@code 11211500} - Powder for dispersion for infusion */
       _11211500("11211500", "Powder for dispersion for infusion"),
 
+      /** {@code 11212000} - Powder for solution for infusion */
       _11212000("11212000", "Powder for solution for infusion"),
 
+      /** {@code 11213000} - Concentrate for solution for infusion */
       _11213000("11213000", "Concentrate for solution for infusion"),
 
+      /** {@code 11215000} - Lyophilisate for solution for infusion */
       _11215000("11215000", "Lyophilisate for solution for infusion"),
 
+      /** {@code 11216000} - Solvent for parenteral use */
       _11216000("11216000", "Solvent for parenteral use"),
 
+      /** {@code 11217000} - Lyophilisate for solution for injection */
       _11217000("11217000", "Lyophilisate for solution for injection"),
 
+      /** {@code 11218000} - Lyophilisate for suspension for injection */
       _11218000("11218000", "Lyophilisate for suspension for injection"),
 
+      /** {@code 11301000} - Implant */
       _11301000("11301000", "Implant"),
 
+      /** {@code 11302000} - Implantation tablet */
       _11302000("11302000", "Implantation tablet"),
 
+      /** {@code 11303000} - Implantation chain */
       _11303000("11303000", "Implantation chain"),
 
+      /** {@code 11303300} - Implantation matrix */
       _11303300("11303300", "Implantation matrix"),
 
+      /** {@code 11303500} - Implantation suspension */
       _11303500("11303500", "Implantation suspension"),
 
+      /** {@code 11303750} - Kit for implant */
       _11303750("11303750", "Kit for implant"),
 
+      /** {@code 11401000} - Solution for peritoneal dialysis */
       _11401000("11401000", "Solution for peritoneal dialysis"),
 
+      /** {@code 11402000} - Solution for haemofiltration */
       _11402000("11402000", "Solution for haemofiltration"),
 
+      /** {@code 11403000} - Solution for haemodiafiltration */
       _11403000("11403000", "Solution for haemodiafiltration"),
 
+      /** {@code 11404000} - Solution for haemodialysis */
       _11404000("11404000", "Solution for haemodialysis"),
 
+      /** {@code 11405000} - Concentrate for solution for haemodialysis */
       _11405000("11405000", "Concentrate for solution for haemodialysis"),
 
+      /** {@code 11501000} - Solution for intravesical use */
       _11501000("11501000", "Solution for intravesical use"),
 
+      /** {@code 11502000} - Bladder irrigation */
       _11502000("11502000", "Bladder irrigation"),
 
+      /** {@code 11502500} - Intravesical solution */
       _11502500("11502500", "Intravesical solution"),
 
+      /** {@code 11503000} - Powder for bladder irrigation */
       _11503000("11503000", "Powder for bladder irrigation"),
 
+      /** {@code 11504000} - Urethral gel */
       _11504000("11504000", "Urethral gel"),
 
+      /** {@code 11505000} - Urethral stick */
       _11505000("11505000", "Urethral stick"),
 
+      /** {@code 11601000} - Endotracheopulmonary instillation, solution */
       _11601000("11601000", "Endotracheopulmonary instillation, solution"),
 
+      /** {@code 11602000} - Endotracheopulmonary instillation, powder for solution */
       _11602000("11602000", "Endotracheopulmonary instillation, powder for solution"),
 
+      /** {@code 11603000} - Endotracheopulmonary instillation, suspension */
       _11603000("11603000", "Endotracheopulmonary instillation, suspension"),
 
+      /** {@code 11701000} - Endocervical gel */
       _11701000("11701000", "Endocervical gel"),
 
+      /** {@code 11801000} - Intramammary solution */
       _11801000("11801000", "Intramammary solution"),
 
+      /** {@code 11802000} - Intramammary suspension */
       _11802000("11802000", "Intramammary suspension"),
 
+      /** {@code 11803000} - Intramammary emulsion */
       _11803000("11803000", "Intramammary emulsion"),
 
+      /** {@code 11804000} - Intramammary ointment */
       _11804000("11804000", "Intramammary ointment"),
 
+      /** {@code 11805000} - Teat stick */
       _11805000("11805000", "Teat stick"),
 
+      /** {@code 11901000} - Intrauterine delivery system */
       _11901000("11901000", "Intrauterine delivery system"),
 
+      /** {@code 11902000} - Intrauterine solution */
       _11902000("11902000", "Intrauterine solution"),
 
+      /** {@code 11903000} - Intrauterine suspension */
       _11903000("11903000", "Intrauterine suspension"),
 
+      /** {@code 11904000} - Intrauterine emulsion */
       _11904000("11904000", "Intrauterine emulsion"),
 
+      /** {@code 11905000} - Intrauterine tablet */
       _11905000("11905000", "Intrauterine tablet"),
 
+      /** {@code 11906000} - Intrauterine capsule */
       _11906000("11906000", "Intrauterine capsule"),
 
+      /** {@code 12001000} - Bee-hive strip */
       _12001000("12001000", "Bee-hive strip"),
 
+      /** {@code 12001500} - Bee-hive gel */
       _12001500("12001500", "Bee-hive gel"),
 
+      /** {@code 12002000} - Bee smoke paper */
       _12002000("12002000", "Bee smoke paper"),
 
+      /** {@code 12003000} - Bee smoke stick */
       _12003000("12003000", "Bee smoke stick"),
 
+      /** {@code 12004000} - Nebulisation solution */
       _12004000("12004000", "Nebulisation solution"),
 
+      /** {@code 12100500} - Absorbable coated sponge */
       _12100500("12100500", "Absorbable coated sponge"),
 
+      /** {@code 12101000} - Denture lacquer */
       _12101000("12101000", "Denture lacquer"),
 
+      /** {@code 12102000} - Anticoagulant and preservative solution for blood */
       _12102000("12102000", "Anticoagulant and preservative solution for blood"),
 
+      /** {@code 12103000} - Solution for blood fraction modification */
       _12103000("12103000", "Solution for blood fraction modification"),
 
+      /** {@code 12104000} - Wound stick */
       _12104000("12104000", "Wound stick"),
 
+      /** {@code 12105000} - Radiopharmaceutical precursor */
       _12105000("12105000", "Radiopharmaceutical precursor"),
 
+      /** {@code 12106000} - Radionuclide generator */
       _12106000("12106000", "Radionuclide generator"),
 
+      /** {@code 12107000} - Kit for radiopharmaceutical preparation */
       _12107000("12107000", "Kit for radiopharmaceutical preparation"),
 
+      /** {@code 12108000} - Gastroenteral solution */
       _12108000("12108000", "Gastroenteral solution"),
 
+      /** {@code 12109000} - Dispersion */
       _12109000("12109000", "Dispersion"),
 
+      /** {@code 12109900} - Frozen solution for sealant */
       _12109900("12109900", "Frozen solution for sealant"),
 
+      /** {@code 12110000} - Gastroenteral suspension */
       _12110000("12110000", "Gastroenteral suspension"),
 
+      /** {@code 12111000} - Gastroenteral emulsion */
       _12111000("12111000", "Gastroenteral emulsion"),
 
+      /** {@code 12111500} - Intraperitoneal solution */
       _12111500("12111500", "Intraperitoneal solution"),
 
+      /** {@code 12112000} - Solution for organ preservation */
       _12112000("12112000", "Solution for organ preservation"),
 
+      /** {@code 12113000} - Irrigation solution */
       _12113000("12113000", "Irrigation solution"),
 
+      /** {@code 12114000} - Stomach irrigation */
       _12114000("12114000", "Stomach irrigation"),
 
+      /** {@code 12115000} - Sealant */
       _12115000("12115000", "Sealant"),
 
+      /** {@code 12115100} - Sealant matrix */
       _12115100("12115100", "Sealant matrix"),
 
+      /** {@code 12115200} - Sealant powder */
       _12115200("12115200", "Sealant powder"),
 
+      /** {@code 12115500} - Solution for perfusion of organs */
       _12115500("12115500", "Solution for perfusion of organs"),
 
+      /** {@code 12117000} - Impregnated pad */
       _12117000("12117000", "Impregnated pad"),
 
+      /** {@code 12117500} - Impregnated plug */
       _12117500("12117500", "Impregnated plug"),
 
+      /** {@code 12118000} - Living tissue equivalent */
       _12118000("12118000", "Living tissue equivalent"),
 
+      /** {@code 12118500} - Lyophilisate for oculonasal suspension */
       _12118500("12118500", "Lyophilisate for oculonasal suspension"),
 
+      /** {@code 12119000} - Medicated sponge */
       _12119000("12119000", "Medicated sponge"),
 
+      /** {@code 12120000} - Intestinal gel */
       _12120000("12120000", "Intestinal gel"),
 
+      /** {@code 12130000} - Medicated thread */
       _12130000("12130000", "Medicated thread"),
 
+      /** {@code 12131000} - Solution for provocation test */
       _12131000("12131000", "Solution for provocation test"),
 
+      /** {@code 12301000} - Medicinal gas, compressed */
       _12301000("12301000", "Medicinal gas, compressed"),
 
+      /** {@code 12302000} - Medicinal gas, cryogenic */
       _12302000("12302000", "Medicinal gas, cryogenic"),
 
+      /** {@code 12303000} - Medicinal gas, liquefied */
       _12303000("12303000", "Medicinal gas, liquefied"),
 
+      /** {@code 13001000} - Concentrate for concentrate for solution for infusion */
       _13001000("13001000", "Concentrate for concentrate for solution for infusion"),
 
+      /** {@code 13002000} - Concentrate for nebuliser solution */
       _13002000("13002000", "Concentrate for nebuliser solution"),
 
+      /** {@code 13003000} - Concentrate for oromucosal solution */
       _13003000("13003000", "Concentrate for oromucosal solution"),
 
+      /** {@code 13004000} - Concentrate for suspension for injection */
       _13004000("13004000", "Concentrate for suspension for injection"),
 
+      /** {@code 13005000} - Dispersion for concentrate for dispersion for infusion */
       _13005000("13005000", "Dispersion for concentrate for dispersion for infusion"),
 
+      /** {@code 13006000} - Ear drops, powder for suspension */
       _13006000("13006000", "Ear drops, powder for suspension"),
 
+      /** {@code 13007000} - Effervescent granules for oral suspension */
       _13007000("13007000", "Effervescent granules for oral suspension"),
 
+      /** {@code 13008000} - Emulsion for emulsion for injection */
       _13008000("13008000", "Emulsion for emulsion for injection"),
 
+      /** {@code 13009000} - Endotracheopulmonary instillation, powder for suspension */
       _13009000("13009000", "Endotracheopulmonary instillation, powder for suspension"),
 
+      /** {@code 13010000} - Eye drops, powder for solution */
       _13010000("13010000", "Eye drops, powder for solution"),
 
+      /** {@code 13011000} - Eye drops, powder for suspension */
       _13011000("13011000", "Eye drops, powder for suspension"),
 
+      /** {@code 13012000} - Gas for dispersion for infusion */
       _13012000("13012000", "Gas for dispersion for infusion"),
 
+      /** {@code 13013000} - Gas for dispersion for injection */
       _13013000("13013000", "Gas for dispersion for injection"),
 
+      /** {@code 13014000} - Gel for gel */
       _13014000("13014000", "Gel for gel"),
 
+      /** {@code 13015000} - Granules for rectal suspension */
       _13015000("13015000", "Granules for rectal suspension"),
 
+      /** {@code 13016000} - Laryngopharyngeal solution */
       _13016000("13016000", "Laryngopharyngeal solution"),
 
+      /** {@code 13017000} - Laryngopharyngeal spray, solution */
       _13017000("13017000", "Laryngopharyngeal spray, solution"),
 
+      /** {@code 13018000} - Matrix for implantation matrix */
       _13018000("13018000", "Matrix for implantation matrix"),
 
+      /** {@code 13019000} - Nasal drops, lyophilisate for suspension */
       _13019000("13019000", "Nasal drops, lyophilisate for suspension"),
 
+      /** {@code 13020000} - Nasal drops, powder for solution */
       _13020000("13020000", "Nasal drops, powder for solution"),
 
+      /** {@code 13021000} - Powder for gel */
       _13021000("13021000", "Powder for gel"),
 
+      /** {@code 13022000} - Powder for dental gel */
       _13022000("13022000", "Powder for dental gel"),
 
+      /** {@code 13023000} - Powder for dispersion for injection */
       _13023000("13023000", "Powder for dispersion for injection"),
 
+      /** {@code 13024000} - Powder for endocervical gel */
       _13024000("13024000", "Powder for endocervical gel"),
 
+      /** {@code 13025000} - Powder for endosinusial solution */
       _13025000("13025000", "Powder for endosinusial solution"),
 
+      /** {@code 13026000} - Powder for gingival gel */
       _13026000("13026000", "Powder for gingival gel"),
 
+      /** {@code 13027000} - Powder for implantation matrix */
       _13027000("13027000", "Powder for implantation matrix"),
 
+      /** {@code 13028000} - Powder for implantation paste */
       _13028000("13028000", "Powder for implantation paste"),
 
+      /** {@code 13029000} - Powder for intraocular instillation solution */
       _13029000("13029000", "Powder for intraocular instillation solution"),
 
+      /** {@code 13031000} - Powder for sealant */
       _13031000("13031000", "Powder for sealant"),
 
+      /** {@code 13032000} - Powder for solution for skin-prick test */
       _13032000("13032000", "Powder for solution for skin-prick test"),
 
+      /** {@code 13033000} - Solution for solution for injection */
       _13033000("13033000", "Solution for solution for injection"),
 
+      /** {@code 13034000} - Solution for spray */
       _13034000("13034000", "Solution for spray"),
 
+      /** {@code 13035000} - Solvent for... */
       _13035000("13035000", "Solvent for..."),
 
+      /** {@code 13036000} - Suspension for emulsion for injection */
       _13036000("13036000", "Suspension for emulsion for injection"),
 
+      /** {@code 13037000} - Suspension for oral suspension */
       _13037000("13037000", "Suspension for oral suspension"),
 
+      /** {@code 13038000} - Suspension for spray */
       _13038000("13038000", "Suspension for spray"),
 
+      /** {@code 13039000} - Suspension for suspension for injection */
       _13039000("13039000", "Suspension for suspension for injection"),
 
+      /** {@code 13040000} - Powder for emulsion for injection */
       _13040000("13040000", "Powder for emulsion for injection"),
 
+      /** {@code 13041000} - Endosinusial solution */
       _13041000("13041000", "Endosinusial solution"),
 
+      /** {@code 13042000} - Epilesional solution */
       _13042000("13042000", "Epilesional solution"),
 
+      /** {@code 13043000} - Implantation paste */
       _13043000("13043000", "Implantation paste"),
 
+      /** {@code 13044000} - Intraocular instillation solution */
       _13044000("13044000", "Intraocular instillation solution"),
 
+      /** {@code 13045000} - Intravesical suspension */
       _13045000("13045000", "Intravesical suspension"),
 
+      /** {@code 13046000} - Coated granules */
       _13046000("13046000", "Coated granules"),
 
+      /** {@code 13047000} - Solution for suspension for injection */
       _13047000("13047000", "Solution for suspension for injection"),
 
+      /** {@code 13048000} - Granules for suspension for injection */
       _13048000("13048000", "Granules for suspension for injection"),
 
+      /** {@code 13049000} - Dispersion for injection/infusion */
       _13049000("13049000", "Dispersion for injection/infusion"),
 
+      /** {@code 13050000} - Gas for dispersion for injection/infusion */
       _13050000("13050000", "Gas for dispersion for injection/infusion"),
 
+      /** {@code 13051000} - Solution for injection/skin-prick test */
       _13051000("13051000", "Solution for injection/skin-prick test"),
 
+      /** {@code 13052000} - Powder for solution for injection/skin-prick test */
       _13052000("13052000", "Powder for solution for injection/skin-prick test"),
 
+      /** {@code 13054000} - Solution for bee-hive strip */
       _13054000("13054000", "Solution for bee-hive strip"),
 
+      /** {@code 13055000} - Solution for use in drinking water/milk */
       _13055000("13055000", "Solution for use in drinking water/milk"),
 
+      /** {@code 13056000} - Powder for solution for fish treatment */
       _13056000("13056000", "Powder for solution for fish treatment"),
 
+      /** {@code 13058000} - Caplet */
       _13058000("13058000", "Caplet"),
 
+      /** {@code 13061000} - Solution for solution for infusion */
       _13061000("13061000", "Solution for solution for infusion"),
 
+      /** {@code 13065000} - Intramammary gel */
       _13065000("13065000", "Intramammary gel"),
 
+      /** {@code 13066000} - Tablet for cutaneous solution */
       _13066000("13066000", "Tablet for cutaneous solution"),
 
+      /** {@code 13067000} - Lyophilisate for oral suspension */
       _13067000("13067000", "Lyophilisate for oral suspension"),
 
+      /** {@code 13076000} - Prolonged-release solution for injection */
       _13076000("13076000", "Prolonged-release solution for injection"),
 
+      /** {@code 13077000} - Urethral emulsion */
       _13077000("13077000", "Urethral emulsion"),
 
+      /** {@code 13078000} - Bee-hive solution */
       _13078000("13078000", "Bee-hive solution"),
 
+      /** {@code 13079000} - Powder for bee-hive solution */
       _13079000("13079000", "Powder for bee-hive solution"),
 
+      /** {@code 13080000} - Solution for bee-hive solution */
       _13080000("13080000", "Solution for bee-hive solution"),
 
+      /** {@code 13082000} - Bee-hive dispersion */
       _13082000("13082000", "Bee-hive dispersion"),
 
+      /** {@code 13084000} - Oral spray, suspension */
       _13084000("13084000", "Oral spray, suspension"),
 
+      /** {@code 13085000} - Concentrate for concentrate for oral spray, suspension */
       _13085000("13085000", "Concentrate for concentrate for oral spray, suspension"),
 
+      /** {@code 13087000} - Oculonasal suspension */
       _13087000("13087000", "Oculonasal suspension"),
 
+      /** {@code 13089000} - Lyophilisate for oral spray, suspension */
       _13089000("13089000", "Lyophilisate for oral spray, suspension"),
 
+      /** {@code 13091000} - Emulsion for suspension for injection */
       _13091000("13091000", "Emulsion for suspension for injection"),
 
+      /** {@code 13096000} - Nasal spray, lyophilisate for suspension */
       _13096000("13096000", "Nasal spray, lyophilisate for suspension"),
 
+      /** {@code 13098000} - Lyophilisate for oculonasal suspension/use in drinking water */
       _13098000("13098000", "Lyophilisate for oculonasal suspension/use in drinking water"),
 
+      /** {@code 13099000} - Powder for bee-hive dispersion */
       _13099000("13099000", "Powder for bee-hive dispersion"),
 
+      /** {@code 13100000} - Solution for bee-hive dispersion */
       _13100000("13100000", "Solution for bee-hive dispersion"),
 
+      /** {@code 13102000} - Transdermal ointment */
       _13102000("13102000", "Transdermal ointment"),
 
+      /** {@code 13105000} - Sublingual powder */
       _13105000("13105000", "Sublingual powder"),
 
+      /** {@code 13106000} - Oral herbal material */
       _13106000("13106000", "Oral herbal material"),
 
+      /** {@code 13107000} - Solution for cardioplegia/organ preservation */
       _13107000("13107000", "Solution for cardioplegia/organ preservation"),
 
+      /** {@code 13111000} - Powder for vaginal solution */
       _13111000("13111000", "Powder for vaginal solution"),
 
+      /** {@code 13113000} - Intrauterine gel */
       _13113000("13113000", "Intrauterine gel"),
 
+      /** {@code 13115000} - Medicinal leech */
       _13115000("13115000", "Medicinal leech"),
 
+      /** {@code 13116000} - Lyophilisate for emulsion for injection */
       _13116000("13116000", "Lyophilisate for emulsion for injection"),
 
+      /** {@code 13118000} - Tablet with sensor */
       _13118000("13118000", "Tablet with sensor"),
 
+      /** {@code 13123000} - Urethral ointment */
       _13123000("13123000", "Urethral ointment"),
 
+      /** {@code 13124000} - Medicinal larvae */
       _13124000("13124000", "Medicinal larvae"),
 
+      /** {@code 13126000} - Prolonged-release dispersion for injection */
       _13126000("13126000", "Prolonged-release dispersion for injection"),
 
+      /** {@code 13127000} - Sublingual lyophilisate */
       _13127000("13127000", "Sublingual lyophilisate"),
 
+      /** {@code 13128000} - Prolonged-release wound solution */
       _13128000("13128000", "Prolonged-release wound solution"),
 
+      /** {@code 13129000} - Nebuliser dispersion */
       _13129000("13129000", "Nebuliser dispersion"),
 
+      /** {@code 13133000} - Gastro-resistant oral suspension */
       _13133000("13133000", "Gastro-resistant oral suspension"),
 
+      /** {@code 13134000} - Prolonged-release oral suspension */
       _13134000("13134000", "Prolonged-release oral suspension"),
 
+      /** {@code 13135000} - Modified-release oral suspension */
       _13135000("13135000", "Modified-release oral suspension"),
 
+      /** {@code 13136000} - Gastro-resistant powder for oral suspension */
       _13136000("13136000", "Gastro-resistant powder for oral suspension"),
 
+      /** {@code 13139000} - Concentrate for dispersion for injection */
       _13139000("13139000", "Concentrate for dispersion for injection"),
 
+      /** {@code 13140000} - Cutaneous/oromucosal solution */
       _13140000("13140000", "Cutaneous/oromucosal solution"),
 
+      /** {@code 13141000} - Oromucosal pouch */
       _13141000("13141000", "Oromucosal pouch"),
 
+      /** {@code 13145000} - Impregnated cutaneous swab */
       _13145000("13145000", "Impregnated cutaneous swab"),
 
+      /** {@code 13148000} - Prolonged-release pessary */
       _13148000("13148000", "Prolonged-release pessary"),
 
+      /** {@code 13149000} - Oromucosal film */
       _13149000("13149000", "Oromucosal film"),
 
+      /** {@code 13152000} - Concentrate for emulsion for injection */
       _13152000("13152000", "Concentrate for emulsion for injection"),
 
+      /** {@code 13154000} - Film-coated granules */
       _13154000("13154000", "Film-coated granules"),
 
+      /** {@code 13158000} - Effervescent tablet for oculonasal suspension */
       _13158000("13158000", "Effervescent tablet for oculonasal suspension"),
 
+      /** {@code 13159000} - Eye drops, prolonged-release solution */
       _13159000("13159000", "Eye drops, prolonged-release solution"),
 
+      /** {@code 13162000} - Concentrate for cutaneous emulsion */
       _13162000("13162000", "Concentrate for cutaneous emulsion"),
 
+      /** {@code 13163000} - Granules for use in drinking water/milk */
       _13163000("13163000", "Granules for use in drinking water/milk"),
 
+      /** {@code 30047500} - Pouch */
       _30047500("30047500", "Pouch"),
 
+      /** {@code 50001000} - Chewable/dispersible tablet */
       _50001000("50001000", "Chewable/dispersible tablet"),
 
+      /** {@code 50009000} - Concentrate for cutaneous spray, emulsion */
       _50009000("50009000", "Concentrate for cutaneous spray, emulsion"),
 
+      /** {@code 50009300} - Concentrate for dispersion for infusion */
       _50009300("50009300", "Concentrate for dispersion for infusion"),
 
+      /** {@code 50009500} - Concentrate for emulsion for infusion */
       _50009500("50009500", "Concentrate for emulsion for infusion"),
 
+      /** {@code 50009750} - Concentrate for intravesical solution */
       _50009750("50009750", "Concentrate for intravesical solution"),
 
+      /** {@code 50010000} - Concentrate for oral solution */
       _50010000("50010000", "Concentrate for oral solution"),
 
+      /** {@code 50011000} - Concentrate for oral/rectal solution */
       _50011000("50011000", "Concentrate for oral/rectal solution"),
 
+      /** {@code 50012000} - Concentrate for peritoneal dialysis solution */
       _50012000("50012000", "Concentrate for peritoneal dialysis solution"),
 
+      /** {@code 50013000} - Concentrate for solution for intravesical use */
       _50013000("50013000", "Concentrate for solution for intravesical use"),
 
+      /** {@code 50013250} - Concentrate for solution for peritoneal dialysis */
       _50013250("50013250", "Concentrate for solution for peritoneal dialysis"),
 
+      /** {@code 50013500} - Concentrate for spray emulsion */
       _50013500("50013500", "Concentrate for spray emulsion"),
 
+      /** {@code 50014000} - Concentrate for suspension for infusion */
       _50014000("50014000", "Concentrate for suspension for infusion"),
 
+      /** {@code 50015000} - Cutaneous and nasal ointment */
       _50015000("50015000", "Cutaneous and nasal ointment"),
 
+      /** {@code 50015100} - Cutaneous/ear drops suspension */
       _50015100("50015100", "Cutaneous/ear drops suspension"),
 
+      /** {@code 50015200} - Cutaneous/nasal ointment */
       _50015200("50015200", "Cutaneous/nasal ointment"),
 
+      /** {@code 50015300} - Cutaneous/oromucosal/oral solution */
       _50015300("50015300", "Cutaneous/oromucosal/oral solution"),
 
+      /** {@code 50015400} - Cutaneous/oromucosal spray */
       _50015400("50015400", "Cutaneous/oromucosal spray"),
 
+      /** {@code 50015450} - Cutaneous solution/concentrate for oromucosal solution */
       _50015450("50015450", "Cutaneous solution/concentrate for oromucosal solution"),
 
+      /** {@code 50015500} - Cutaneous spray, emulsion */
       _50015500("50015500", "Cutaneous spray, emulsion"),
 
+      /** {@code 50016000} - Cutaneous spray, ointment */
       _50016000("50016000", "Cutaneous spray, ointment"),
 
+      /** {@code 50017000} - Dental paste */
       _50017000("50017000", "Dental paste"),
 
+      /** {@code 50017500} - Dispersion for infusion */
       _50017500("50017500", "Dispersion for infusion"),
 
+      /** {@code 50018000} - Ear/eye drops, solution */
       _50018000("50018000", "Ear/eye drops, solution"),
 
+      /** {@code 50018500} - Ear/eye drops, suspension */
       _50018500("50018500", "Ear/eye drops, suspension"),
 
+      /** {@code 50019000} - Ear/eye ointment */
       _50019000("50019000", "Ear/eye ointment"),
 
+      /** {@code 50019500} - Ear/eye/nasal drops, solution */
       _50019500("50019500", "Ear/eye/nasal drops, solution"),
 
+      /** {@code 50020000} - Ear/eye/nose drops, solution */
       _50020000("50020000", "Ear/eye/nose drops, solution"),
 
+      /** {@code 50020200} - Ear/nasal drops, suspension */
       _50020200("50020200", "Ear/nasal drops, suspension"),
 
+      /** {@code 50020500} - Effervescent buccal tablet */
       _50020500("50020500", "Effervescent buccal tablet"),
 
+      /** {@code 50021000} - Emulsion for injection/infusion */
       _50021000("50021000", "Emulsion for injection/infusion"),
 
+      /** {@code 50022000} - Endosinusial wash, suspension */
       _50022000("50022000", "Endosinusial wash, suspension"),
 
+      /** {@code 50023500} - Film coated gastro-resistant tablet */
       _50023500("50023500", "Film coated gastro-resistant tablet"),
 
+      /** {@code 50024000} - Gargle/mouthwash */
       _50024000("50024000", "Gargle/mouthwash"),
 
+      /** {@code 50024500} - Gargle/nasal wash */
       _50024500("50024500", "Gargle/nasal wash"),
 
+      /** {@code 50025000} - Gastro-resistant coated tablet */
       _50025000("50025000", "Gastro-resistant coated tablet"),
 
+      /** {@code 50026000} - Gastro-resistant granules for oral suspension */
       _50026000("50026000", "Gastro-resistant granules for oral suspension"),
 
+      /** {@code 50026250} - Gastro-resistant prolonged-release tablet */
       _50026250("50026250", "Gastro-resistant prolonged-release tablet"),
 
+      /** {@code 50028000} - Granules for oral and rectal suspension */
       _50028000("50028000", "Granules for oral and rectal suspension"),
 
+      /** {@code 50029000} - Granules for oral drops, solution */
       _50029000("50029000", "Granules for oral drops, solution"),
 
+      /** {@code 50029150} - Granules for oral/rectal suspension */
       _50029150("50029150", "Granules for oral/rectal suspension"),
 
+      /** {@code 50029250} - Granules for use in drinking water */
       _50029250("50029250", "Granules for use in drinking water"),
 
+      /** {@code 50029500} - Granules for vaginal solution */
       _50029500("50029500", "Granules for vaginal solution"),
 
+      /** {@code 50029600} - Hard capsule with gastro-resistant pellets */
       _50029600("50029600", "Hard capsule with gastro-resistant pellets"),
 
+      /** {@code 50029800} - Inhalation impregnated pad */
       _50029800("50029800", "Inhalation impregnated pad"),
 
+      /** {@code 50030000} - Inhalation powder, tablet */
       _50030000("50030000", "Inhalation powder, tablet"),
 
+      /** {@code 50031000} - Inhalation vapour, effervescent tablet */
       _50031000("50031000", "Inhalation vapour, effervescent tablet"),
 
+      /** {@code 50032000} - Inhalation vapour, emulsion */
       _50032000("50032000", "Inhalation vapour, emulsion"),
 
+      /** {@code 50033000} - Inhalation vapour, impregnated pad */
       _50033000("50033000", "Inhalation vapour, impregnated pad"),
 
+      /** {@code 50033100} - Inhalation vapour, impregnated plug */
       _50033100("50033100", "Inhalation vapour, impregnated plug"),
 
+      /** {@code 50033300} - Intrauterine foam */
       _50033300("50033300", "Intrauterine foam"),
 
+      /** {@code 50033400} - Intravesical solution/solution for injection */
       _50033400("50033400", "Intravesical solution/solution for injection"),
 
+      /** {@code 50034000} - Liquefied gas for dental use */
       _50034000("50034000", "Liquefied gas for dental use"),
 
+      /** {@code 50034700} - Lyophilisate for use in drinking water */
       _50034700("50034700", "Lyophilisate for use in drinking water"),
 
+      /** {@code 50035000} - Modified-release film-coated tablet */
       _50035000("50035000", "Modified-release film-coated tablet"),
 
+      /** {@code 50036000} - Modified-release granules for oral suspension */
       _50036000("50036000", "Modified-release granules for oral suspension"),
 
+      /** {@code 50036050} - Mouthwash, powder for solution */
       _50036050("50036050", "Mouthwash, powder for solution"),
 
+      /** {@code 50036100} - Muco-adhesive buccal prolonged-release tablet */
       _50036100("50036100", "Muco-adhesive buccal prolonged-release tablet"),
 
+      /** {@code 50036500} - Nasal/oromucosal solution */
       _50036500("50036500", "Nasal/oromucosal solution"),
 
+      /** {@code 50036700} - Nasal/oromucosal spray, solution */
       _50036700("50036700", "Nasal/oromucosal spray, solution"),
 
+      /** {@code 50037000} - Nasal spray and oromucosal solution */
       _50037000("50037000", "Nasal spray and oromucosal solution"),
 
+      /** {@code 50037100} - Nasal spray, powder for solution */
       _50037100("50037100", "Nasal spray, powder for solution"),
 
+      /** {@code 50037400} - Nasal spray, solution/oromucosal solution */
       _50037400("50037400", "Nasal spray, solution/oromucosal solution"),
 
+      /** {@code 50037500} - Oral drops, granules for solution */
       _50037500("50037500", "Oral drops, granules for solution"),
 
+      /** {@code 50037750} - Oral drops, liquid */
       _50037750("50037750", "Oral drops, liquid"),
 
+      /** {@code 50037900} - Oral/rectal solution */
       _50037900("50037900", "Oral/rectal solution"),
 
+      /** {@code 50038000} - Oral/rectal suspension */
       _50038000("50038000", "Oral/rectal suspension"),
 
+      /** {@code 50038500} - Oral solution/concentrate for nebuliser solution */
       _50038500("50038500", "Oral solution/concentrate for nebuliser solution"),
 
+      /** {@code 50039000} - Oromucosal patch */
       _50039000("50039000", "Oromucosal patch"),
 
+      /** {@code 50039500} - Oromucosal/laryngopharyngeal solution */
       _50039500("50039500", "Oromucosal/laryngopharyngeal solution"),
 
+      /** {@code 50040000} - Oromucosal/laryngopharyngeal solution/spray */
       _50040000("50040000", "Oromucosal/laryngopharyngeal solution/spray"),
 
+      /** {@code 50040500} - Oromucosal/laryngopharyngeal solution/spray, solution */
       _50040500("50040500", "Oromucosal/laryngopharyngeal solution/spray, solution"),
 
+      /** {@code 50043000} - Powder for concentrate for solution for infusion */
       _50043000("50043000", "Powder for concentrate for solution for infusion"),
 
+      /** {@code 50048750} - Powder for concentrate for dispersion for infusion */
       _50048750("50048750", "Powder for concentrate for dispersion for infusion"),
 
+      /** {@code 50049000} - Powder for concentrate for haemodialysis solution */
       _50049000("50049000", "Powder for concentrate for haemodialysis solution"),
 
+      /** {@code 50049100} - Powder for concentrate for intravesical suspension */
       _50049100("50049100", "Powder for concentrate for intravesical suspension"),
 
+      /** {@code 50049200} - Powder for concentrate for solution for haemodialysis */
       _50049200("50049200", "Powder for concentrate for solution for haemodialysis"),
 
+      /** {@code 50049250} - Powder for concentrate for solution for injection/infusion */
       _50049250("50049250", "Powder for concentrate for solution for injection/infusion"),
 
+      /** {@code 50049270} - Powder for dental solution */
       _50049270("50049270", "Powder for dental solution"),
 
+      /** {@code 50049300} - Powder for epilesional solution */
       _50049300("50049300", "Powder for epilesional solution"),
 
+      /** {@code 50049500} - Powder for implantation suspension */
       _50049500("50049500", "Powder for implantation suspension"),
 
+      /** {@code 50050000} - Powder for intravesical solution */
       _50050000("50050000", "Powder for intravesical solution"),
 
+      /** {@code 50050500} - Powder for intravesical solution/solution for injection */
       _50050500("50050500", "Powder for intravesical solution/solution for injection"),
 
+      /** {@code 50051000} - Powder for intravesical suspension */
       _50051000("50051000", "Powder for intravesical suspension"),
 
+      /** {@code 50051100} - Powder for mouth wash */
       _50051100("50051100", "Powder for mouth wash"),
 
+      /** {@code 50051500} - Powder for nebuliser solution/solution for injection/infusion */
       _50051500("50051500", "Powder for nebuliser solution/solution for injection/infusion"),
 
+      /** {@code 50052000} - Powder for oral/rectal suspension */
       _50052000("50052000", "Powder for oral/rectal suspension"),
 
+      /** {@code 50053000} - Powder for solution for injection or infusion */
       _50053000("50053000", "Powder for solution for injection or infusion"),
 
+      /** {@code 50053500} - Powder for solution for injection/infusion */
       _50053500("50053500", "Powder for solution for injection/infusion"),
 
+      /** {@code 50054000} - Powder for solution for intravesical use */
       _50054000("50054000", "Powder for solution for intravesical use"),
 
+      /** {@code 50055000} - Powder for solution for nasal spray */
       _50055000("50055000", "Powder for solution for nasal spray"),
 
+      /** {@code 50055150} - Powder for solution/suspension for injection */
       _50055150("50055150", "Powder for solution/suspension for injection"),
 
+      /** {@code 50055250} - Powder for use in drinking water/milk */
       _50055250("50055250", "Powder for use in drinking water/milk"),
 
+      /** {@code 50055500} - Prolonged-release film-coated tablet */
       _50055500("50055500", "Prolonged-release film-coated tablet"),
 
+      /** {@code 50056000} - Prolonged-release granules for oral suspension */
       _50056000("50056000", "Prolonged-release granules for oral suspension"),
 
+      /** {@code 50056500} - Radiopharmaceutical precursor, solution */
       _50056500("50056500", "Radiopharmaceutical precursor, solution"),
 
+      /** {@code 50057000} - Solution for haemodialysis/haemofiltration */
       _50057000("50057000", "Solution for haemodialysis/haemofiltration"),
 
+      /** {@code 50058000} - Solution for infusion and oral solution */
       _50058000("50058000", "Solution for infusion and oral solution"),
 
+      /** {@code 50059000} - Solution for injection/concentrate for solution for infusion */
       _50059000("50059000", "Solution for injection/concentrate for solution for infusion"),
 
+      /** {@code 50059500} - Solution for injection for euthanasia */
       _50059500("50059500", "Solution for injection for euthanasia"),
 
+      /** {@code 50060000} - Solution for injection/infusion */
       _50060000("50060000", "Solution for injection/infusion"),
 
+      /** {@code 50060700} - Solution for injection/infusion/rectal use */
       _50060700("50060700", "Solution for injection/infusion/rectal use"),
 
+      /** {@code 50061000} - Solution for intraperitoneal use */
       _50061000("50061000", "Solution for intraperitoneal use"),
 
+      /** {@code 50061300} - Solution for use in drinking water */
       _50061300("50061300", "Solution for use in drinking water"),
 
+      /** {@code 50061500} - Solution for sealant */
       _50061500("50061500", "Solution for sealant"),
 
+      /** {@code 50061600} - Solvent for nasal use */
       _50061600("50061600", "Solvent for nasal use"),
 
+      /** {@code 50063000} - Suspension for infusion */
       _50063000("50063000", "Suspension for infusion"),
 
+      /** {@code 50063500} - Suspension for use in drinking water */
       _50063500("50063500", "Suspension for use in drinking water"),
 
+      /** {@code 50066000} - Tablet for oral suspension */
       _50066000("50066000", "Tablet for oral suspension"),
 
+      /** {@code 50068000} - Teat dip/spray solution */
       _50068000("50068000", "Teat dip/spray solution"),
 
+      /** {@code 50070000} - Oral suspension for use in drinking water */
       _50070000("50070000", "Oral suspension for use in drinking water"),
 
+      /** {@code 50072000} - Powder for use in drinking water */
       _50072000("50072000", "Powder for use in drinking water"),
 
+      /** {@code 50073000} - Powder for solution for intraocular irrigation */
       _50073000("50073000", "Powder for solution for intraocular irrigation"),
 
+      /** {@code 50073500} - Solution for intraocular irrigation */
       _50073500("50073500", "Solution for intraocular irrigation"),
 
+      /** {@code 50074000} - Solvent for solution for intraocular irrigation */
       _50074000("50074000", "Solvent for solution for intraocular irrigation"),
 
+      /** {@code 50076000} - Solvent for solution for infusion */
       _50076000("50076000", "Solvent for solution for infusion"),
 
+      /** {@code 50077000} - Dispersion for injection */
       _50077000("50077000", "Dispersion for injection"),
 
+      /** {@code 50079000} - Concentrate for solution for injection/infusion */
       _50079000("50079000", "Concentrate for solution for injection/infusion"),
 
+      /** {@code 50081000} - Inhalation solution */
       _50081000("50081000", "Inhalation solution"),
 
+      /** {@code 50082000} - Oral drops, powder for suspension */
       _50082000("50082000", "Oral drops, powder for suspension"),
 
+      /** {@code 20001000} - Auricular use */
       _20001000("20001000", "Auricular use"),
 
+      /** {@code 20002500} - Buccal use */
       _20002500("20002500", "Buccal use"),
 
+      /** {@code 20003000} - Cutaneous use */
       _20003000("20003000", "Cutaneous use"),
 
+      /** {@code 20004000} - Dental use */
       _20004000("20004000", "Dental use"),
 
+      /** {@code 20006000} - Endocervical use */
       _20006000("20006000", "Endocervical use"),
 
+      /** {@code 20007000} - Endosinusial use */
       _20007000("20007000", "Endosinusial use"),
 
+      /** {@code 20008000} - Endotracheopulmonary use */
       _20008000("20008000", "Endotracheopulmonary use"),
 
+      /** {@code 20009000} - Epidural use */
       _20009000("20009000", "Epidural use"),
 
+      /** {@code 20010000} - Epilesional use */
       _20010000("20010000", "Epilesional use"),
 
+      /** {@code 20011000} - Extraamniotic use */
       _20011000("20011000", "Extraamniotic use"),
 
+      /** {@code 20011500} - Extracorporeal use */
       _20011500("20011500", "Extracorporeal use"),
 
+      /** {@code 20087000} - Extrapleural use */
       _20087000("20087000", "Extrapleural use"),
 
+      /** {@code 20013000} - Gastroenteral use */
       _20013000("20013000", "Gastroenteral use"),
 
+      /** {@code 20013500} - Gastric use */
       _20013500("20013500", "Gastric use"),
 
+      /** {@code 20014000} - Gingival use */
       _20014000("20014000", "Gingival use"),
 
+      /** {@code 20015000} - Haemodialysis */
       _20015000("20015000", "Haemodialysis"),
 
+      /** {@code 20015500} - Implantation */
       _20015500("20015500", "Implantation"),
 
+      /** {@code 20019500} - Infiltration */
       _20019500("20019500", "Infiltration"),
 
+      /** {@code 20020000} - Inhalation use */
       _20020000("20020000", "Inhalation use"),
 
+      /** {@code 20021000} - Intestinal use */
       _20021000("20021000", "Intestinal use"),
 
+      /** {@code 20022000} - Intraamniotic use */
       _20022000("20022000", "Intraamniotic use"),
 
+      /** {@code 20023000} - Intraarterial use */
       _20023000("20023000", "Intraarterial use"),
 
+      /** {@code 20024000} - Intraarticular use */
       _20024000("20024000", "Intraarticular use"),
 
+      /** {@code 20025000} - Intrabursal use */
       _20025000("20025000", "Intrabursal use"),
 
+      /** {@code 20025500} - Intracameral use */
       _20025500("20025500", "Intracameral use"),
 
+      /** {@code 20026000} - Intracardiac use */
       _20026000("20026000", "Intracardiac use"),
 
+      /** {@code 20026500} - Intracartilaginous use */
       _20026500("20026500", "Intracartilaginous use"),
 
+      /** {@code 20027000} - Intracavernous use */
       _20027000("20027000", "Intracavernous use"),
 
+      /** {@code 20027010} - Intracerebral use */
       _20027010("20027010", "Intracerebral use"),
 
+      /** {@code 20028000} - Intracervical use */
       _20028000("20028000", "Intracervical use"),
 
+      /** {@code 20028300} - Intracholangiopancreatic use */
       _20028300("20028300", "Intracholangiopancreatic use"),
 
+      /** {@code 20028500} - Intracisternal use */
       _20028500("20028500", "Intracisternal use"),
 
+      /** {@code 20029000} - Intracoronary use */
       _20029000("20029000", "Intracoronary use"),
 
+      /** {@code 20030000} - Intradermal use */
       _20030000("20030000", "Intradermal use"),
 
+      /** {@code 20031000} - Intradiscal use */
       _20031000("20031000", "Intradiscal use"),
 
+      /** {@code 20031500} - Intraepidermal use */
       _20031500("20031500", "Intraepidermal use"),
 
+      /** {@code 20031700} - Intraglandular use */
       _20031700("20031700", "Intraglandular use"),
 
+      /** {@code 20032000} - Intralesional use */
       _20032000("20032000", "Intralesional use"),
 
+      /** {@code 20033000} - Intralymphatic use */
       _20033000("20033000", "Intralymphatic use"),
 
+      /** {@code 20035000} - Intramuscular use */
       _20035000("20035000", "Intramuscular use"),
 
+      /** {@code 20036000} - Intraocular use */
       _20036000("20036000", "Intraocular use"),
 
+      /** {@code 20036500} - Intraosseous use */
       _20036500("20036500", "Intraosseous use"),
 
+      /** {@code 20037000} - Intrapericardial use */
       _20037000("20037000", "Intrapericardial use"),
 
+      /** {@code 20038000} - Intraperitoneal use */
       _20038000("20038000", "Intraperitoneal use"),
 
+      /** {@code 20039000} - Intrapleural use */
       _20039000("20039000", "Intrapleural use"),
 
+      /** {@code 20039200} - Intraportal use */
       _20039200("20039200", "Intraportal use"),
 
+      /** {@code 20039500} - Intraprostatic use */
       _20039500("20039500", "Intraprostatic use"),
 
+      /** {@code 20041000} - Intrasternal use */
       _20041000("20041000", "Intrasternal use"),
 
+      /** {@code 20042000} - Intrathecal use */
       _20042000("20042000", "Intrathecal use"),
 
+      /** {@code 20043000} - Intratumoral use */
       _20043000("20043000", "Intratumoral use"),
 
+      /** {@code 20044000} - Intrauterine use */
       _20044000("20044000", "Intrauterine use"),
 
+      /** {@code 20045000} - Intravenous use */
       _20045000("20045000", "Intravenous use"),
 
+      /** {@code 20046000} - Intravesical use */
       _20046000("20046000", "Intravesical use"),
 
+      /** {@code 20047000} - Intravitreal use */
       _20047000("20047000", "Intravitreal use"),
 
+      /** {@code 20047500} - Iontophoresis */
       _20047500("20047500", "Iontophoresis"),
 
+      /** {@code 20048000} - Laryngopharyngeal use */
       _20048000("20048000", "Laryngopharyngeal use"),
 
+      /** {@code 20049000} - Nasal use */
       _20049000("20049000", "Nasal use"),
 
+      /** {@code 20051000} - Ocular use */
       _20051000("20051000", "Ocular use"),
 
+      /** {@code 20053000} - Oral use */
       _20053000("20053000", "Oral use"),
 
+      /** {@code 20054000} - Oromucosal use */
       _20054000("20054000", "Oromucosal use"),
 
+      /** {@code 20055000} - Oropharyngeal use */
       _20055000("20055000", "Oropharyngeal use"),
 
+      /** {@code 20057000} - Periarticular use */
       _20057000("20057000", "Periarticular use"),
 
+      /** {@code 20058000} - Perineural use */
       _20058000("20058000", "Perineural use"),
 
+      /** {@code 20059000} - Periodontal use */
       _20059000("20059000", "Periodontal use"),
 
+      /** {@code 20059300} - Periosseous use */
       _20059300("20059300", "Periosseous use"),
 
+      /** {@code 20059400} - Peritumoral use */
       _20059400("20059400", "Peritumoral use"),
 
+      /** {@code 20059500} - Posterior juxtascleral use */
       _20059500("20059500", "Posterior juxtascleral use"),
 
+      /** {@code 20061000} - Rectal use */
       _20061000("20061000", "Rectal use"),
 
+      /** {@code 20061500} - Retrobulbar use */
       _20061500("20061500", "Retrobulbar use"),
 
+      /** {@code 20062000} - Route of administration not applicable */
       _20062000("20062000", "Route of administration not applicable"),
 
+      /** {@code 20063000} - Skin scarification */
       _20063000("20063000", "Skin scarification"),
 
+      /** {@code 20065000} - Subconjunctival use */
       _20065000("20065000", "Subconjunctival use"),
 
+      /** {@code 20066000} - Subcutaneous use */
       _20066000("20066000", "Subcutaneous use"),
 
+      /** {@code 20067000} - Sublingual use */
       _20067000("20067000", "Sublingual use"),
 
+      /** {@code 20067500} - Submucosal use */
       _20067500("20067500", "Submucosal use"),
 
+      /** {@code 20070000} - Transdermal use */
       _20070000("20070000", "Transdermal use"),
 
+      /** {@code 20071000} - Urethral use */
       _20071000("20071000", "Urethral use"),
 
+      /** {@code 20072000} - Vaginal use */
       _20072000("20072000", "Vaginal use"),
 
+      /** {@code 20080000} - Intracerebroventricular use */
       _20080000("20080000", "Intracerebroventricular use"),
 
+      /** {@code 20081000} - Subretinal use */
       _20081000("20081000", "Subretinal use"),
 
+      /** {@code 20084000} - Intracorneal use */
       _20084000("20084000", "Intracorneal use"),
 
+      /** {@code 20086000} - Intraputaminal use */
       _20086000("20086000", "Intraputaminal use");
 
       private final @NonNull String code;
@@ -1998,7 +2993,7 @@ public final class EdqmStandardTerms {
        * @return a new {@link Coding} for this concept, with system {@code
        *     http://standardterms.edqm.eu}
        */
-      public @NonNull Coding coding() {
+      public @NonNull Coding coding(@NonNull EdqmStandardterms this) {
         return new Coding("http://standardterms.edqm.eu", code, display);
       }
 

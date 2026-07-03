@@ -22,560 +22,859 @@ public final class KbvDarreichungsform {
     }
 
     public enum KbvCsSfhirKbvDarreichungsform {
+      /** {@code AEO} - Ätherisches Öl */
       AEO("AEO", "Ätherisches Öl"),
 
+      /** {@code AMP} - Ampullen */
       AMP("AMP", "Ampullen"),
 
+      /** {@code APA} - Ampullenpaare */
       APA("APA", "Ampullenpaare"),
 
+      /** {@code ASN} - Augen- und Nasensalbe */
       ASN("ASN", "Augen- und Nasensalbe"),
 
+      /** {@code ASO} - Augen- und Ohrensalbe */
       ASO("ASO", "Augen- und Ohrensalbe"),
 
+      /** {@code ATO} - Augen- und Ohrentropfen */
       ATO("ATO", "Augen- und Ohrentropfen"),
 
+      /** {@code ATR} - Augentropfen */
       ATR("ATR", "Augentropfen"),
 
+      /** {@code AUB} - Augenbad */
       AUB("AUB", "Augenbad"),
 
+      /** {@code AUC} - Augencreme */
       AUC("AUC", "Augencreme"),
 
+      /** {@code AUG} - Augengel */
       AUG("AUG", "Augengel"),
 
+      /** {@code AUS} - Augensalbe */
       AUS("AUS", "Augensalbe"),
 
+      /** {@code BAD} - Bad */
       BAD("BAD", "Bad"),
 
+      /** {@code BAL} - Balsam */
       BAL("BAL", "Balsam"),
 
+      /** {@code BAN} - Bandage */
       BAN("BAN", "Bandage"),
 
+      /** {@code BEU} - Beutel */
       BEU("BEU", "Beutel"),
 
+      /** {@code BIN} - Binden */
       BIN("BIN", "Binden"),
 
+      /** {@code BON} - Bonbons */
       BON("BON", "Bonbons"),
 
+      /** {@code BPL} - Basisplatte */
       BPL("BPL", "Basisplatte"),
 
+      /** {@code BRE} - Brei */
       BRE("BRE", "Brei"),
 
+      /** {@code BTA} - Brausetabletten */
       BTA("BTA", "Brausetabletten"),
 
+      /** {@code CRE} - Creme */
       CRE("CRE", "Creme"),
 
+      /** {@code DFL} - Durchstechflaschen */
       DFL("DFL", "Durchstechflaschen"),
 
+      /** {@code DIG} - Digitale Gesundheitsanwendungen */
       DIG("DIG", "Digitale Gesundheitsanwendungen"),
 
+      /** {@code DIL} - Dilution */
       DIL("DIL", "Dilution"),
 
+      /** {@code DIS} - Depot-Injektionssuspension */
       DIS("DIS", "Depot-Injektionssuspension"),
 
+      /** {@code DKA} - Dragees in Kalenderpackung */
       DKA("DKA", "Dragees in Kalenderpackung"),
 
+      /** {@code DOS} - Dosieraerosol */
       DOS("DOS", "Dosieraerosol"),
 
+      /** {@code DRA} - Dragees */
       DRA("DRA", "Dragees"),
 
+      /** {@code DRM} - Dragees magensaftresistent */
       DRM("DRM", "Dragees magensaftresistent"),
 
+      /** {@code DSC} - Dosierschaum */
       DSC("DSC", "Dosierschaum"),
 
+      /** {@code DSS} - Dosierspray */
       DSS("DSS", "Dosierspray"),
 
+      /** {@code EDP} - Einzeldosis-Pipetten */
       EDP("EDP", "Einzeldosis-Pipetten"),
 
+      /** {@code EIN} - Einreibung */
       EIN("EIN", "Einreibung"),
 
+      /** {@code ELE} - Elektroden */
       ELE("ELE", "Elektroden"),
 
+      /** {@code ELI} - Elixier */
       ELI("ELI", "Elixier"),
 
+      /** {@code EMU} - Emulsion */
       EMU("EMU", "Emulsion"),
 
+      /** {@code ESS} - Essenz */
       ESS("ESS", "Essenz"),
 
+      /** {@code ESU} - Erwachsenen-Suppositorien */
       ESU("ESU", "Erwachsenen-Suppositorien"),
 
+      /** {@code EXT} - Extrakt */
       EXT("EXT", "Extrakt"),
 
+      /** {@code FBE} - Filterbeutel */
       FBE("FBE", "Filterbeutel"),
 
+      /** {@code FBW} - Franzbranntwein */
       FBW("FBW", "Franzbranntwein"),
 
+      /** {@code FDA} - Filmdragees */
       FDA("FDA", "Filmdragees"),
 
+      /** {@code FER} - Fertigspritzen */
       FER("FER", "Fertigspritzen"),
 
+      /** {@code FET} - Fettsalbe */
       FET("FET", "Fettsalbe"),
 
+      /** {@code FLA} - Flasche */
       FLA("FLA", "Flasche"),
 
+      /** {@code FLE} - Flüssigkeit zum Einnehmen */
       FLE("FLE", "Flüssigkeit zum Einnehmen"),
 
+      /** {@code FLU} - Flüssig */
       FLU("FLU", "Flüssig"),
 
+      /** {@code FMR} - Filmtabletten magensaftresistent */
       FMR("FMR", "Filmtabletten magensaftresistent"),
 
+      /** {@code FOL} - Folie */
       FOL("FOL", "Folie"),
 
+      /** {@code FRB} - Beutel mit retardierten Filmtabletten */
       FRB("FRB", "Beutel mit retardierten Filmtabletten"),
 
+      /** {@code FSE} - Flüssigseife */
       FSE("FSE", "Flüssigseife"),
 
+      /** {@code FTA} - Filmtabletten */
       FTA("FTA", "Filmtabletten"),
 
+      /** {@code GEK} - Granulat zur Entnahme aus Kapseln */
       GEK("GEK", "Granulat zur Entnahme aus Kapseln"),
 
+      /** {@code GEL} - Gel */
       GEL("GEL", "Gel"),
 
+      /**
+       * {@code GLI} - Gas und Lösungsmittel zur Herstellung einer Injektions-/Infusionsdispersion
+       */
       GLI("GLI", "Gas und Lösungsmittel zur Herstellung einer Injektions-/Infusionsdispersion"),
 
+      /** {@code GLO} - Globuli */
       GLO("GLO", "Globuli"),
 
+      /** {@code GMR} - Magensaftresistentes Granulat */
       GMR("GMR", "Magensaftresistentes Granulat"),
 
+      /** {@code GPA} - Gelplatte */
       GPA("GPA", "Gelplatte"),
 
+      /** {@code GRA} - Granulat */
       GRA("GRA", "Granulat"),
 
+      /** {@code GSE} - Granulat zur Herstellung einer Suspension zum Einnehmen */
       GSE("GSE", "Granulat zur Herstellung einer Suspension zum Einnehmen"),
 
+      /** {@code GUL} - Gurgellösung */
       GUL("GUL", "Gurgellösung"),
 
+      /** {@code HAS} - Handschuhe */
       HAS("HAS", "Handschuhe"),
 
+      /** {@code HKM} - Magensaftresistente Hartkapseln */
       HKM("HKM", "Magensaftresistente Hartkapseln"),
 
+      /** {@code HKP} - Hartkapseln */
       HKP("HKP", "Hartkapseln"),
 
+      /** {@code HPI} - Hartkapseln mit Pulver zur Inhalation */
       HPI("HPI", "Hartkapseln mit Pulver zur Inhalation"),
 
+      /** {@code HVW} - Hartkapseln mit veränderter Wirkstofffreisetzung */
       HVW("HVW", "Hartkapseln mit veränderter Wirkstofffreisetzung"),
 
+      /** {@code IFA} - Infusionsampullen */
       IFA("IFA", "Infusionsampullen"),
 
+      /** {@code IFB} - Infusionsbeutel */
       IFB("IFB", "Infusionsbeutel"),
 
+      /** {@code IFD} - Infusionsdispersion */
       IFD("IFD", "Infusionsdispersion"),
 
+      /** {@code IFE} - Injektionslösung in einer Fertigspritze */
       IFE("IFE", "Injektionslösung in einer Fertigspritze"),
 
+      /** {@code IFF} - Infusionsflaschen */
       IFF("IFF", "Infusionsflaschen"),
 
+      /** {@code IFK} - Infusionslösungskonzentrat */
       IFK("IFK", "Infusionslösungskonzentrat"),
 
+      /** {@code IFL} - Injektionsflaschen */
       IFL("IFL", "Injektionsflaschen"),
 
+      /** {@code IFS} - Infusionsset */
       IFS("IFS", "Infusionsset"),
 
+      /** {@code IHA} - Inhalationsampullen */
       IHA("IHA", "Inhalationsampullen"),
 
+      /** {@code IHP} - Inhalationspulver */
       IHP("IHP", "Inhalationspulver"),
 
+      /** {@code IIE} - Injektions- oder Infusionslösung oder Lösung zum Einnehmen */
       IIE("IIE", "Injektions- oder Infusionslösung oder Lösung zum Einnehmen"),
 
+      /** {@code IIL} - Injektions-, Infusionslösung */
       IIL("IIL", "Injektions-, Infusionslösung"),
 
+      /** {@code IIM} - Injektionslösung zur intramuskulären Anwendung */
       IIM("IIM", "Injektionslösung zur intramuskulären Anwendung"),
 
+      /** {@code IKA} - Inhalationskapseln */
       IKA("IKA", "Inhalationskapseln"),
 
+      /** {@code ILO} - Injektionslösung */
       ILO("ILO", "Injektionslösung"),
 
+      /** {@code IMP} - Implantat */
       IMP("IMP", "Implantat"),
 
+      /** {@code INF} - Infusionslösung */
       INF("INF", "Infusionslösung"),
 
+      /** {@code INH} - Inhalat */
       INH("INH", "Inhalat"),
 
+      /** {@code INI} - Injektions-, Infusionsflaschen */
       INI("INI", "Injektions-, Infusionsflaschen"),
 
+      /** {@code INL} - Inhalationslösung */
       INL("INL", "Inhalationslösung"),
 
+      /** {@code INS} - Instant-Tee */
       INS("INS", "Instant-Tee"),
 
+      /** {@code IST} - Instillation */
       IST("IST", "Instillation"),
 
+      /** {@code ISU} - Injektionssuspension */
       ISU("ISU", "Injektionssuspension"),
 
+      /** {@code IUP} - Intrauterinpessar */
       IUP("IUP", "Intrauterinpessar"),
 
+      /** {@code KAN} - Kanülen */
       KAN("KAN", "Kanülen"),
 
+      /** {@code KAP} - Kapseln */
       KAP("KAP", "Kapseln"),
 
+      /** {@code KAT} - Katheter */
       KAT("KAT", "Katheter"),
 
+      /** {@code KDA} - Kaudragees */
       KDA("KDA", "Kaudragees"),
 
+      /** {@code KEG} - Kegel */
       KEG("KEG", "Kegel"),
 
+      /** {@code KER} - Kerne */
       KER("KER", "Kerne"),
 
+      /** {@code KGU} - Kaugummi */
       KGU("KGU", "Kaugummi"),
 
+      /** {@code KID} - Konzentrat zur Herstellung einer Infusionsdispersion */
       KID("KID", "Konzentrat zur Herstellung einer Infusionsdispersion"),
 
+      /** {@code KII} - Konzentrat zur Herstellung einer Injektions- oder Infusionslösung */
       KII("KII", "Konzentrat zur Herstellung einer Injektions- oder Infusionslösung"),
 
+      /** {@code KKS} - Kleinkinder-Suppositorien */
       KKS("KKS", "Kleinkinder-Suppositorien"),
 
+      /** {@code KLI} - Klistiere */
       KLI("KLI", "Klistiere"),
 
+      /** {@code KLT} - Klistier-Tabletten */
       KLT("KLT", "Klistier-Tabletten"),
 
+      /** {@code KMP} - Hartkapseln mit magensaftresistent überzogenen Pellets */
       KMP("KMP", "Hartkapseln mit magensaftresistent überzogenen Pellets"),
 
+      /** {@code KMR} - Kapseln magensaftresistent */
       KMR("KMR", "Kapseln magensaftresistent"),
 
+      /** {@code KOD} - Kondome */
       KOD("KOD", "Kondome"),
 
+      /** {@code KOM} - Kompressen */
       KOM("KOM", "Kompressen"),
 
+      /** {@code KON} - Konzentrat */
       KON("KON", "Konzentrat"),
 
+      /** {@code KPG} - Kombipackung */
       KPG("KPG", "Kombipackung"),
 
+      /** {@code KRI} - Kristallsuspension */
       KRI("KRI", "Kristallsuspension"),
 
+      /** {@code KSS} - Kinder- und Säuglings-Suppositorien */
       KSS("KSS", "Kinder- und Säuglings-Suppositorien"),
 
+      /** {@code KSU} - Kinder-Suppositorien */
       KSU("KSU", "Kinder-Suppositorien"),
 
+      /** {@code KTA} - Kautabletten */
       KTA("KTA", "Kautabletten"),
 
+      /** {@code LAN} - Lanzetten */
       LAN("LAN", "Lanzetten"),
 
+      /** {@code LII} - Lösung zur Injektion, Infusion und Inhalation */
       LII("LII", "Lösung zur Injektion, Infusion und Inhalation"),
 
+      /** {@code LIQ} - Liquidum */
       LIQ("LIQ", "Liquidum"),
 
+      /** {@code LOE} - Lösung */
       LOE("LOE", "Lösung"),
 
+      /** {@code LOT} - Lotion */
       LOT("LOT", "Lotion"),
 
+      /** {@code LOV} - Lösung für einen Vernebler */
       LOV("LOV", "Lösung für einen Vernebler"),
 
+      /** {@code LSE} - Lösung zum Einnehmen */
       LSE("LSE", "Lösung zum Einnehmen"),
 
+      /** {@code LTA} - Lacktabletten */
       LTA("LTA", "Lacktabletten"),
 
+      /** {@code LUP} - Lutschpastillen */
       LUP("LUP", "Lutschpastillen"),
 
+      /** {@code LUT} - Lutschtabletten */
       LUT("LUT", "Lutschtabletten"),
 
+      /** {@code MIL} - Milch */
       MIL("MIL", "Milch"),
 
+      /** {@code MIS} - Mischung */
       MIS("MIS", "Mischung"),
 
+      /** {@code MIX} - Mixtur */
       MIX("MIX", "Mixtur"),
 
+      /** {@code MRG} - Magensaftresistentes Retardgranulat */
       MRG("MRG", "Magensaftresistentes Retardgranulat"),
 
+      /** {@code MRP} - Magensaftresistente Pellets */
       MRP("MRP", "Magensaftresistente Pellets"),
 
+      /** {@code MTA} - Manteltabletten */
       MTA("MTA", "Manteltabletten"),
 
+      /** {@code MUW} - Mundwasser */
       MUW("MUW", "Mundwasser"),
 
+      /** {@code NAG} - Nasengel */
       NAG("NAG", "Nasengel"),
 
+      /** {@code NAO} - Nasenöl */
       NAO("NAO", "Nasenöl"),
 
+      /** {@code NAS} - Nasenspray */
       NAS("NAS", "Nasenspray"),
 
+      /** {@code NAW} - Wirkstoffhaltiger Nagellack */
       NAW("NAW", "Wirkstoffhaltiger Nagellack"),
 
+      /** {@code NDS} - Nasendosierspray */
       NDS("NDS", "Nasendosierspray"),
 
+      /** {@code NSA} - Nasensalbe */
       NSA("NSA", "Nasensalbe"),
 
+      /** {@code NTR} - Nasentropfen */
       NTR("NTR", "Nasentropfen"),
 
+      /** {@code OCU} - Ocusert */
       OCU("OCU", "Ocusert"),
 
+      /** {@code OEL} - Öl */
       OEL("OEL", "Öl"),
 
+      /** {@code OHT} - Ohrentropfen */
       OHT("OHT", "Ohrentropfen"),
 
+      /** {@code OVU} - Ovula */
       OVU("OVU", "Ovula"),
 
+      /** {@code PAM} - Packungsmasse */
       PAM("PAM", "Packungsmasse"),
 
+      /** {@code PAS} - Pastillen */
       PAS("PAS", "Pastillen"),
 
+      /** {@code PEL} - Pellets */
       PEL("PEL", "Pellets"),
 
+      /** {@code PEN} - Injektionslösung in einem Fertigpen */
       PEN("PEN", "Injektionslösung in einem Fertigpen"),
 
+      /** {@code PER} - Perlen */
       PER("PER", "Perlen"),
 
+      /** {@code PFL} - Pflaster */
       PFL("PFL", "Pflaster"),
 
+      /** {@code PFT} - Pflaster transdermal */
       PFT("PFT", "Pflaster transdermal"),
 
+      /**
+       * {@code PHI} - Pulver zur Herstellung einer Injektions-, Infusions- oder Inhalationslösung
+       */
       PHI("PHI", "Pulver zur Herstellung einer Injektions-, Infusions- oder Inhalationslösung"),
 
+      /**
+       * {@code PHV} - Pulver zur Herstellung einer Injektions- bzw. Infusionslösung oder Pulver und
+       * Lösungsmittel zur Herstellung einer Lösung zur intravesikalen Anwendung
+       */
       PHV(
           "PHV",
           "Pulver zur Herstellung einer Injektions- bzw. Infusionslösung oder Pulver und Lösungsmittel zur Herstellung einer Lösung zur intravesikalen Anwendung"),
 
+      /**
+       * {@code PIE} - Pulver für ein Konzentrat zur Herstellung einer Infusionslösung, Pulver zur
+       * Herstellung einer Lösung zum Einnehmen
+       */
       PIE(
           "PIE",
           "Pulver für ein Konzentrat zur Herstellung einer Infusionslösung, Pulver zur Herstellung einer Lösung zum Einnehmen"),
 
+      /**
+       * {@code PIF} - Pulver für ein Konzentrat zur Herstellung einer Infusionslösung, Pulver zur
+       * Herstellung einer Lösung zum Einnehmen
+       */
       PIF(
           "PIF",
           "Pulver für ein Konzentrat zur Herstellung einer Infusionslösung, Pulver zur Herstellung einer Lösung zum Einnehmen"),
 
+      /** {@code PII} - Pulver zur Herstellung einer Injektions- oder Infusionslösung */
       PII("PII", "Pulver zur Herstellung einer Injektions- oder Infusionslösung"),
 
+      /** {@code PIJ} - Pulver zur Herstellung einer Injektionslösung */
       PIJ("PIJ", "Pulver zur Herstellung einer Injektionslösung"),
 
+      /** {@code PIK} - Pulver zur Herstellung eines Infusionslösungskonzentrates */
       PIK("PIK", "Pulver zur Herstellung eines Infusionslösungskonzentrates"),
 
+      /** {@code PIS} - Pulver zur Herstellung einer Infusionssuspension */
       PIS("PIS", "Pulver zur Herstellung einer Infusionssuspension"),
 
+      /**
+       * {@code PIV} - Pulver zur Herstellung einer Injektions- bzw. Infusionslösung oder einer
+       * Lösung zur intravesikalen Anwendung
+       */
       PIV(
           "PIV",
           "Pulver zur Herstellung einer Injektions- bzw. Infusionslösung oder einer Lösung zur intravesikalen Anwendung"),
 
+      /** {@code PKI} - Pulver für ein Konzentrat zur Herstellung einer Infusionslösung */
       PKI("PKI", "Pulver für ein Konzentrat zur Herstellung einer Infusionslösung"),
 
+      /** {@code PLE} - Pulver zur Herstellung einer Lösung zum Einnehmen */
       PLE("PLE", "Pulver zur Herstellung einer Lösung zum Einnehmen"),
 
+      /** {@code PLF} - Pulver und Lösungsmittel zur Herstellung einer Infusionslösung */
       PLF("PLF", "Pulver und Lösungsmittel zur Herstellung einer Infusionslösung"),
 
+      /** {@code PLG} - Perlongetten */
       PLG("PLG", "Perlongetten"),
 
+      /**
+       * {@code PLH} - Pulver und Lösungsmittel zur Herstellung einer Injektions- bzw.
+       * Infusionslösung
+       */
       PLH("PLH", "Pulver und Lösungsmittel zur Herstellung einer Injektions- bzw. Infusionslösung"),
 
+      /** {@code PLI} - Pulver und Lösungsmittel zur Herstellung einer Injektionslösung */
       PLI("PLI", "Pulver und Lösungsmittel zur Herstellung einer Injektionslösung"),
 
+      /**
+       * {@code PLK} - Pulver und Lösungsmittel für ein Konzentrat zur Herstellung einer
+       * Infusionslösung
+       */
       PLK(
           "PLK",
           "Pulver und Lösungsmittel für ein Konzentrat zur Herstellung einer Infusionslösung"),
 
+      /** {@code PLS} - Pulver und Lösungsmittel zur Herstellung einer Injektionssuspension */
       PLS("PLS", "Pulver und Lösungsmittel zur Herstellung einer Injektionssuspension"),
 
+      /**
+       * {@code PLV} - Pulver und Lösungsmittel zur Herstellung einer Lösung zur intravesikalen
+       * Anwendung
+       */
       PLV(
           "PLV",
           "Pulver und Lösungsmittel zur Herstellung einer Lösung zur intravesikalen Anwendung"),
 
+      /** {@code PPL} - Pumplösung */
       PPL("PPL", "Pumplösung"),
 
+      /** {@code PRS} - Presslinge */
       PRS("PRS", "Presslinge"),
 
+      /** {@code PSE} - Pulver zur Herstellung einer Suspension zum Einnehmen */
       PSE("PSE", "Pulver zur Herstellung einer Suspension zum Einnehmen"),
 
+      /** {@code PST} - Paste */
       PST("PST", "Paste"),
 
+      /** {@code PUD} - Puder */
       PUD("PUD", "Puder"),
 
+      /** {@code PUL} - Pulver */
       PUL("PUL", "Pulver"),
 
+      /** {@code RED} - Retard-Dragees */
       RED("RED", "Retard-Dragees"),
 
+      /** {@code REK} - Retard-Kapseln */
       REK("REK", "Retard-Kapseln"),
 
+      /** {@code RET} - Retard-Tabletten */
       RET("RET", "Retard-Tabletten"),
 
+      /** {@code RGR} - Retard-Granulat */
       RGR("RGR", "Retard-Granulat"),
 
+      /** {@code RKA} - Retard-Kapseln */
       RKA("RKA", "Retard-Kapseln"),
 
+      /** {@code RMS} - Retardmikrokapseln und Suspensionsmittel */
       RMS("RMS", "Retardmikrokapseln und Suspensionsmittel"),
 
+      /** {@code RSC} - Rektalschaum */
       RSC("RSC", "Rektalschaum"),
 
+      /** {@code RSU} - Rektalsuspension */
       RSU("RSU", "Rektalsuspension"),
 
+      /** {@code RUT} - Retard-überzogene Tabletten */
       RUT("RUT", "Retard-überzogene Tabletten"),
 
+      /** {@code SAF} - Saft */
       SAF("SAF", "Saft"),
 
+      /** {@code SAL} - Salbe */
       SAL("SAL", "Salbe"),
 
+      /** {@code SAM} - Salbe zur Anwendung in der Mundhöhle */
       SAM("SAM", "Salbe zur Anwendung in der Mundhöhle"),
 
+      /** {@code SCH} - Schaum */
       SCH("SCH", "Schaum"),
 
+      /** {@code SEI} - Seife */
       SEI("SEI", "Seife"),
 
+      /** {@code SHA} - Shampoo */
       SHA("SHA", "Shampoo"),
 
+      /** {@code SIR} - Sirup */
       SIR("SIR", "Sirup"),
 
+      /** {@code SLZ} - Salz */
       SLZ("SLZ", "Salz"),
 
+      /** {@code SMF} - Schmelzfilm */
       SMF("SMF", "Schmelzfilm"),
 
+      /** {@code SMT} - Schmelztabletten */
       SMT("SMT", "Schmelztabletten"),
 
+      /** {@code SMU} - Suppositorien mit Mulleinlage */
       SMU("SMU", "Suppositorien mit Mulleinlage"),
 
+      /** {@code SPA} - Spritzampullen */
       SPA("SPA", "Spritzampullen"),
 
+      /** {@code SPF} - Sprühflasche */
       SPF("SPF", "Sprühflasche"),
 
+      /** {@code SPL} - Spüllösung */
       SPL("SPL", "Spüllösung"),
 
+      /** {@code SPR} - Spray */
       SPR("SPR", "Spray"),
 
+      /** {@code SPT} - Transdermales Spray */
       SPT("SPT", "Transdermales Spray"),
 
+      /** {@code SRI} - Spritzen */
       SRI("SRI", "Spritzen"),
 
+      /** {@code SSU} - Säuglings-Suppositorien */
       SSU("SSU", "Säuglings-Suppositorien"),
 
+      /** {@code STA} - Stechampullen */
       STA("STA", "Stechampullen"),
 
+      /** {@code STB} - Stäbchen */
       STB("STB", "Stäbchen"),
 
+      /** {@code STI} - Stifte */
       STI("STI", "Stifte"),
 
+      /** {@code STR} - Streifen */
       STR("STR", "Streifen"),
 
+      /** {@code SUB} - Substanz */
       SUB("SUB", "Substanz"),
 
+      /** {@code SUE} - Suspension zum Einnehmen */
       SUE("SUE", "Suspension zum Einnehmen"),
 
+      /** {@code SUL} - Sublingualspray, Lösung */
       SUL("SUL", "Sublingualspray, Lösung"),
 
+      /** {@code SUP} - Suppositorien */
       SUP("SUP", "Suppositorien"),
 
+      /** {@code SUS} - Suspension */
       SUS("SUS", "Suspension"),
 
+      /** {@code SUT} - Sublingualtabletten */
       SUT("SUT", "Sublingualtabletten"),
 
+      /** {@code SUV} - Suspension für einen Vernebler */
       SUV("SUV", "Suspension für einen Vernebler"),
 
+      /** {@code SWA} - Schwämme */
       SWA("SWA", "Schwämme"),
 
+      /** {@code TAB} - Tabletten */
       TAB("TAB", "Tabletten"),
 
+      /** {@code TAE} - Täfelchen */
       TAE("TAE", "Täfelchen"),
 
+      /** {@code TAM} - Trockenampullen */
       TAM("TAM", "Trockenampullen"),
 
+      /** {@code TEE} - Tee */
       TEE("TEE", "Tee"),
 
+      /** {@code TEI} - Tropfen zum Einnehmen */
       TEI("TEI", "Tropfen zum Einnehmen"),
 
+      /** {@code TES} - Test */
       TES("TES", "Test"),
 
+      /** {@code TIN} - Tinktur */
       TIN("TIN", "Tinktur"),
 
+      /** {@code TKA} - Tabletten in Kalenderpackung */
       TKA("TKA", "Tabletten in Kalenderpackung"),
 
+      /** {@code TLE} - Tablette zur Herstellung einer Lösung zum Einnehmen */
       TLE("TLE", "Tablette zur Herstellung einer Lösung zum Einnehmen"),
 
+      /** {@code TMR} - Tabletten magensaftresistent */
       TMR("TMR", "Tabletten magensaftresistent"),
 
+      /** {@code TON} - Tonikum */
       TON("TON", "Tonikum"),
 
+      /** {@code TPN} - Tampon */
       TPN("TPN", "Tampon"),
 
+      /** {@code TPO} - Tamponaden */
       TPO("TPO", "Tamponaden"),
 
+      /** {@code TRA} - Trinkampullen */
       TRA("TRA", "Trinkampullen"),
 
+      /** {@code TRI} - Trituration */
       TRI("TRI", "Trituration"),
 
+      /** {@code TRO} - Tropfen */
       TRO("TRO", "Tropfen"),
 
+      /** {@code TRS} - Trockensubstanz mit Lösungsmittel */
       TRS("TRS", "Trockensubstanz mit Lösungsmittel"),
 
+      /** {@code TRT} - Trinktabletten */
       TRT("TRT", "Trinktabletten"),
 
+      /** {@code TSA} - Trockensaft */
       TSA("TSA", "Trockensaft"),
 
+      /**
+       * {@code TSD} - Tabletten zur Herstellung einer Suspension zum Einnehmen für einen
+       * Dosierspender
+       */
       TSD(
           "TSD",
           "Tabletten zur Herstellung einer Suspension zum Einnehmen für einen Dosierspender"),
 
+      /** {@code TSE} - Tablette zur Herstellung einer Suspension zum Einnehmen */
       TSE("TSE", "Tablette zur Herstellung einer Suspension zum Einnehmen"),
 
+      /** {@code TSS} - Trockensubstanz ohne Lösungsmittel */
       TSS("TSS", "Trockensubstanz ohne Lösungsmittel"),
 
+      /** {@code TST} - Teststäbchen */
       TST("TST", "Teststäbchen"),
 
+      /** {@code TSY} - Transdermales System */
       TSY("TSY", "Transdermales System"),
 
+      /** {@code TTR} - Teststreifen */
       TTR("TTR", "Teststreifen"),
 
+      /** {@code TUB} - Tube */
       TUB("TUB", "Tube"),
 
+      /** {@code TUE} - Tücher */
       TUE("TUE", "Tücher"),
 
+      /** {@code TUP} - Tupfer */
       TUP("TUP", "Tupfer"),
 
+      /** {@code TVW} - Tablette mit veränderter Wirkstofffreisetzung */
       TVW("TVW", "Tablette mit veränderter Wirkstofffreisetzung"),
 
+      /** {@code UTA} - Überzogene Tabletten */
       UTA("UTA", "Überzogene Tabletten"),
 
+      /** {@code VAL} - Vaginallösung */
       VAL("VAL", "Vaginallösung"),
 
+      /** {@code VAR} - Vaginalring */
       VAR("VAR", "Vaginalring"),
 
+      /** {@code VCR} - Vaginalcreme */
       VCR("VCR", "Vaginalcreme"),
 
+      /** {@code VER} - Verband */
       VER("VER", "Verband"),
 
+      /** {@code VGE} - Vaginalgel */
       VGE("VGE", "Vaginalgel"),
 
+      /** {@code VKA} - Vaginalkapseln */
       VKA("VKA", "Vaginalkapseln"),
 
+      /** {@code VLI} - Vlies */
       VLI("VLI", "Vlies"),
 
+      /** {@code VOV} - Vaginalovula */
       VOV("VOV", "Vaginalovula"),
 
+      /** {@code VST} - Vaginalstäbchen */
       VST("VST", "Vaginalstäbchen"),
 
+      /** {@code VSU} - Vaginalsuppositorien */
       VSU("VSU", "Vaginalsuppositorien"),
 
+      /** {@code VTA} - Vaginaltabletten */
       VTA("VTA", "Vaginaltabletten"),
 
+      /** {@code WAT} - Watte */
       WAT("WAT", "Watte"),
 
+      /** {@code WGA} - Wundgaze */
       WGA("WGA", "Wundgaze"),
 
+      /** {@code WKA} - Weichkapseln */
       WKA("WKA", "Weichkapseln"),
 
+      /** {@code WKM} - Magensaftresistente Weichkapseln */
       WKM("WKM", "Magensaftresistente Weichkapseln"),
 
+      /** {@code WUE} - Würfel */
       WUE("WUE", "Würfel"),
 
+      /** {@code XDG} - Duschgel */
       XDG("XDG", "Duschgel"),
 
+      /** {@code XDS} - Deo-Spray */
       XDS("XDS", "Deo-Spray"),
 
+      /** {@code XFE} - Festiger */
       XFE("XFE", "Festiger"),
 
+      /** {@code XGM} - Gesichtsmaske */
       XGM("XGM", "Gesichtsmaske"),
 
+      /** {@code XHA} - Halsband */
       XHA("XHA", "Halsband"),
 
+      /** {@code XHS} - Haarspülung */
       XHS("XHS", "Haarspülung"),
 
+      /** {@code XNC} - Nachtcreme */
       XNC("XNC", "Nachtcreme"),
 
+      /** {@code XPK} - Körperpflege */
       XPK("XPK", "Körperpflege"),
 
+      /** {@code XTC} - Tagescreme */
       XTC("XTC", "Tagescreme"),
 
+      /** {@code ZAM} - Zylinderampullen */
       ZAM("ZAM", "Zylinderampullen"),
 
+      /** {@code ZBU} - Zahnbürste */
       ZBU("ZBU", "Zahnbürste"),
 
+      /** {@code ZCR} - Zahncreme */
       ZCR("ZCR", "Zahncreme"),
 
+      /** {@code ZGE} - Zahngel */
       ZGE("ZGE", "Zahngel"),
 
+      /** {@code ZKA} - Zerbeisskapseln */
       ZKA("ZKA", "Zerbeisskapseln"),
 
+      /** {@code ZPA} - Zahnpasta */
       ZPA("ZPA", "Zahnpasta");
 
       private final @NonNull String code;
@@ -591,7 +890,7 @@ public final class KbvDarreichungsform {
        * @return a new {@link Coding} for this concept, with system {@code
        *     https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM}
        */
-      public @NonNull Coding coding() {
+      public @NonNull Coding coding(@NonNull KbvCsSfhirKbvDarreichungsform this) {
         return new Coding(
             "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM", code, display);
       }
