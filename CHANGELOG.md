@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.1.20](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.19...v0.1.20) (2026-07-03)
+
+
+### Bug Fixes
+
+* corrected code system ([#27](https://github.com/diz-uker/med-rezepte-to-fhir/issues/27)) ([ff9db49](https://github.com/diz-uker/med-rezepte-to-fhir/commit/ff9db49b1f275fed25645b15c44667efe2e9f9a1))
+* **deps:** update all non-major dependencies ([#31](https://github.com/diz-uker/med-rezepte-to-fhir/issues/31)) ([dc6869e](https://github.com/diz-uker/med-rezepte-to-fhir/commit/dc6869e26da152ff1c76e9e3be2bcd60c9ef0411))
+* **deps:** update dependency com.approvaltests:approvaltests to v31 ([#30](https://github.com/diz-uker/med-rezepte-to-fhir/issues/30)) ([34858c8](https://github.com/diz-uker/med-rezepte-to-fhir/commit/34858c853049d7e91c0d3e69a469ff9f6885c02c))
+* ignore amount ([#25](https://github.com/diz-uker/med-rezepte-to-fhir/issues/25)) ([66fd84b](https://github.com/diz-uker/med-rezepte-to-fhir/commit/66fd84b1fb34fb88b41ace86cbdd94735ad37538))
+
+
+### Miscellaneous Chores
+
+* **deps:** update all digest updates ([#28](https://github.com/diz-uker/med-rezepte-to-fhir/issues/28)) ([c1fff08](https://github.com/diz-uker/med-rezepte-to-fhir/commit/c1fff083ba3011a9792da1c60f2b2d8de045a887))
+* **deps:** update all non-major dependencies ([#35](https://github.com/diz-uker/med-rezepte-to-fhir/issues/35)) ([976399b](https://github.com/diz-uker/med-rezepte-to-fhir/commit/976399b5a953a4ff4888e60a83cbe0d4654f8add))
+* **deps:** update github-actions ([#29](https://github.com/diz-uker/med-rezepte-to-fhir/issues/29)) ([2f535e3](https://github.com/diz-uker/med-rezepte-to-fhir/commit/2f535e336add636ca0ab692540f6d525cc091820))
+* **deps:** update github-actions ([#33](https://github.com/diz-uker/med-rezepte-to-fhir/issues/33)) ([aa9c2e4](https://github.com/diz-uker/med-rezepte-to-fhir/commit/aa9c2e4e36c8546b8fa0404f6029c90b247c9af2))
+* **deps:** update github-actions ([#34](https://github.com/diz-uker/med-rezepte-to-fhir/issues/34)) ([3cc58c5](https://github.com/diz-uker/med-rezepte-to-fhir/commit/3cc58c59a744b2e8940a1f9e7290b5ccce03a01e))
+* updated container image build ([#32](https://github.com/diz-uker/med-rezepte-to-fhir/issues/32)) ([cf4efee](https://github.com/diz-uker/med-rezepte-to-fhir/commit/cf4efeec97e9956e4e5267492cb146f0a290e7b6))
+
 ## [0.1.19](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.18...v0.1.19) (2026-06-30)
 
 
