@@ -88,7 +88,7 @@
       },
       "form": {
         "coding": [ {
-          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM",
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
           "code": "PUL",
           "display": "Pulver"
         } ],

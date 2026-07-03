@@ -107,6 +107,6 @@ public final class IfaDoseFormMapper {
   public static Optional<Coding> lookup(String ifaCode) {
     return Optional.ofNullable(IFA_TO_EDQM.get(ifaCode))
         .flatMap(EdqmStandardterms::fromValue)
-        .map(c -> c.coding());
+        .map(EdqmStandardterms::coding);
   }
 }

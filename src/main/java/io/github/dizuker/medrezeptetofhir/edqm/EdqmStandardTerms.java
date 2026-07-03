@@ -3,6 +3,8 @@ package io.github.dizuker.medrezeptetofhir.edqm;
 
 import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public final class EdqmStandardTerms {
   private EdqmStandardTerms() {}
@@ -1983,11 +1985,11 @@ public final class EdqmStandardTerms {
 
       _20086000("20086000", "Intraputaminal use");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      EdqmStandardterms(String code, String display) {
+      EdqmStandardterms(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
@@ -1996,7 +1998,7 @@ public final class EdqmStandardTerms {
        * @return a new {@link Coding} for this concept, with system {@code
        *     http://standardterms.edqm.eu}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding("http://standardterms.edqm.eu", code, display);
       }
 
@@ -2005,7 +2007,7 @@ public final class EdqmStandardTerms {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<EdqmStandardterms> fromValue(String code) {
+      public static Optional<@NonNull EdqmStandardterms> fromValue(@NonNull String code) {
         for (EdqmStandardterms value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);

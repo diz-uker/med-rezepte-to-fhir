@@ -95,9 +95,9 @@
           "code": "10219000",
           "display": "Tablet"
         }, {
-          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM",
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
           "code": "TAB",
-          "display": "Tabl"
+          "display": "Tabletten"
         } ],
         "text": "TAB"
       },

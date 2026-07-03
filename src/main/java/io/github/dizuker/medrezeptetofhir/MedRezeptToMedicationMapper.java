@@ -100,7 +100,7 @@ public class MedRezeptToMedicationMapper {
       var formConcept = new CodeableConcept().setText(rezept.ifaPharmFormCode());
 
       IfaDoseFormMapper.lookup(rezept.ifaPharmFormCode()).ifPresent(formConcept::addCoding);
-      KbvDarreichungsform.CodeSystems.KbvCsSfhirBmpDarreichungsform.fromValue(
+      KbvDarreichungsform.CodeSystems.KbvCsSfhirKbvDarreichungsform.fromValue(
               rezept.ifaPharmFormCode())
           .map(c -> c.coding())
           .ifPresent(formConcept::addCoding);

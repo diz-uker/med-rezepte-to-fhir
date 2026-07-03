@@ -3,6 +3,8 @@ package io.github.dizuker.medrezeptetofhir.kbv;
 
 import java.util.Optional;
 import org.hl7.fhir.r4.model.Coding;
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
 
 public final class KbvDarreichungsform {
   private KbvDarreichungsform() {}
@@ -11,36 +13,36 @@ public final class KbvDarreichungsform {
     private CodeSystems() {}
 
     /**
-     * The canonical URL {@code https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM}.
+     * The canonical URL {@code https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM}.
      *
-     * @return {@code https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM}
+     * @return {@code https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM}
      */
-    public static String kbvCsSfhirBmpDarreichungsform() {
-      return "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM";
+    public static String kbvCsSfhirKbvDarreichungsform() {
+      return "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM";
     }
 
-    public enum KbvCsSfhirBmpDarreichungsform {
-      AEO("AEO", "Öl"),
+    public enum KbvCsSfhirKbvDarreichungsform {
+      AEO("AEO", "Ätherisches Öl"),
 
-      AMP("AMP", "Amp"),
+      AMP("AMP", "Ampullen"),
 
-      APA("APA", "Amp"),
+      APA("APA", "Ampullenpaare"),
 
-      ASN("ASN", "Salbe"),
+      ASN("ASN", "Augen- und Nasensalbe"),
 
-      ASO("ASO", "Salbe"),
+      ASO("ASO", "Augen- und Ohrensalbe"),
 
-      ATO("ATO", "Tropf"),
+      ATO("ATO", "Augen- und Ohrentropfen"),
 
-      ATR("ATR", "AuTropf"),
+      ATR("ATR", "Augentropfen"),
 
-      AUB("AUB", "AuBad"),
+      AUB("AUB", "Augenbad"),
 
-      AUC("AUC", "AuCreme"),
+      AUC("AUC", "Augencreme"),
 
-      AUG("AUG", "AuGel"),
+      AUG("AUG", "Augengel"),
 
-      AUS("AUS", "AuSalbe"),
+      AUS("AUS", "Augensalbe"),
 
       BAD("BAD", "Bad"),
 
@@ -54,303 +56,319 @@ public final class KbvDarreichungsform {
 
       BON("BON", "Bonbons"),
 
-      BPL("BPL", "Platte"),
+      BPL("BPL", "Basisplatte"),
 
       BRE("BRE", "Brei"),
 
-      BTA("BTA", "BrTabl"),
+      BTA("BTA", "Brausetabletten"),
 
       CRE("CRE", "Creme"),
 
-      DFL("DFL", "Flasche"),
+      DFL("DFL", "Durchstechflaschen"),
 
-      DIL("DIL", "Dilut"),
+      DIG("DIG", "Digitale Gesundheitsanwendungen"),
 
-      DIS("DIS", "DIS"),
+      DIL("DIL", "Dilution"),
 
-      DKA("DKA", "Dragees"),
+      DIS("DIS", "Depot-Injektionssuspension"),
 
-      DOS("DOS", "Spray"),
+      DKA("DKA", "Dragees in Kalenderpackung"),
+
+      DOS("DOS", "Dosieraerosol"),
 
       DRA("DRA", "Dragees"),
 
-      DRM("DRM", "Dragees"),
+      DRM("DRM", "Dragees magensaftresistent"),
 
-      DSC("DSC", "Schaum"),
+      DSC("DSC", "Dosierschaum"),
 
-      DSS("DSS", "Spray"),
+      DSS("DSS", "Dosierspray"),
 
-      EDP("EDP", "Pipette"),
+      EDP("EDP", "Einzeldosis-Pipetten"),
 
-      EIN("EIN", "Einreib"),
+      EIN("EIN", "Einreibung"),
 
-      ELE("ELE", "Elektr"),
+      ELE("ELE", "Elektroden"),
 
       ELI("ELI", "Elixier"),
 
-      EMU("EMU", "Emul"),
+      EMU("EMU", "Emulsion"),
 
       ESS("ESS", "Essenz"),
 
-      ESU("ESU", "Supp"),
+      ESU("ESU", "Erwachsenen-Suppositorien"),
 
       EXT("EXT", "Extrakt"),
 
-      FBE("FBE", "Beutel"),
+      FBE("FBE", "Filterbeutel"),
 
-      FBW("FBW", "Einreib"),
+      FBW("FBW", "Franzbranntwein"),
 
-      FDA("FDA", "Drag"),
+      FDA("FDA", "Filmdragees"),
 
-      FER("FER", "Spritze"),
+      FER("FER", "Fertigspritzen"),
 
-      FET("FET", "Salbe"),
+      FET("FET", "Fettsalbe"),
 
       FLA("FLA", "Flasche"),
 
-      FLE("FLE", "Flüss"),
+      FLE("FLE", "Flüssigkeit zum Einnehmen"),
 
-      FLU("FLU", "Flüss"),
+      FLU("FLU", "Flüssig"),
 
-      FMR("FMR", "Tabl"),
+      FMR("FMR", "Filmtabletten magensaftresistent"),
 
       FOL("FOL", "Folie"),
 
-      FRB("FRB", "FRB"),
+      FRB("FRB", "Beutel mit retardierten Filmtabletten"),
 
-      FSE("FSE", "Seife"),
+      FSE("FSE", "Flüssigseife"),
 
-      FTA("FTA", "Tabl"),
+      FTA("FTA", "Filmtabletten"),
 
-      GEK("GEK", "Gran"),
+      GEK("GEK", "Granulat zur Entnahme aus Kapseln"),
 
       GEL("GEL", "Gel"),
 
-      GLI("GLI", "GLI"),
+      GLI("GLI", "Gas und Lösungsmittel zur Herstellung einer Injektions-/Infusionsdispersion"),
 
       GLO("GLO", "Globuli"),
 
-      GMR("GMR", "Gran"),
+      GMR("GMR", "Magensaftresistentes Granulat"),
 
-      GPA("GPA", "Platte"),
+      GPA("GPA", "Gelplatte"),
 
-      GRA("GRA", "Gran"),
+      GRA("GRA", "Granulat"),
 
-      GSE("GSE", "Saft"),
+      GSE("GSE", "Granulat zur Herstellung einer Suspension zum Einnehmen"),
 
-      GUL("GUL", "Lösung"),
+      GUL("GUL", "Gurgellösung"),
 
-      HAS("HAS", "Handsch"),
+      HAS("HAS", "Handschuhe"),
 
-      HKM("HKM", "Kaps"),
+      HKM("HKM", "Magensaftresistente Hartkapseln"),
 
-      HKP("HKP", "Kaps"),
+      HKP("HKP", "Hartkapseln"),
 
-      HPI("HPI", "InhKaps"),
+      HPI("HPI", "Hartkapseln mit Pulver zur Inhalation"),
 
-      HVW("HVW", "Kaps"),
+      HVW("HVW", "Hartkapseln mit veränderter Wirkstofffreisetzung"),
 
-      IFA("IFA", "Amp"),
+      IFA("IFA", "Infusionsampullen"),
 
-      IFB("IFB", "Beutel"),
+      IFB("IFB", "Infusionsbeutel"),
 
-      IFD("IFD", "InfDisp"),
+      IFD("IFD", "Infusionsdispersion"),
 
-      IFE("IFE", "Spritze"),
+      IFE("IFE", "Injektionslösung in einer Fertigspritze"),
 
-      IFF("IFF", "Flasche"),
+      IFF("IFF", "Infusionsflaschen"),
 
-      IFK("IFK", "Lösung"),
+      IFK("IFK", "Infusionslösungskonzentrat"),
 
-      IFL("IFL", "Flasche"),
+      IFL("IFL", "Injektionsflaschen"),
 
-      IFS("IFS", "Set"),
+      IFS("IFS", "Infusionsset"),
 
-      IHA("IHA", "InhAmp"),
+      IHA("IHA", "Inhalationsampullen"),
 
-      IHP("IHP", "InhPulv"),
+      IHP("IHP", "Inhalationspulver"),
 
-      IIE("IIE", "Lösung"),
+      IIE("IIE", "Injektions- oder Infusionslösung oder Lösung zum Einnehmen"),
 
-      IIL("IIL", "Lösung"),
+      IIL("IIL", "Injektions-, Infusionslösung"),
 
-      IIM("IIM", "Lösung"),
+      IIM("IIM", "Injektionslösung zur intramuskulären Anwendung"),
 
-      IKA("IKA", "InhKaps"),
+      IKA("IKA", "Inhalationskapseln"),
 
-      ILO("ILO", "Lösung"),
+      ILO("ILO", "Injektionslösung"),
 
-      IMP("IMP", "Impl"),
+      IMP("IMP", "Implantat"),
 
-      INF("INF", "Lösung"),
+      INF("INF", "Infusionslösung"),
 
       INH("INH", "Inhalat"),
 
-      INI("INI", "Flasche"),
+      INI("INI", "Injektions-, Infusionsflaschen"),
 
-      INL("INL", "InhLös"),
+      INL("INL", "Inhalationslösung"),
 
-      INS("INS", "Tee"),
+      INS("INS", "Instant-Tee"),
 
-      IST("IST", "Instill"),
+      IST("IST", "Instillation"),
 
-      ISU("ISU", "Susp"),
+      ISU("ISU", "Injektionssuspension"),
 
-      IUP("IUP", "Spirale"),
+      IUP("IUP", "Intrauterinpessar"),
 
-      KAN("KAN", "Kanüle"),
+      KAN("KAN", "Kanülen"),
 
-      KAP("KAP", "Kaps"),
+      KAP("KAP", "Kapseln"),
 
-      KAT("KAT", "KAT"),
+      KAT("KAT", "Katheter"),
 
-      KDA("KDA", "KauDrag"),
+      KDA("KDA", "Kaudragees"),
 
       KEG("KEG", "Kegel"),
 
       KER("KER", "Kerne"),
 
-      KGU("KGU", "Kaug"),
+      KGU("KGU", "Kaugummi"),
 
-      KID("KID", "Konz"),
+      KID("KID", "Konzentrat zur Herstellung einer Infusionsdispersion"),
 
-      KII("KII", "Konz"),
+      KII("KII", "Konzentrat zur Herstellung einer Injektions- oder Infusionslösung"),
 
-      KKS("KKS", "Supp"),
+      KKS("KKS", "Kleinkinder-Suppositorien"),
 
-      KLI("KLI", "Klist"),
+      KLI("KLI", "Klistiere"),
 
-      KLT("KLT", "KlisTbl"),
+      KLT("KLT", "Klistier-Tabletten"),
 
-      KMP("KMP", "Kaps"),
+      KMP("KMP", "Hartkapseln mit magensaftresistent überzogenen Pellets"),
 
-      KMR("KMR", "Kaps"),
+      KMR("KMR", "Kapseln magensaftresistent"),
 
-      KOD("KOD", "Kondom"),
+      KOD("KOD", "Kondome"),
 
-      KOM("KOM", "Kompr"),
+      KOM("KOM", "Kompressen"),
 
-      KON("KON", "Konz"),
+      KON("KON", "Konzentrat"),
 
-      KPG("KPG", "KombiPg"),
+      KPG("KPG", "Kombipackung"),
 
-      KRI("KRI", "KRI"),
+      KRI("KRI", "Kristallsuspension"),
 
-      KSS("KSS", "Supp"),
+      KSS("KSS", "Kinder- und Säuglings-Suppositorien"),
 
-      KSU("KSU", "Supp"),
+      KSU("KSU", "Kinder-Suppositorien"),
 
-      KTA("KTA", "KauTabl"),
+      KTA("KTA", "Kautabletten"),
 
-      LAN("LAN", "Lanz"),
+      LAN("LAN", "Lanzetten"),
 
-      LII("LII", "Lösung"),
+      LII("LII", "Lösung zur Injektion, Infusion und Inhalation"),
 
-      LIQ("LIQ", "Flüss"),
+      LIQ("LIQ", "Liquidum"),
 
       LOE("LOE", "Lösung"),
 
       LOT("LOT", "Lotion"),
 
-      LOV("LOV", "LOV"),
+      LOV("LOV", "Lösung für einen Vernebler"),
 
-      LSE("LSE", "Lösung"),
+      LSE("LSE", "Lösung zum Einnehmen"),
 
-      LTA("LTA", "Tabl"),
+      LTA("LTA", "Lacktabletten"),
 
-      LUP("LUP", "LUP"),
+      LUP("LUP", "Lutschpastillen"),
 
-      LUT("LUT", "LuTabl"),
+      LUT("LUT", "Lutschtabletten"),
 
       MIL("MIL", "Milch"),
 
-      MIS("MIS", "Misch"),
+      MIS("MIS", "Mischung"),
 
       MIX("MIX", "Mixtur"),
 
-      MRG("MRG", "RetGran"),
+      MRG("MRG", "Magensaftresistentes Retardgranulat"),
 
-      MRP("MRP", "Pellets"),
+      MRP("MRP", "Magensaftresistente Pellets"),
 
-      MTA("MTA", "Tabl"),
+      MTA("MTA", "Manteltabletten"),
 
-      MUW("MUW", "MUW"),
+      MUW("MUW", "Mundwasser"),
 
-      NAG("NAG", "NasGel"),
+      NAG("NAG", "Nasengel"),
 
-      NAO("NAO", "NasÖl"),
+      NAO("NAO", "Nasenöl"),
 
-      NAS("NAS", "NasSpr"),
+      NAS("NAS", "Nasenspray"),
 
-      NAW("NAW", "NAW"),
+      NAW("NAW", "Wirkstoffhaltiger Nagellack"),
 
-      NDS("NDS", "NasSpr"),
+      NDS("NDS", "Nasendosierspray"),
 
-      NSA("NSA", "NSalbe"),
+      NSA("NSA", "Nasensalbe"),
 
-      NTR("NTR", "NTropf"),
+      NTR("NTR", "Nasentropfen"),
 
-      OCU("OCU", "OCU"),
+      OCU("OCU", "Ocusert"),
 
       OEL("OEL", "Öl"),
 
-      OHT("OHT", "OTropf"),
+      OHT("OHT", "Ohrentropfen"),
 
       OVU("OVU", "Ovula"),
 
-      PAS("PAS", "Pastill"),
+      PAM("PAM", "Packungsmasse"),
+
+      PAS("PAS", "Pastillen"),
 
       PEL("PEL", "Pellets"),
 
-      PEN("PEN", "Pen"),
+      PEN("PEN", "Injektionslösung in einem Fertigpen"),
 
       PER("PER", "Perlen"),
 
-      PFL("PFL", "Pflast"),
+      PFL("PFL", "Pflaster"),
 
-      PFT("PFT", "Pflast"),
+      PFT("PFT", "Pflaster transdermal"),
 
-      PHI("PHI", "Pulver"),
+      PHI("PHI", "Pulver zur Herstellung einer Injektions-, Infusions- oder Inhalationslösung"),
 
-      PHV("PHV", "Pulver"),
+      PHV(
+          "PHV",
+          "Pulver zur Herstellung einer Injektions- bzw. Infusionslösung oder Pulver und Lösungsmittel zur Herstellung einer Lösung zur intravesikalen Anwendung"),
 
-      PIE("PIE", "Pulver"),
+      PIE(
+          "PIE",
+          "Pulver für ein Konzentrat zur Herstellung einer Infusionslösung, Pulver zur Herstellung einer Lösung zum Einnehmen"),
 
-      PIF("PIF", "Lösung"),
+      PIF(
+          "PIF",
+          "Pulver für ein Konzentrat zur Herstellung einer Infusionslösung, Pulver zur Herstellung einer Lösung zum Einnehmen"),
 
-      PII("PII", "Pulver"),
+      PII("PII", "Pulver zur Herstellung einer Injektions- oder Infusionslösung"),
 
-      PIJ("PIJ", "Pulver"),
+      PIJ("PIJ", "Pulver zur Herstellung einer Injektionslösung"),
 
-      PIK("PIK", "Pulver"),
+      PIK("PIK", "Pulver zur Herstellung eines Infusionslösungskonzentrates"),
 
-      PIS("PIS", "Pulver"),
+      PIS("PIS", "Pulver zur Herstellung einer Infusionssuspension"),
 
-      PIV("PIV", "PIV"),
+      PIV(
+          "PIV",
+          "Pulver zur Herstellung einer Injektions- bzw. Infusionslösung oder einer Lösung zur intravesikalen Anwendung"),
 
-      PKI("PKI", "Pulver"),
+      PKI("PKI", "Pulver für ein Konzentrat zur Herstellung einer Infusionslösung"),
 
-      PLE("PLE", "Pulver"),
+      PLE("PLE", "Pulver zur Herstellung einer Lösung zum Einnehmen"),
 
-      PLF("PLF", "PLF"),
+      PLF("PLF", "Pulver und Lösungsmittel zur Herstellung einer Infusionslösung"),
 
-      PLG("PLG", "PLG"),
+      PLG("PLG", "Perlongetten"),
 
-      PLH("PLH", "PLH"),
+      PLH("PLH", "Pulver und Lösungsmittel zur Herstellung einer Injektions- bzw. Infusionslösung"),
 
-      PLI("PLI", "PLI"),
+      PLI("PLI", "Pulver und Lösungsmittel zur Herstellung einer Injektionslösung"),
 
-      PLK("PLK", "PLK"),
+      PLK(
+          "PLK",
+          "Pulver und Lösungsmittel für ein Konzentrat zur Herstellung einer Infusionslösung"),
 
-      PLS("PLS", "Pulver"),
+      PLS("PLS", "Pulver und Lösungsmittel zur Herstellung einer Injektionssuspension"),
 
-      PLV("PLV", "PLV"),
+      PLV(
+          "PLV",
+          "Pulver und Lösungsmittel zur Herstellung einer Lösung zur intravesikalen Anwendung"),
 
-      PPL("PPL", "Lösung"),
+      PPL("PPL", "Pumplösung"),
 
-      PRS("PRS", "PRS"),
+      PRS("PRS", "Presslinge"),
 
-      PSE("PSE", "Saft"),
+      PSE("PSE", "Pulver zur Herstellung einer Suspension zum Einnehmen"),
 
       PST("PST", "Paste"),
 
@@ -358,29 +376,29 @@ public final class KbvDarreichungsform {
 
       PUL("PUL", "Pulver"),
 
-      RED("RED", "RetDrag"),
+      RED("RED", "Retard-Dragees"),
 
-      REK("REK", "RetKaps"),
+      REK("REK", "Retard-Kapseln"),
 
-      RET("RET", "RetTabl"),
+      RET("RET", "Retard-Tabletten"),
 
-      RGR("RGR", "RetGran"),
+      RGR("RGR", "Retard-Granulat"),
 
-      RKA("RKA", "RekKaps"),
+      RKA("RKA", "Retard-Kapseln"),
 
-      RMS("RMS", "Depot"),
+      RMS("RMS", "Retardmikrokapseln und Suspensionsmittel"),
 
-      RSC("RSC", "Schaum"),
+      RSC("RSC", "Rektalschaum"),
 
-      RSU("RSU", "RekSusp"),
+      RSU("RSU", "Rektalsuspension"),
 
-      RUT("RUT", "RetTabl"),
+      RUT("RUT", "Retard-überzogene Tabletten"),
 
       SAF("SAF", "Saft"),
 
       SAL("SAL", "Salbe"),
 
-      SAM("SAM", "Salbe"),
+      SAM("SAM", "Salbe zur Anwendung in der Mundhöhle"),
 
       SCH("SCH", "Schaum"),
 
@@ -390,99 +408,103 @@ public final class KbvDarreichungsform {
 
       SIR("SIR", "Sirup"),
 
-      SMF("SMF", "SMF"),
+      SLZ("SLZ", "Salz"),
 
-      SMT("SMT", "SMT"),
+      SMF("SMF", "Schmelzfilm"),
 
-      SMU("SMU", "Supp"),
+      SMT("SMT", "Schmelztabletten"),
 
-      SPA("SPA", "Amp"),
+      SMU("SMU", "Suppositorien mit Mulleinlage"),
 
-      SPF("SPF", "Flasche"),
+      SPA("SPA", "Spritzampullen"),
 
-      SPL("SPL", "Lösung"),
+      SPF("SPF", "Sprühflasche"),
+
+      SPL("SPL", "Spüllösung"),
 
       SPR("SPR", "Spray"),
 
-      SPT("SPT", "Spray"),
+      SPT("SPT", "Transdermales Spray"),
 
-      SRI("SRI", "Spritze"),
+      SRI("SRI", "Spritzen"),
 
-      SSU("SSU", "Supp"),
+      SSU("SSU", "Säuglings-Suppositorien"),
 
-      STA("STA", "Amp"),
+      STA("STA", "Stechampullen"),
 
-      STB("STB", "Stäbch"),
+      STB("STB", "Stäbchen"),
 
       STI("STI", "Stifte"),
 
-      STR("STR", "Streif"),
+      STR("STR", "Streifen"),
 
-      SUB("SUB", "Subst"),
+      SUB("SUB", "Substanz"),
 
-      SUE("SUE", "Susp"),
+      SUE("SUE", "Suspension zum Einnehmen"),
 
-      SUL("SUL", "SubSpr"),
+      SUL("SUL", "Sublingualspray, Lösung"),
 
-      SUP("SUP", "Supp"),
+      SUP("SUP", "Suppositorien"),
 
-      SUS("SUS", "Susp"),
+      SUS("SUS", "Suspension"),
 
-      SUT("SUT", "SubTabl"),
+      SUT("SUT", "Sublingualtabletten"),
 
-      SUV("SUV", "Susp"),
+      SUV("SUV", "Suspension für einen Vernebler"),
 
-      SWA("SWA", "Schwamm"),
+      SWA("SWA", "Schwämme"),
 
-      TAB("TAB", "Tabl"),
+      TAB("TAB", "Tabletten"),
 
-      TAE("TAE", "Tafel"),
+      TAE("TAE", "Täfelchen"),
 
-      TAM("TAM", "Amp"),
+      TAM("TAM", "Trockenampullen"),
 
       TEE("TEE", "Tee"),
 
-      TEI("TEI", "Tropfen"),
+      TEI("TEI", "Tropfen zum Einnehmen"),
 
       TES("TES", "Test"),
 
       TIN("TIN", "Tinktur"),
 
-      TKA("TKA", "Tabl"),
+      TKA("TKA", "Tabletten in Kalenderpackung"),
 
-      TLE("TLE", "LösTabl"),
+      TLE("TLE", "Tablette zur Herstellung einer Lösung zum Einnehmen"),
 
-      TMR("TMR", "Tabl"),
+      TMR("TMR", "Tabletten magensaftresistent"),
 
       TON("TON", "Tonikum"),
 
       TPN("TPN", "Tampon"),
 
-      TPO("TPO", "Tamp"),
+      TPO("TPO", "Tamponaden"),
 
-      TRA("TRA", "TrAmp"),
+      TRA("TRA", "Trinkampullen"),
 
-      TRI("TRI", "TRI"),
+      TRI("TRI", "Trituration"),
 
       TRO("TRO", "Tropfen"),
 
-      TRS("TRS", "TRS"),
+      TRS("TRS", "Trockensubstanz mit Lösungsmittel"),
 
-      TRT("TRT", "TrTabl"),
+      TRT("TRT", "Trinktabletten"),
 
-      TSA("TSA", "Saft"),
+      TSA("TSA", "Trockensaft"),
 
-      TSD("TSD", "TSD"),
+      TSD(
+          "TSD",
+          "Tabletten zur Herstellung einer Suspension zum Einnehmen für einen Dosierspender"),
 
-      TSE("TSE", "SusTabl"),
+      TSE("TSE", "Tablette zur Herstellung einer Suspension zum Einnehmen"),
 
-      TSS("TSS", "TSS"),
+      TSS("TSS", "Trockensubstanz ohne Lösungsmittel"),
 
-      TST("TST", "Test"),
+      TST("TST", "Teststäbchen"),
 
-      TSY("TSY", "TSY"),
+      TSY("TSY", "Transdermales System"),
 
-      TTR("TTR", "Test"),
+      TTR("TTR", "Teststreifen"),
 
       TUB("TUB", "Tube"),
 
@@ -490,86 +512,88 @@ public final class KbvDarreichungsform {
 
       TUP("TUP", "Tupfer"),
 
-      TVW("TVW", "RetTabl"),
+      TVW("TVW", "Tablette mit veränderter Wirkstofffreisetzung"),
 
-      UTA("UTA", "Tabl"),
+      UTA("UTA", "Überzogene Tabletten"),
 
-      VAL("VAL", "VagLös"),
+      VAL("VAL", "Vaginallösung"),
 
-      VAR("VAR", "VagRing"),
+      VAR("VAR", "Vaginalring"),
 
-      VCR("VCR", "VagCrem"),
+      VCR("VCR", "Vaginalcreme"),
 
       VER("VER", "Verband"),
 
-      VGE("VGE", "VagGel"),
+      VGE("VGE", "Vaginalgel"),
 
-      VKA("VKA", "VagKaps"),
+      VKA("VKA", "Vaginalkapseln"),
 
       VLI("VLI", "Vlies"),
 
-      VOV("VOV", "VagOvul"),
+      VOV("VOV", "Vaginalovula"),
 
-      VST("VST", "VagStäb"),
+      VST("VST", "Vaginalstäbchen"),
 
-      VSU("VSU", "VagSupp"),
+      VSU("VSU", "Vaginalsuppositorien"),
 
-      VTA("VTA", "VagTabl"),
+      VTA("VTA", "Vaginaltabletten"),
 
       WAT("WAT", "Watte"),
 
-      WGA("WGA", "Gaze"),
+      WGA("WGA", "Wundgaze"),
 
-      WKA("WKA", "Kaps"),
+      WKA("WKA", "Weichkapseln"),
 
-      WKM("WKM", "Kaps"),
+      WKM("WKM", "Magensaftresistente Weichkapseln"),
 
       WUE("WUE", "Würfel"),
 
-      XDG("XDG", "Gel"),
+      XDG("XDG", "Duschgel"),
 
-      XDS("XDS", "Spray"),
+      XDS("XDS", "Deo-Spray"),
 
-      XFE("XFE", "Festig."),
+      XFE("XFE", "Festiger"),
 
-      XGM("XGM", "Maske"),
+      XGM("XGM", "Gesichtsmaske"),
 
-      XHS("XHS", "Spül."),
+      XHA("XHA", "Halsband"),
 
-      XNC("XNC", "Creme"),
+      XHS("XHS", "Haarspülung"),
 
-      XPK("XPK", "Pflege"),
+      XNC("XNC", "Nachtcreme"),
 
-      XTC("XTC", "Creme"),
+      XPK("XPK", "Körperpflege"),
 
-      ZAM("ZAM", "Amp"),
+      XTC("XTC", "Tagescreme"),
 
-      ZBU("ZBU", "Bürste"),
+      ZAM("ZAM", "Zylinderampullen"),
 
-      ZCR("ZCR", "Zahncr."),
+      ZBU("ZBU", "Zahnbürste"),
+
+      ZCR("ZCR", "Zahncreme"),
 
       ZGE("ZGE", "Zahngel"),
 
-      ZKA("ZKA", "ZerbKps"),
+      ZKA("ZKA", "Zerbeisskapseln"),
 
-      ZPA("ZPA", "Zahnp.");
+      ZPA("ZPA", "Zahnpasta");
 
-      private final String code;
+      private final @NonNull String code;
 
-      private final String display;
+      private final @Nullable String display;
 
-      KbvCsSfhirBmpDarreichungsform(String code, String display) {
+      KbvCsSfhirKbvDarreichungsform(@NonNull String code, @Nullable String display) {
         this.code = code;
         this.display = display;
       }
 
       /**
        * @return a new {@link Coding} for this concept, with system {@code
-       *     https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM}
+       *     https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM}
        */
-      public Coding coding() {
+      public @NonNull Coding coding() {
         return new Coding(
-            "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_BMP_DARREICHUNGSFORM", code, display);
+            "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM", code, display);
       }
 
       /**
@@ -577,8 +601,9 @@ public final class KbvDarreichungsform {
        * @return an {@link Optional} containing the constant whose {@code code} matches, or empty if
        *     none matches
        */
-      public static Optional<KbvCsSfhirBmpDarreichungsform> fromValue(String code) {
-        for (KbvCsSfhirBmpDarreichungsform value : values()) {
+      public static Optional<@NonNull KbvCsSfhirKbvDarreichungsform> fromValue(
+          @NonNull String code) {
+        for (KbvCsSfhirKbvDarreichungsform value : values()) {
           if (value.code.equals(code)) {
             return Optional.of(value);
           }
