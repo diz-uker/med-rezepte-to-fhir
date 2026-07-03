@@ -2,9 +2,9 @@
 plugins {
     id 'java'
     id 'jacoco'
-    id 'org.springframework.boot' version '4.0.6'
+    id 'org.springframework.boot' version '4.1.0'
     id 'io.spring.dependency-management' version '1.1.7'
-    id 'com.diffplug.spotless' version '8.6.0'
+    id 'com.diffplug.spotless' version '8.7.0'
     id 'io.freefair.lombok' version '9.5.0'
     id 'net.ltgt.errorprone' version '5.1.0'
 }
@@ -32,7 +32,7 @@ repositories {
 }
 
 ext {
-    set('springCloudVersion', '2025.1.1')
+    set('springCloudVersion', '2025.1.2')
     set('hapiVersion', '8.10.0')
 }
 
@@ -57,8 +57,8 @@ dependencies {
     testImplementation 'com.approvaltests:approvaltests:31.0.0'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    errorprone 'com.google.errorprone:error_prone_core:2.49.0'
-    errorprone 'com.uber.nullaway:nullaway:0.13.4'
+    errorprone 'com.google.errorprone:error_prone_core:2.50.0'
+    errorprone 'com.uber.nullaway:nullaway:0.13.7'
 }
 
 dependencyManagement {
@@ -105,7 +105,7 @@ tasks.register('generateConstants', JavaExec) {
 }
 
 jacoco {
-    toolVersion = '0.8.14'
+    toolVersion = '0.8.15'
 }
 
 jacocoTestReport {
