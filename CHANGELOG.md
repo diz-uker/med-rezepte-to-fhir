@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.21](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.20...v0.1.21) (2026-07-03)
+
+
+### Miscellaneous Chores
+
+* **deps:** update actions/cache action to v6 ([#36](https://github.com/diz-uker/med-rezepte-to-fhir/issues/36)) ([dc180ff](https://github.com/diz-uker/med-rezepte-to-fhir/commit/dc180ffadfaf47d315fb4b585b4509abba79287e))
+
 ## [0.1.20](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.19...v0.1.20) (2026-07-03)
 
 
