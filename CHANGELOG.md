@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.22](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.21...v0.1.22) (2026-07-04)
+
+
+### Features
+
+* added e2e test and upgraded ifa -&gt; edqm mapping ([#38](https://github.com/diz-uker/med-rezepte-to-fhir/issues/38)) ([90c0c41](https://github.com/diz-uker/med-rezepte-to-fhir/commit/90c0c410fd8be7827f379f787989637c56a80056))
+
 ## [0.1.21](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.20...v0.1.21) (2026-07-03)
 
 

@@ -1,4 +1,4 @@
-app-version: 0.1.21 # x-release-please-version
+app-version: 0.1.22 # x-release-please-version
 
 fhir:
   systems:
