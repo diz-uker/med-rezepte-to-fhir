@@ -74,28 +74,42 @@ def main():
 
     expected, skipped_fixtures = expected_identifiers(args.fixtures_dir)
     expected_total = sum(expected.values())
-    print(f"expecting {expected_total} mapped bundle(s) from fixtures; "
-          f"skipped (blank rezeptId/rezeptPos/verschreibung): {skipped_fixtures or 'none'}")
+    print(
+        f"expecting {expected_total} mapped bundle(s) from fixtures; "
+        "skipped (blank rezeptId/rezeptPos/verschreibung): "
+        f"{skipped_fixtures or 'none'}"
+    )
 
     dlq_messages = read_messages(args.dlq_file)
     if dlq_messages:
-        errors.append(f"expected an empty DLQ topic, found {len(dlq_messages)} message(s)")
+        errors.append(
+            f"expected an empty DLQ topic, found {len(dlq_messages)} message(s)"
+        )
 
     data_messages = read_messages(args.data_file)
     if len(data_messages) != expected_total:
         errors.append(
-            f"expected {expected_total} message(s) on the data output topic, got {len(data_messages)}"
+            f"expected {expected_total} message(s) on the data output "
+            f"topic, got {len(data_messages)}"
         )
 
     actual_identifiers = Counter()
     data_keys = Counter()
     for key, bundle in data_messages:
         data_keys[key] += 1
-        if bundle.get("resourceType") != "Bundle" or bundle.get("type") != "transaction":
-            errors.append(f"data message {key} is not a transaction Bundle: {bundle.get('resourceType')}/{bundle.get('type')}")
+        if (
+            bundle.get("resourceType") != "Bundle"
+            or bundle.get("type") != "transaction"
+        ):
+            errors.append(
+                f"data message {key} is not a transaction Bundle: "
+                f"{bundle.get('resourceType')}/{bundle.get('type')}"
+            )
             continue
         if bundle.get("id") != key:
-            errors.append(f"data message key {key} does not match bundle id {bundle.get('id')}")
+            errors.append(
+                f"data message key {key} does not match bundle id {bundle.get('id')}"
+            )
         med_request = find_entry(bundle, "MedicationRequest")
         if med_request is None:
             errors.append(f"data message {key} has no MedicationRequest entry")
@@ -118,16 +132,22 @@ def main():
     provenance_messages = read_messages(args.provenance_file)
     if len(provenance_messages) != expected_total:
         errors.append(
-            f"expected {expected_total} message(s) on the provenance output topic, got {len(provenance_messages)}"
+            f"expected {expected_total} message(s) on the provenance "
+            f"output topic, got {len(provenance_messages)}"
         )
 
     provenance_keys = Counter()
     for key, bundle in provenance_messages:
         if not key.startswith("provenance-"):
-            errors.append(f"provenance message key {key!r} missing 'provenance-' prefix")
+            errors.append(
+                f"provenance message key {key!r} missing 'provenance-' prefix"
+            )
             continue
-        provenance_keys[key[len("provenance-"):]] += 1
-        if bundle.get("resourceType") != "Bundle" or bundle.get("type") != "transaction":
+        provenance_keys[key[len("provenance-") :]] += 1
+        if (
+            bundle.get("resourceType") != "Bundle"
+            or bundle.get("type") != "transaction"
+        ):
             errors.append(f"provenance message {key} is not a transaction Bundle")
             continue
         if find_entry(bundle, "Provenance") is None:
@@ -137,7 +157,8 @@ def main():
 
     if provenance_keys != data_keys:
         errors.append(
-            "provenance message keys don't correspond 1:1 to data message keys.\n"
+            "provenance message keys don't correspond 1:1 to data "
+            "message keys.\n"
             f"  data keys:       {sorted(data_keys.elements())}\n"
             f"  provenance keys: {sorted(provenance_keys.elements())}"
         )
