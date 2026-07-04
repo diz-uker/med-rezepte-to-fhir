@@ -99,11 +99,16 @@ public class MedRezeptToMedicationMapper {
     if (StringUtils.isNotBlank(rezept.ifaPharmFormCode())) {
       var formConcept = new CodeableConcept().setText(rezept.ifaPharmFormCode());
 
-      IfaDoseFormMapper.lookup(rezept.ifaPharmFormCode()).ifPresent(formConcept::addCoding);
+      IfaDoseFormMapper.lookup(rezept.ifaPharmFormCode())
+          .ifPresentOrElse(
+              formConcept::addCoding,
+              () -> LOG.warn("IFA code {} not found in EDQM mapping", rezept.ifaPharmFormCode()));
       KbvDarreichungsform.CodeSystems.KbvCsSfhirKbvDarreichungsform.fromValue(
               rezept.ifaPharmFormCode())
           .map(c -> c.coding())
-          .ifPresent(formConcept::addCoding);
+          .ifPresentOrElse(
+              formConcept::addCoding,
+              () -> LOG.warn("IFA code {} not found in KBV mapping", rezept.ifaPharmFormCode()));
 
       medication.setForm(formConcept);
     }

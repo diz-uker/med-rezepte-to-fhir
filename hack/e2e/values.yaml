@@ -1,0 +1,36 @@
+# Helm values for the miracum/charts stream-processors chart used by hack/e2e/run.sh.
+# https://github.com/miracum/charts/tree/master/charts/stream-processors
+#
+# strimziClusterName/securityProtocol are left at their chart defaults
+# ("my-cluster" / "SSL"), matching hack/e2e/manifests/kafka.yaml and this
+# app's own application.yaml defaults for KAFKA_SSL_TRUST_STORE /
+# KAFKA_SSL_KEY_STORE_FILE, so no extra wiring is needed for the TLS
+# client cert the chart mounts from the KafkaUser it creates.
+#
+# processors.medrezept-to-fhir.container.image.* is filled in by run.sh via
+# --set, since it depends on the locally built/loaded image reference.
+processors:
+  medrezept-to-fhir:
+    replicaCount: 1
+    revisionHistoryLimit: 0
+    container:
+      image:
+        pullPolicy: Never
+      env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "prod"
+        - name: KAFKA_INPUT_TOPIC
+          value: "dwh.med-rezepte"
+        - name: KAFKA_OUTPUT_TOPIC
+          value: "fhir.med-rezepte"
+        # a single partition is created for the e2e test's input topic, so
+        # extra consumer threads would just sit idle.
+        - name: KAFKA_CONSUMER_CONCURRENCY
+          value: "1"
+      resources:
+        requests:
+          cpu: "250m"
+          memory: "512Mi"
+        limits:
+          cpu: "1"
+          memory: "1Gi"
