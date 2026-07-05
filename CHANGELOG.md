@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.23](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.22...v0.1.23) (2026-07-05)
+
+
+### Miscellaneous Chores
+
+* **deps:** update miracum/.github action to v1.22.3 ([#40](https://github.com/diz-uker/med-rezepte-to-fhir/issues/40)) ([ebedc64](https://github.com/diz-uker/med-rezepte-to-fhir/commit/ebedc64b6b7be6e1d770e3e843b2d80316ec2735))
+
 ## [0.1.22](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.21...v0.1.22) (2026-07-04)
 
 
