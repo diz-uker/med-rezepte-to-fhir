@@ -16,15 +16,15 @@ jobs:
   validate-fhir-resource:
     name: validate fhir resources
     runs-on: ubuntu-24.04
-    container: ghcr.io/miracum/ig-build-tools:v2.2.46@sha256:00ab42bcf4f527b5c4f7415dc8bbcd65aa05f21f5ddfa4303bdaf7642789d862
+    container: ghcr.io/miracum/ig-build-tools:v2.3.0@sha256:c849d2e22b6088ef191202763170553de88cafd4907a6f9d0e11e5b0ff7e83ef
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        uses: step-security/harden-runner@05e31511f85b41b11d1cf0ef85d0992719546e2c # v2.21.0
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
       - name: Checkout code
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
