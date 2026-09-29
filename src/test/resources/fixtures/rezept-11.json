@@ -1,0 +1,70 @@
+{
+  "REZEPT_ID": "123",
+  "REZEPT_QUELLE": "ACM",
+  "FALL_ID": "307",
+  "PATIENT_ID": "101",
+  "REZEPT_DATUM": 1758751200000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "PENICILLIN V RAT 1MEGA FTA N2 20St PZN08730666",
+  "SIGNATUR": "1-1-1 für 7 Tage",
+  "REZEPT_POS": "1",
+  "PZN": "08730666",
+  "PACKAGE_NAME": "Penicillin V-ratiopharm® 1 Mega 20 Filmtbl. N2",
+  "PACKAGE_NORM_SIZE_CODE": "2",
+  "IFA_NAME": "Penicillin V-ratiopharm 1 Mega Filmtabletten",
+  "IFA_PHARM_FORM_CODE": "FTA",
+  "AMOUNT_TEXT": "20 st",
+  "AMOUNT": 20,
+  "FACTOR1": 1,
+  "FACTOR2": 1,
+  "PACKAGE_UNIT_CODE": "ST",
+  "ATC_CODES": [
+    "J01CE02"
+  ],
+  "INGREDIENTS": [
+    {
+      "name": "Hypromellose",
+      "ask": "01333"
+    },
+    {
+      "name": "Macrogol 6000",
+      "ask": null
+    },
+    {
+      "name": "Magnesium stearat",
+      "ask": "15598"
+    },
+    {
+      "name": "Maltodextrin",
+      "ask": "08941"
+    },
+    {
+      "name": "Pfefferminzöl",
+      "ask": "00251"
+    },
+    {
+      "name": "Phenoxymethylpenicillin",
+      "ask": "07674"
+    },
+    {
+      "name": "Phenoxymethylpenicillin kalium",
+      "ask": "01160"
+    },
+    {
+      "name": "Povidon",
+      "ask": "01357"
+    },
+    {
+      "name": "Saccharin natrium",
+      "ask": "13374"
+    },
+    {
+      "name": "Talkum",
+      "ask": "00315"
+    },
+    {
+      "name": "Titandioxid",
+      "ask": "00785"
+    }
+  ]
+}

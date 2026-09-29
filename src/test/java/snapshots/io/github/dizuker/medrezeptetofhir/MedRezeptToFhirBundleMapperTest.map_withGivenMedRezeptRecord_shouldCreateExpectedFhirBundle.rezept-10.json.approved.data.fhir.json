@@ -1,0 +1,174 @@
+{
+  "resourceType": "Bundle",
+  "id": "aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
+        "value": "2-1"
+      } ],
+      "status": "unknown",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "outpatient",
+          "display": "Outpatient"
+        } ]
+      } ],
+      "reportedBoolean": false,
+      "medicationReference": {
+        "reference": "Medication/bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8",
+        "display": "Moxifloxacin AbZ 400 mg 14 Filmtbl. N1"
+      },
+      "subject": {
+        "reference": "Patient/a20efab8ba8d307ae9cf7dac88cd43e85d6cb5aaf5ed15ca61130e48248114d2",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "MR",
+              "display": "Medical record number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
+          "value": "10"
+        }
+      },
+      "authoredOn": "2026-09-27",
+      "dosageInstruction": [ {
+        "text": "1-0-0-0, bis 03.10.2026 um 07:59 Uhr"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5"
+    }
+  }, {
+    "fullUrl": "Medication/bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
+        "value": "08503410"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn",
+          "code": "08503410",
+          "display": "Moxifloxacin AbZ 400 mg 14 Filmtbl. N1"
+        }, {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc",
+          "version": "2026",
+          "code": "J01MA14"
+        } ],
+        "text": "Moxifloxacin AbZ 400 mg 14 Filmtbl. N1"
+      },
+      "form": {
+        "coding": [ {
+          "system": "http://standardterms.edqm.eu",
+          "code": "10221000",
+          "display": "Film-coated tablet"
+        }, {
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
+          "code": "FTA",
+          "display": "Filmtabletten"
+        } ],
+        "text": "FTA"
+      },
+      "ingredient": [ {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "02798"
+          } ],
+          "text": "Cellulose, mikrokristalline"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "22628"
+          } ],
+          "text": "Croscarmellose natrium"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "03904"
+          } ],
+          "text": "Eisen(III)-oxid"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01333"
+          } ],
+          "text": "Hypromellose"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
+          } ],
+          "text": "Macrogol 4000"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "32017"
+          } ],
+          "text": "Magnesium stearat (pflanzlich)"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "29248"
+          } ],
+          "text": "Moxifloxacin hydrochlorid"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "15657"
+          } ],
+          "text": "Siliciumdioxid, hochdisperses"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00785"
+          } ],
+          "text": "Titandioxid"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Medication/bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8"
+    }
+  } ]
+}

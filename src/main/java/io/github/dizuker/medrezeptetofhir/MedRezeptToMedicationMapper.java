@@ -5,10 +5,10 @@ import de.medizininformatikinitiative.kerndatensatz.medikation.Medikation;
 import io.github.dizuker.medrezeptetofhir.edqm.IfaDoseFormMapper;
 import io.github.dizuker.medrezeptetofhir.kbv.KbvDarreichungsform;
 import io.github.dizuker.medrezeptetofhir.models.MedRezept;
+import io.github.dizuker.tofhir.FhirExtensions.DataAbsentReason;
 import io.github.dizuker.tofhir.IdUtils;
 import java.util.Locale;
 import org.apache.commons.lang3.StringUtils;
-import org.hl7.fhir.r4.model.CodeType;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Medication;
@@ -75,10 +75,7 @@ public class MedRezeptToMedicationMapper {
         if (StringUtils.isNotBlank(ingredient.ask())) {
           coding.setCode(ingredient.ask());
         } else {
-          coding
-              .getCodeElement()
-              .addExtension(
-                  fhirProperties.extensions().dataAbsentReason().setValue(new CodeType("as-text")));
+          coding.getCodeElement().addExtension(DataAbsentReason.asText());
         }
 
         ingredientConcept.addCoding(coding);
@@ -86,13 +83,7 @@ public class MedRezeptToMedicationMapper {
       }
     } else {
       var ingredient = new CodeableConcept();
-      ingredient
-          .addCoding()
-          .addExtension(
-              fhirProperties
-                  .extensions()
-                  .dataAbsentReason()
-                  .setValue(new CodeType("asked-unknown")));
+      ingredient.addCoding().addExtension(DataAbsentReason.askedUnknown());
       medication.addIngredient().setItem(ingredient);
     }
 

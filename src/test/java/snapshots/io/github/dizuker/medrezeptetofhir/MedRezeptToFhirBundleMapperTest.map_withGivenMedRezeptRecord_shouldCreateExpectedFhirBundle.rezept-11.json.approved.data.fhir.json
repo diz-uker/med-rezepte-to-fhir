@@ -1,0 +1,204 @@
+{
+  "resourceType": "Bundle",
+  "id": "eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "MedicationRequest/eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
+        "value": "123-1"
+      } ],
+      "status": "unknown",
+      "intent": "order",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+          "code": "outpatient",
+          "display": "Outpatient"
+        } ]
+      } ],
+      "reportedBoolean": false,
+      "medicationReference": {
+        "reference": "Medication/7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a",
+        "display": "Penicillin V-ratiopharm® 1 Mega 20 Filmtbl. N2"
+      },
+      "subject": {
+        "reference": "Patient/0319b3b01bdd3eb743a23903490a60fa478e63a8ee97a4b561bff23986459d17",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "MR",
+              "display": "Medical record number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
+          "value": "101"
+        }
+      },
+      "encounter": {
+        "reference": "Encounter/1e311cfecb63dc6036b5aba339d1d3d06429fa50b3448e3b0f6854933f6f3d8b",
+        "identifier": {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "VN",
+              "display": "Visit number"
+            } ]
+          },
+          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
+          "value": "307"
+        }
+      },
+      "authoredOn": "2025-09-25",
+      "dosageInstruction": [ {
+        "text": "1-1-1 für 7 Tage"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MedicationRequest/eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555"
+    }
+  }, {
+    "fullUrl": "Medication/7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a",
+      "meta": {
+        "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
+      },
+      "identifier": [ {
+        "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
+        "value": "08730666"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn",
+          "code": "08730666",
+          "display": "Penicillin V-ratiopharm® 1 Mega 20 Filmtbl. N2"
+        }, {
+          "system": "http://fhir.de/CodeSystem/bfarm/atc",
+          "version": "2026",
+          "code": "J01CE02"
+        } ],
+        "text": "Penicillin V-ratiopharm® 1 Mega 20 Filmtbl. N2"
+      },
+      "form": {
+        "coding": [ {
+          "system": "http://standardterms.edqm.eu",
+          "code": "10221000",
+          "display": "Film-coated tablet"
+        }, {
+          "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
+          "code": "FTA",
+          "display": "Filmtabletten"
+        } ],
+        "text": "FTA"
+      },
+      "ingredient": [ {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01333"
+          } ],
+          "text": "Hypromellose"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
+          } ],
+          "text": "Macrogol 6000"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "15598"
+          } ],
+          "text": "Magnesium stearat"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "08941"
+          } ],
+          "text": "Maltodextrin"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00251"
+          } ],
+          "text": "Pfefferminzöl"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "07674"
+          } ],
+          "text": "Phenoxymethylpenicillin"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01160"
+          } ],
+          "text": "Phenoxymethylpenicillin kalium"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "01357"
+          } ],
+          "text": "Povidon"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "13374"
+          } ],
+          "text": "Saccharin natrium"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00315"
+          } ],
+          "text": "Talkum"
+        }
+      }, {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://fhir.de/CodeSystem/ask",
+            "code": "00785"
+          } ],
+          "text": "Titandioxid"
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Medication/7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a"
+    }
+  } ]
+}

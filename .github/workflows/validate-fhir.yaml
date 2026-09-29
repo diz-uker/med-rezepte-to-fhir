@@ -59,3 +59,25 @@ jobs:
           find src/test/java/snapshots/ -type f \
             -name "*.fhir.json" -print0 | \
             xargs -0 -I {} sh -c 'echo "\n\n\nValidating: {}" && fhir validate --verbose --fail "{}"'
+
+      - name: Validate bundles (Java validator)
+        continue-on-error: true
+        run: |
+          # derives the -version/-ig args for the Java validator (validator_cli.jar) directly
+          # from package.json, so it stays in sync with whatever packages are declared there.
+          VALIDATOR_ARGS=$(jq -r '
+            (["-version", .fhirVersions[0], "-tx", "n/a"]) as $base |
+            ( .dependencies | to_entries | map(select(.key != "hl7.fhir.r4.core")) | map(["-ig", (.key + "#" + .value)]) | add // [] ) as $igs |
+            ($base + $igs) | join(" ")
+          ' package.json)
+          echo "Derived validator args: $VALIDATOR_ARGS"
+          # shellcheck disable=SC2086 # VALIDATOR_ARGS must word-split into separate flags
+          java -jar /usr/local/bin/validator_cli.jar \
+            src/test/java/snapshots/*.fhir.json \
+            $VALIDATOR_ARGS -html-output=java-validator-bundles-report.html
+
+      - name: Upload Java validator bundle report
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: java-validator-bundles-report
+          path: java-validator-bundles-report.html

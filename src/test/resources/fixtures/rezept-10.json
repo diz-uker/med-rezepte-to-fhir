@@ -1,0 +1,62 @@
+{
+  "REZEPT_ID": "2",
+  "REZEPT_QUELLE": "meona",
+  "FALL_ID": null,
+  "PATIENT_ID": "10",
+  "REZEPT_DATUM": 1790460000000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "MOXIFLOXACIN AbZ 400 mg Filmtabletten",
+  "SIGNATUR": "1-0-0-0, bis 03.10.2026 um 07:59 Uhr",
+  "REZEPT_POS": "1",
+  "PZN": "08503410",
+  "PACKAGE_NAME": "Moxifloxacin AbZ 400 mg 14 Filmtbl. N1",
+  "PACKAGE_NORM_SIZE_CODE": "1",
+  "IFA_NAME": "Moxifloxacin AbZ 400mg Filmtabletten",
+  "IFA_PHARM_FORM_CODE": "FTA",
+  "AMOUNT_TEXT": "14 st",
+  "AMOUNT": 14,
+  "FACTOR1": 1,
+  "FACTOR2": 1,
+  "PACKAGE_UNIT_CODE": "ST",
+  "ATC_CODES": [
+    "J01MA14"
+  ],
+  "INGREDIENTS": [
+    {
+      "name": "Cellulose, mikrokristalline",
+      "ask": "02798"
+    },
+    {
+      "name": "Croscarmellose natrium",
+      "ask": "22628"
+    },
+    {
+      "name": "Eisen(III)-oxid",
+      "ask": "03904"
+    },
+    {
+      "name": "Hypromellose",
+      "ask": "01333"
+    },
+    {
+      "name": "Macrogol 4000",
+      "ask": null
+    },
+    {
+      "name": "Magnesium stearat (pflanzlich)",
+      "ask": "32017"
+    },
+    {
+      "name": "Moxifloxacin hydrochlorid",
+      "ask": "29248"
+    },
+    {
+      "name": "Siliciumdioxid, hochdisperses",
+      "ask": "15657"
+    },
+    {
+      "name": "Titandioxid",
+      "ask": "00785"
+    }
+  ]
+}
