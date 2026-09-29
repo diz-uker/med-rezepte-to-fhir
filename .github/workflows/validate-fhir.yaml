@@ -16,7 +16,7 @@ jobs:
   validate-fhir-resource:
     name: validate fhir resources
     runs-on: ubuntu-24.04
-    container: ghcr.io/miracum/ig-build-tools:v2.2.46@sha256:00ab42bcf4f527b5c4f7415dc8bbcd65aa05f21f5ddfa4303bdaf7642789d862
+    container: ghcr.io/miracum/ig-build-tools:v2.2.49@sha256:2dd3c195d9c49cf93a379cfe41b25720a87589b7f76ede332d7aee7232bc7e98
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
@@ -73,7 +73,7 @@ jobs:
           echo "Derived validator args: $VALIDATOR_ARGS"
           # shellcheck disable=SC2086 # VALIDATOR_ARGS must word-split into separate flags
           java -jar /usr/local/bin/validator_cli.jar \
-            src/test/java/snapshots/*.fhir.json \
+            src/test/java/snapshots/io/github/dizuker/medrezeptetofhir/*.json \
             $VALIDATOR_ARGS -html-output=java-validator-bundles-report.html
 
       - name: Upload Java validator bundle report
