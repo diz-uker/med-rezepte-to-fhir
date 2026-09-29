@@ -3,7 +3,7 @@
   "id": "f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "MedicationRequest/f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/MedicationRequest/f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d",
     "resource": {
       "resourceType": "MedicationRequest",
       "id": "f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d",
@@ -66,7 +66,7 @@
       "url": "MedicationRequest/f487bff8f43837300198648eb3cc6dad1228747ef4a68be3d1c825935656720d"
     }
   }, {
-    "fullUrl": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",
     "resource": {
       "resourceType": "Medication",
       "id": "abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5",

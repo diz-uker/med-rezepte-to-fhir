@@ -3,7 +3,7 @@
   "id": "ed482f801f5bab824a5a0886c286158fa4fff3bf095c52c1bc6a533dc9fb2e9f",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
     "resource": {
       "resourceType": "Device",
       "id": "364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
@@ -38,7 +38,7 @@
       "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
     }
   }, {
-    "fullUrl": "Provenance/ff9fecd2fb9cfdd5ca4e9440c9e4108a1b4adb5fef662a4469c1286e57ab6cbe",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Provenance/ff9fecd2fb9cfdd5ca4e9440c9e4108a1b4adb5fef662a4469c1286e57ab6cbe",
     "resource": {
       "resourceType": "Provenance",
       "id": "ff9fecd2fb9cfdd5ca4e9440c9e4108a1b4adb5fef662a4469c1286e57ab6cbe",

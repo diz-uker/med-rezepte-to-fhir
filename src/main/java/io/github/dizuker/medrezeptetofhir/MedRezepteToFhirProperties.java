@@ -45,6 +45,7 @@ public class MedRezepteToFhirProperties extends FhirProperties {
     private Identifiers identifiers = new Identifiers();
     private String medicationrequestCategory;
     private String identifierType;
+    private String fullUrlBase;
 
     /** Used by Spring Boot for property binding. */
     public void setIdentifiers(Identifiers identifiers) {
@@ -59,6 +60,11 @@ public class MedRezepteToFhirProperties extends FhirProperties {
     /** Used by Spring Boot for property binding. */
     public void setIdentifierType(String identifierType) {
       this.identifierType = identifierType;
+    }
+
+    /** Used by Spring Boot for property binding. */
+    public void setFullUrlBase(String fullUrlBase) {
+      this.fullUrlBase = fullUrlBase;
     }
   }
 

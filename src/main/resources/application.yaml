@@ -12,6 +12,7 @@ fhir:
       source-system: "https://diz-uker.github.io/source-system"
     medicationrequest-category: "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
     identifier-type: "http://terminology.hl7.org/CodeSystem/v2-0203"
+    full-url-base: "https://diz-uker.github.io/med-rezepte-to-fhir/fhir"
   codings:
     ask:
       system: "http://fhir.de/CodeSystem/ask"
