@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.24](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.23...v0.1.24) (2026-09-29)
+
+
+### Features
+
+* updated to Medikation 2027.0.0-ballot and minor fixes ([#42](https://github.com/diz-uker/med-rezepte-to-fhir/issues/42)) ([65c10b8](https://github.com/diz-uker/med-rezepte-to-fhir/commit/65c10b87ae88f97d85064a2001864404f4cf160f))
+
 ## [0.1.23](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.22...v0.1.23) (2026-07-05)
 
 
