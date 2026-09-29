@@ -55,6 +55,11 @@ public class MedRezeptToFhirBundleMapper {
 
     var request = medicationRequestMapper.map(rezept, medicationReference);
 
+    if (StringUtils.isNotBlank(fhirProperties.metaSource())) {
+      request.getMeta().setSource(fhirProperties.metaSource());
+      medication.getMeta().setSource(fhirProperties.metaSource());
+    }
+
     var device = deviceMapper.map();
 
     var sourceSystemValue =

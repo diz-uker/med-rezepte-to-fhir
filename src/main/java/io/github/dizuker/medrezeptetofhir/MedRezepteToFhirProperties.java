@@ -22,6 +22,7 @@ public class MedRezepteToFhirProperties extends FhirProperties {
   private Systems systems = new Systems();
   private Codings codings = new Codings();
   private String sourceSystemValueTemplate;
+  private String metaSource;
 
   /** Used by Spring Boot for property binding. */
   public void setSystems(Systems systems) {
@@ -36,6 +37,11 @@ public class MedRezepteToFhirProperties extends FhirProperties {
   /** Used by Spring Boot for property binding. */
   public void setSourceSystemValueTemplate(String sourceSystemValueTemplate) {
     this.sourceSystemValueTemplate = sourceSystemValueTemplate;
+  }
+
+  /** Used by Spring Boot for property binding. */
+  public void setMetaSource(String metaSource) {
+    this.metaSource = metaSource;
   }
 
   /** Application-specific FHIR systems, extending the to-fhir starter's defaults. */
