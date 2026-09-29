@@ -1,6 +1,6 @@
 {
   "resourceType": "Bundle",
-  "id": "41e2f5642a3ca2ae8053b58552d2e4dd34952c629f6b166c30c2361cc319cd4e",
+  "id": "7ab161f8c7738807db0289c0b6a7da3ade422e761b018a27f07f519babdae54f",
   "type": "transaction",
   "entry": [ {
     "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
@@ -38,14 +38,14 @@
       "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
     }
   }, {
-    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Provenance/9decd7669d0575e4fbd7caa5d45c8e0feeb34461cf18e46ab3ad2aca1aafb0bb",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Provenance/d5e73576f87fb45bac16cc0760fe893168e07aa07f51879da63a775ab8323431",
     "resource": {
       "resourceType": "Provenance",
-      "id": "9decd7669d0575e4fbd7caa5d45c8e0feeb34461cf18e46ab3ad2aca1aafb0bb",
+      "id": "d5e73576f87fb45bac16cc0760fe893168e07aa07f51879da63a775ab8323431",
       "target": [ {
-        "reference": "MedicationRequest/6fbe5d48613cd696983a1e4f09df709e891a8be73a9235be8c0184bb16ed3888"
+        "reference": "MedicationRequest/eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555"
       }, {
-        "reference": "Medication/61cbe435e083102301924d49c6d5deb395bbe7235363d943bc8c3edbd8350032"
+        "reference": "Medication/7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a"
       }, {
         "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
       } ],
@@ -82,14 +82,14 @@
         "what": {
           "identifier": {
             "system": "https://diz-uker.github.io/source-system",
-            "value": "urn:source:diz-uker:db:schema:table:rezept_id=123_0;rezept_pos=1"
+            "value": "urn:source:diz-uker:db:schema:table:rezept_id=123;rezept_pos=1"
           }
         }
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "Provenance/9decd7669d0575e4fbd7caa5d45c8e0feeb34461cf18e46ab3ad2aca1aafb0bb"
+      "url": "Provenance/d5e73576f87fb45bac16cc0760fe893168e07aa07f51879da63a775ab8323431"
     }
   } ]
 }

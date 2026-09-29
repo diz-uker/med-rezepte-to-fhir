@@ -25,11 +25,11 @@
       } ],
       "reportedBoolean": false,
       "medicationReference": {
-        "reference": "Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
-        "display": "Daivonex® 50µg/g 30g Creme N1"
+        "reference": "Medication/bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8",
+        "display": "Moxifloxacin AbZ 400 mg 14 Filmtbl. N1"
       },
       "subject": {
-        "reference": "Patient/613da17dafd7596efc58e76e4152c03c3b4deb317662b69ba836dda0e069cd05",
+        "reference": "Patient/a20efab8ba8d307ae9cf7dac88cd43e85d6cb5aaf5ed15ca61130e48248114d2",
         "identifier": {
           "type": {
             "coding": [ {
@@ -39,26 +39,12 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
-          "value": "2"
+          "value": "10"
         }
       },
-      "encounter": {
-        "reference": "Encounter/0c1695fac46466b1b21b911f149e36da04d2f5390bad3dc61100c8aad70d7e95",
-        "identifier": {
-          "type": {
-            "coding": [ {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "VN",
-              "display": "Visit number"
-            } ]
-          },
-          "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
-          "value": "2"
-        }
-      },
-      "authoredOn": "2024-05-02",
+      "authoredOn": "2026-09-27",
       "dosageInstruction": [ {
-        "text": "1x tgl."
+        "text": "1-0-0-0, bis 03.10.2026 um 07:59 Uhr"
       } ]
     },
     "request": {
@@ -66,150 +52,123 @@
       "url": "MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5"
     }
   }, {
-    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Medication/bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8",
     "resource": {
       "resourceType": "Medication",
-      "id": "08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
+      "id": "bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
-        "value": "06636259"
+        "value": "08503410"
       } ],
       "code": {
         "coding": [ {
           "system": "http://fhir.de/CodeSystem/ifa/pzn",
-          "code": "06636259",
-          "display": "Daivonex® 50µg/g 30g Creme N1"
+          "code": "08503410",
+          "display": "Moxifloxacin AbZ 400 mg 14 Filmtbl. N1"
         }, {
           "system": "http://fhir.de/CodeSystem/bfarm/atc",
           "version": "2026",
-          "code": "D05AX02"
+          "code": "J01MA14"
         } ],
-        "text": "Daivonex® 50µg/g 30g Creme N1"
+        "text": "Moxifloxacin AbZ 400 mg 14 Filmtbl. N1"
       },
       "form": {
         "coding": [ {
           "system": "http://standardterms.edqm.eu",
-          "code": "10502000",
-          "display": "Cream"
+          "code": "10221000",
+          "display": "Film-coated tablet"
         }, {
           "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
-          "code": "CRE",
-          "display": "Creme"
+          "code": "FTA",
+          "display": "Filmtabletten"
         } ],
-        "text": "CRE"
+        "text": "FTA"
       },
       "ingredient": [ {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "29510"
+            "code": "02798"
           } ],
-          "text": "Calcipotriol-1-Wasser"
+          "text": "Cellulose, mikrokristalline"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00341"
+            "code": "22628"
           } ],
-          "text": "Wasser, gereinigtes"
+          "text": "Croscarmellose natrium"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00861"
+            "code": "03904"
           } ],
-          "text": "all-rac-¤a-Tocopherol"
+          "text": "Eisen(III)-oxid"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "05680"
+            "code": "01333"
           } ],
-          "text": "2,4-Dichlorbenzylalkohol"
+          "text": "Hypromellose"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "29838"
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
           } ],
-          "text": "Diazolidinylharnstoff"
+          "text": "Macrogol 4000"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00067"
+            "code": "32017"
           } ],
-          "text": "Cetylstearylalkohol"
+          "text": "Magnesium stearat (pflanzlich)"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "02908"
+            "code": "29248"
           } ],
-          "text": "Cetomacrogol 1000"
+          "text": "Moxifloxacin hydrochlorid"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "12816"
+            "code": "15657"
           } ],
-          "text": "Glycerol 85%"
+          "text": "Siliciumdioxid, hochdisperses"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00216"
+            "code": "00785"
           } ],
-          "text": "Natriumhydroxid"
-        }
-      }, {
-        "itemCodeableConcept": {
-          "coding": [ {
-            "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00334"
-          } ],
-          "text": "Vaselin, weißes"
-        }
-      }, {
-        "itemCodeableConcept": {
-          "coding": [ {
-            "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00242"
-          } ],
-          "text": "Paraffin, dickflüssiges"
-        }
-      }, {
-        "itemCodeableConcept": {
-          "coding": [ {
-            "system": "http://fhir.de/CodeSystem/ask",
-            "code": "12711"
-          } ],
-          "text": "Natriummonohydrogenphosphat dihydrat"
-        }
-      }, {
-        "itemCodeableConcept": {
-          "coding": [ {
-            "system": "http://fhir.de/CodeSystem/ask",
-            "code": "01295"
-          } ],
-          "text": "Natriumedetat"
+          "text": "Titandioxid"
         }
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1"
+      "url": "Medication/bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8"
     }
   } ]
 }

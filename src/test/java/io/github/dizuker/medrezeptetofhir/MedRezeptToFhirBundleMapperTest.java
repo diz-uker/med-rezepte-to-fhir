@@ -23,7 +23,7 @@ import org.springframework.context.annotation.Import;
 class MedRezeptToFhirBundleMapperTest {
   private static final FhirContext FHIR_CONTEXT = FhirContext.forR4();
   protected static final Scrubber PROFILE_VERSION_SCRUBBER =
-      new RegExScrubber("\\|[0-9]+\\.[0-9]+\\.[0-9]+(?=\")", "");
+      new RegExScrubber("\\|[0-9]+\\.[0-9]+\\.[0-9]+-[^\"]+(?=\")", "");
   public static final Scrubber FHIR_DATE_TIME_SCRUBBER =
       Scrubbers.scrubAll(
           new RegExScrubber(
@@ -42,6 +42,8 @@ class MedRezeptToFhirBundleMapperTest {
     "rezept-7.json",
     "rezept-8.json",
     "rezept-9.json",
+    "rezept-10.json",
+    "rezept-11.json",
   })
   void map_withGivenMedRezeptRecord_shouldCreateExpectedFhirBundle(String sourceFile)
       throws IOException {

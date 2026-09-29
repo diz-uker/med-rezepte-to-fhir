@@ -3,7 +3,7 @@
   "id": "75460a1aa6679aa1e774fb86579bb3a0e1d8b3ec5b8adece6f91f6bfcfff5d4d",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
     "resource": {
       "resourceType": "Device",
       "id": "364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
@@ -38,7 +38,7 @@
       "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
     }
   }, {
-    "fullUrl": "Provenance/036e7da1fbfce1d30a4f4919f3decbc07b35201536bb728b11a898536045cf75",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Provenance/036e7da1fbfce1d30a4f4919f3decbc07b35201536bb728b11a898536045cf75",
     "resource": {
       "resourceType": "Provenance",
       "id": "036e7da1fbfce1d30a4f4919f3decbc07b35201536bb728b11a898536045cf75",
@@ -70,7 +70,7 @@
           "coding": [ {
             "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
             "code": "AUT",
-            "display": "author"
+            "display": "author (originator)"
           } ]
         } ],
         "who": {

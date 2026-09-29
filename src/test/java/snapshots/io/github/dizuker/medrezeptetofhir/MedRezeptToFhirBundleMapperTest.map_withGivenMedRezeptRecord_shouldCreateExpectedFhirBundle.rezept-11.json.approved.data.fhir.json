@@ -1,18 +1,18 @@
 {
   "resourceType": "Bundle",
-  "id": "aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+  "id": "eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/MedicationRequest/eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555",
     "resource": {
       "resourceType": "MedicationRequest",
-      "id": "aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5",
+      "id": "eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/MedicationRequest" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-request-id",
-        "value": "2-1"
+        "value": "123-1"
       } ],
       "status": "unknown",
       "intent": "order",
@@ -25,11 +25,11 @@
       } ],
       "reportedBoolean": false,
       "medicationReference": {
-        "reference": "Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
-        "display": "Daivonex® 50µg/g 30g Creme N1"
+        "reference": "Medication/7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a",
+        "display": "Penicillin V-ratiopharm® 1 Mega 20 Filmtbl. N2"
       },
       "subject": {
-        "reference": "Patient/613da17dafd7596efc58e76e4152c03c3b4deb317662b69ba836dda0e069cd05",
+        "reference": "Patient/0319b3b01bdd3eb743a23903490a60fa478e63a8ee97a4b561bff23986459d17",
         "identifier": {
           "type": {
             "coding": [ {
@@ -39,11 +39,11 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/patient-id",
-          "value": "2"
+          "value": "101"
         }
       },
       "encounter": {
-        "reference": "Encounter/0c1695fac46466b1b21b911f149e36da04d2f5390bad3dc61100c8aad70d7e95",
+        "reference": "Encounter/1e311cfecb63dc6036b5aba339d1d3d06429fa50b3448e3b0f6854933f6f3d8b",
         "identifier": {
           "type": {
             "coding": [ {
@@ -53,163 +53,152 @@
             } ]
           },
           "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/encounter-id",
-          "value": "2"
+          "value": "307"
         }
       },
-      "authoredOn": "2024-05-02",
+      "authoredOn": "2025-09-25",
       "dosageInstruction": [ {
-        "text": "1x tgl."
+        "text": "1-1-1 für 7 Tage"
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5"
+      "url": "MedicationRequest/eeaa0149df4dd29b5f680fa04ef7d00e43fdbf4a8b4d2bd4184c65c1cc5a8555"
     }
   }, {
-    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Medication/7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a",
     "resource": {
       "resourceType": "Medication",
-      "id": "08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1",
+      "id": "7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a",
       "meta": {
         "profile": [ "https://www.medizininformatik-initiative.de/fhir/core/modul-medikation/StructureDefinition/Medication" ]
       },
       "identifier": [ {
         "system": "https://diz-uker.github.io/med-rezepte-to-fhir/identifiers/rezept-medication-id",
-        "value": "06636259"
+        "value": "08730666"
       } ],
       "code": {
         "coding": [ {
           "system": "http://fhir.de/CodeSystem/ifa/pzn",
-          "code": "06636259",
-          "display": "Daivonex® 50µg/g 30g Creme N1"
+          "code": "08730666",
+          "display": "Penicillin V-ratiopharm® 1 Mega 20 Filmtbl. N2"
         }, {
           "system": "http://fhir.de/CodeSystem/bfarm/atc",
           "version": "2026",
-          "code": "D05AX02"
+          "code": "J01CE02"
         } ],
-        "text": "Daivonex® 50µg/g 30g Creme N1"
+        "text": "Penicillin V-ratiopharm® 1 Mega 20 Filmtbl. N2"
       },
       "form": {
         "coding": [ {
           "system": "http://standardterms.edqm.eu",
-          "code": "10502000",
-          "display": "Cream"
+          "code": "10221000",
+          "display": "Film-coated tablet"
         }, {
           "system": "https://fhir.kbv.de/CodeSystem/KBV_CS_SFHIR_KBV_DARREICHUNGSFORM",
-          "code": "CRE",
-          "display": "Creme"
+          "code": "FTA",
+          "display": "Filmtabletten"
         } ],
-        "text": "CRE"
+        "text": "FTA"
       },
       "ingredient": [ {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "29510"
+            "code": "01333"
           } ],
-          "text": "Calcipotriol-1-Wasser"
+          "text": "Hypromellose"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00341"
+            "_code": {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+                "valueCode": "as-text"
+              } ]
+            }
           } ],
-          "text": "Wasser, gereinigtes"
+          "text": "Macrogol 6000"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00861"
+            "code": "15598"
           } ],
-          "text": "all-rac-¤a-Tocopherol"
+          "text": "Magnesium stearat"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "05680"
+            "code": "08941"
           } ],
-          "text": "2,4-Dichlorbenzylalkohol"
+          "text": "Maltodextrin"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "29838"
+            "code": "00251"
           } ],
-          "text": "Diazolidinylharnstoff"
+          "text": "Pfefferminzöl"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00067"
+            "code": "07674"
           } ],
-          "text": "Cetylstearylalkohol"
+          "text": "Phenoxymethylpenicillin"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "02908"
+            "code": "01160"
           } ],
-          "text": "Cetomacrogol 1000"
+          "text": "Phenoxymethylpenicillin kalium"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "12816"
+            "code": "01357"
           } ],
-          "text": "Glycerol 85%"
+          "text": "Povidon"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00216"
+            "code": "13374"
           } ],
-          "text": "Natriumhydroxid"
+          "text": "Saccharin natrium"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00334"
+            "code": "00315"
           } ],
-          "text": "Vaselin, weißes"
+          "text": "Talkum"
         }
       }, {
         "itemCodeableConcept": {
           "coding": [ {
             "system": "http://fhir.de/CodeSystem/ask",
-            "code": "00242"
+            "code": "00785"
           } ],
-          "text": "Paraffin, dickflüssiges"
-        }
-      }, {
-        "itemCodeableConcept": {
-          "coding": [ {
-            "system": "http://fhir.de/CodeSystem/ask",
-            "code": "12711"
-          } ],
-          "text": "Natriummonohydrogenphosphat dihydrat"
-        }
-      }, {
-        "itemCodeableConcept": {
-          "coding": [ {
-            "system": "http://fhir.de/CodeSystem/ask",
-            "code": "01295"
-          } ],
-          "text": "Natriumedetat"
+          "text": "Titandioxid"
         }
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "Medication/08e46eaae865b214704935aae351ccecdbd1a40d041949bf9d452e77f65962e1"
+      "url": "Medication/7c2e2323faa003d99aae49c9d5fd966b792bc4d6fb58c06253161888523f284a"
     }
   } ]
 }

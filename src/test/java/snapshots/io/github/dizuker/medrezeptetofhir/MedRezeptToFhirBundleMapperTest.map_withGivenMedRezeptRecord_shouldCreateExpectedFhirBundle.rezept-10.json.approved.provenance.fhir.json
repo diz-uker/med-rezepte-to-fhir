@@ -1,9 +1,9 @@
 {
   "resourceType": "Bundle",
-  "id": "540a8fea6fd58aa434459dcba2ad104438bbb251915fe11aac91075df7203a87",
+  "id": "e5e0d0d3247bb517033157037e9fdafd62aa8b915ec009e6950907f1aae827b6",
   "type": "transaction",
   "entry": [ {
-    "fullUrl": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
     "resource": {
       "resourceType": "Device",
       "id": "364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf",
@@ -38,14 +38,14 @@
       "url": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
     }
   }, {
-    "fullUrl": "Provenance/57210bc93449d56f6663b392f1eb5243e5ad89f64c026b51a377664d3e807fa2",
+    "fullUrl": "https://diz-uker.github.io/med-rezepte-to-fhir/fhir/Provenance/79ec0f4cd72a13bd23848e3fb36b4fcc5a716466369c5c3a0e3f76eedc86ff8f",
     "resource": {
       "resourceType": "Provenance",
-      "id": "57210bc93449d56f6663b392f1eb5243e5ad89f64c026b51a377664d3e807fa2",
+      "id": "79ec0f4cd72a13bd23848e3fb36b4fcc5a716466369c5c3a0e3f76eedc86ff8f",
       "target": [ {
-        "reference": "MedicationRequest/e68f16b05d3617e2b01e13352fd961a4fa2f1a60e450523f5a60d7508b4fadba"
+        "reference": "MedicationRequest/aa93d9b56d91c2e838c73cee50938c119eae87ebc6b5ea3cfd7a4023492121a5"
       }, {
-        "reference": "Medication/abcb3919ea3d94ba60d1d89b36f8ca4784621f4d5bb80c4dc16a2983a965c2b5"
+        "reference": "Medication/bcc356dba5ce3dbb14cc1684b68c1e0e5deff162a88b1d6843d97e249d3b83e8"
       }, {
         "reference": "Device/364bcb6e6edf4396eaa4a9dfcb4683c3b0d2e9636caec397f976c9ce3428ebbf"
       } ],
@@ -70,7 +70,7 @@
           "coding": [ {
             "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
             "code": "AUT",
-            "display": "author"
+            "display": "author (originator)"
           } ]
         } ],
         "who": {
@@ -82,14 +82,14 @@
         "what": {
           "identifier": {
             "system": "https://diz-uker.github.io/source-system",
-            "value": "urn:source:diz-uker:db:schema:table:rezept_id=50002062760_0;rezept_pos=1"
+            "value": "urn:source:diz-uker:db:schema:table:rezept_id=2;rezept_pos=1"
           }
         }
       } ]
     },
     "request": {
       "method": "PUT",
-      "url": "Provenance/57210bc93449d56f6663b392f1eb5243e5ad89f64c026b51a377664d3e807fa2"
+      "url": "Provenance/79ec0f4cd72a13bd23848e3fb36b4fcc5a716466369c5c3a0e3f76eedc86ff8f"
     }
   } ]
 }
