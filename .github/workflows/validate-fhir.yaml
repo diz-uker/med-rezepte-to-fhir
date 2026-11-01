@@ -15,7 +15,7 @@ concurrency:
 jobs:
   validate-fhir-resource:
     name: validate fhir resources
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     container: ghcr.io/miracum/ig-build-tools:v2.2.49@sha256:2dd3c195d9c49cf93a379cfe41b25720a87589b7f76ede332d7aee7232bc7e98
     steps:
       - name: Harden Runner
