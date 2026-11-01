@@ -16,15 +16,15 @@ jobs:
   validate-fhir-resource:
     name: validate fhir resources
     runs-on: ubuntu-24.04
-    container: ghcr.io/miracum/ig-build-tools:v2.2.49@sha256:2dd3c195d9c49cf93a379cfe41b25720a87589b7f76ede332d7aee7232bc7e98
+    container: ghcr.io/miracum/ig-build-tools:v2.5.0@sha256:ce3b0f9b3ff5f22ff9bf4ea71db188b43a144bb0e72c0e96f714b93ebc26983b
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+        uses: step-security/harden-runner@ccd8616d44fd3846e67624a50d5aad6d37bf2d25 # v2.22.1
         with:
           egress-policy: audit # change to 'egress-policy: block' after couple of runs
 
       - name: Checkout code
-        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -77,7 +77,7 @@ jobs:
             $VALIDATOR_ARGS -html-output=java-validator-bundles-report.html
 
       - name: Upload Java validator bundle report
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: java-validator-bundles-report
           path: java-validator-bundles-report.html
