@@ -9,8 +9,10 @@
 #      (https://github.com/miracum/charts/tree/master/charts/stream-processors)
 #   5. produces the test fixtures (src/test/resources/fixtures) onto the
 #      input topic
-#   6. consumes the output/provenance/DLQ topics and asserts the expected
-#      FHIR bundles were produced (hack/e2e/verify.py)
+#   6. consumes the output/provenance/DLQ topics and counts the produced
+#      messages and FHIR resources. Which records are mapped or skipped, and
+#      what the bundles contain, is covered by the unit/snapshot tests; this
+#      only checks that the deployed app is wired up correctly.
 #
 # Usage: hack/e2e/run.sh
 #
@@ -44,6 +46,9 @@ INPUT_TOPIC="dwh.med-rezepte"
 OUTPUT_TOPIC="fhir.med-rezepte"
 PROVENANCE_TOPIC="fhir.med-rezepte.provenance"
 DLQ_TOPIC="error.${INPUT_TOPIC}.${PROCESSOR_NAME}"
+# number of fixtures in src/test/resources/fixtures expected to be mapped to
+# a bundle, the others are skipped by the app. Update when adding fixtures.
+EXPECTED_BUNDLES=12
 
 log() { echo -e "\033[1;34m[e2e]\033[0m $*"; }
 
@@ -163,11 +168,48 @@ consume "${OUTPUT_TOPIC}" "${WORK_DIR}/data.txt"
 consume "${PROVENANCE_TOPIC}" "${WORK_DIR}/provenance.txt"
 consume "${DLQ_TOPIC}" "${WORK_DIR}/dlq.txt"
 
-log "verifying consumed messages against fixtures"
-python3 "${E2E_DIR}/verify.py" \
-  --fixtures-dir "${ROOT_DIR}/src/test/resources/fixtures" \
-  --data-file "${WORK_DIR}/data.txt" \
-  --provenance-file "${WORK_DIR}/provenance.txt" \
-  --dlq-file "${WORK_DIR}/dlq.txt"
+# kafka-console-consumer prints one "key|value-json" line per message (plus
+# occasional blank lines), turns that into a JSON array of {key, value}
+messages() {
+  jq -R -s -c '[split("\n")[] | select(contains("|")) | split("|")
+    | {key: .[0], value: (.[1:] | join("|") | fromjson)}]' "$1"
+}
+
+resource_type_counts() {
+  jq -c '[.[].value.entry[].resource.resourceType]
+    | group_by(.) | map({key: .[0], value: length}) | from_entries'
+}
+
+failed=false
+check() {
+  local description="$1" expected="$2" actual="$3"
+  if [[ "${actual}" == "${expected}" ]]; then
+    log "OK: ${description}: ${actual}"
+  else
+    log "FAILED: ${description}: expected ${expected}, got ${actual}"
+    failed=true
+  fi
+}
+
+log "verifying consumed messages"
+data="$(messages "${WORK_DIR}/data.txt")"
+provenance="$(messages "${WORK_DIR}/provenance.txt")"
+dlq="$(messages "${WORK_DIR}/dlq.txt")"
+
+check "data messages" "${EXPECTED_BUNDLES}" "$(jq length <<<"${data}")"
+check "data resources" \
+  "{\"Medication\":${EXPECTED_BUNDLES},\"MedicationRequest\":${EXPECTED_BUNDLES}}" \
+  "$(resource_type_counts <<<"${data}")"
+check "data messages whose key is not the bundle id" 0 \
+  "$(jq '[.[] | select(.key != .value.id)] | length' <<<"${data}")"
+check "provenance messages" "${EXPECTED_BUNDLES}" "$(jq length <<<"${provenance}")"
+check "provenance resources" \
+  "{\"Device\":${EXPECTED_BUNDLES},\"Provenance\":${EXPECTED_BUNDLES}}" \
+  "$(resource_type_counts <<<"${provenance}")"
+check "DLQ messages" 0 "$(jq length <<<"${dlq}")"
+
+if [[ "${failed}" == "true" ]]; then
+  exit 1
+fi
 
 log "e2e test passed"
