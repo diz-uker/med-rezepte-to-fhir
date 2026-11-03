@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.25](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.24...v0.1.25) (2026-11-03)
+
+
+### Bug Fixes
+
+* handle verschreibungen with blank text after slugify ([#44](https://github.com/diz-uker/med-rezepte-to-fhir/issues/44)) ([1ef7b31](https://github.com/diz-uker/med-rezepte-to-fhir/commit/1ef7b312eab2fb37e3360872b2c9f889b3ba6f6b))
+
 ## [0.1.24](https://github.com/diz-uker/med-rezepte-to-fhir/compare/v0.1.23...v0.1.24) (2026-09-29)
 
 
