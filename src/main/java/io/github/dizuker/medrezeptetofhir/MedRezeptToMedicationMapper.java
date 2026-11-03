@@ -36,14 +36,12 @@ public class MedRezeptToMedicationMapper {
    *     which a usable identifier could be derived, e.g., if the text is just "...".
    */
   public Optional<Medication> map(MedRezept rezept) {
-    String identifierValue;
-    if (StringUtils.isNotBlank(rezept.pzn())) {
-      identifierValue = rezept.pzn();
-    } else {
-      identifierValue = slugifier.slugify(rezept.verschreibung());
-    }
+    var hasPzn = StringUtils.isNotBlank(rezept.pzn());
+    // texts like "..." contain nothing that survives slugification
+    var verschreibungSlug = slugifier.slugify(rezept.verschreibung());
+    var hasUsableVerschreibung = StringUtils.isNotBlank(verschreibungSlug);
 
-    if (StringUtils.isBlank(identifierValue)) {
+    if (!hasPzn && !hasUsableVerschreibung) {
       LOG.warn("Neither PZN nor a usable Verschreibung text is set, cannot create medication.");
       return Optional.empty();
     }
@@ -52,14 +50,17 @@ public class MedRezeptToMedicationMapper {
     var medicationIdentifier =
         new Identifier()
             .setSystem(fhirProperties.systems().identifiers().rezeptMedicationId())
-            .setValue(identifierValue);
+            .setValue(hasPzn ? rezept.pzn() : verschreibungSlug);
 
     medication.addIdentifier(medicationIdentifier);
     medication.setId(IdUtils.fromIdentifier(medicationIdentifier));
     medication.getMeta().addProfile(Medikation.Profiles.miiPrMedikationMedication());
-    var code = new CodeableConcept().setText(rezept.verschreibung());
+    var code = new CodeableConcept();
+    if (hasUsableVerschreibung) {
+      code.setText(rezept.verschreibung());
+    }
 
-    if (StringUtils.isNotBlank(rezept.pzn())) {
+    if (hasPzn) {
       var pznCoding = fhirProperties.codings().pzn().setCode(rezept.pzn());
       if (StringUtils.isNotBlank(rezept.packageName())) {
         pznCoding.setDisplay(rezept.packageName());

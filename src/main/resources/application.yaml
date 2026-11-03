@@ -38,10 +38,10 @@ spring:
     consumer:
       properties:
         allow.auto.create.topics: ${KAFKA_AUTO_CREATE_TOPICS:false}
-        max.request.size: ${KAFKA_MAX_REQUEST_SIZE:1048576}
     producer:
       properties:
-        batch.size: ${KAFKA_PRODUCER_BATCH_SIZE:16384} # 1 MiB, default: 16384
+        max.request.size: ${KAFKA_MAX_REQUEST_SIZE:1048576}
+        batch.size: ${KAFKA_PRODUCER_BATCH_SIZE:16384} # 16 KiB, default: 16384
         linger.ms: ${KAFKA_PRODUCER_LINGER_MS:5} # default: 5 ms
       compression-type: ${KAFKA_PRODUCER_COMPRESSION_TYPE:zstd}
   cloud:
