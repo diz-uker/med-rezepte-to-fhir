@@ -3,7 +3,8 @@
 
 Reads the fixtures used to seed the input topic (src/test/resources/fixtures)
 to compute which of them the mapper is expected to turn into a FHIR bundle
-(see MedRezeptToFhirBundleMapper.map's blank-field checks), then checks the
+(see the skip checks in MedRezeptToFhirBundleMapper.map and
+MedRezeptToMedicationMapper.map), then checks the
 messages consumed from the output/provenance/DLQ topics against that.
 
 Input files are produced by `kafka-console-consumer.sh --property
@@ -13,7 +14,9 @@ print.key=true --property key.separator='|'`, i.e. lines of `key|value-json`
 
 import argparse
 import json
+import re
 import sys
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
@@ -22,16 +25,33 @@ def is_blank(value):
     return value is None or (isinstance(value, str) and value.strip() == "")
 
 
+def has_usable_text(value):
+    # approximates the app's slugify check: texts like "..." contain no
+    # letters or digits and slugify to an empty string
+    if is_blank(value):
+        return False
+    ascii_text = unicodedata.normalize("NFKD", value).encode("ascii", "ignore")
+    return re.search(rb"[A-Za-z0-9]", ascii_text) is not None
+
+
+def is_skipped(record):
+    return (
+        is_blank(record.get("REZEPT_ID"))
+        or is_blank(record.get("REZEPT_POS"))
+        or is_blank(record.get("PATIENT_ID"))
+        or (
+            is_blank(record.get("PZN"))
+            and not has_usable_text(record.get("VERSCHREIBUNG"))
+        )
+    )
+
+
 def expected_identifiers(fixtures_dir):
     identifiers = Counter()
     skipped = []
     for path in sorted(Path(fixtures_dir).glob("rezept-*.json")):
         record = json.loads(path.read_text())
-        if (
-            is_blank(record.get("REZEPT_ID"))
-            or is_blank(record.get("REZEPT_POS"))
-            or is_blank(record.get("VERSCHREIBUNG"))
-        ):
+        if is_skipped(record):
             skipped.append(path.name)
             continue
         identifiers[f"{record['REZEPT_ID']}-{record['REZEPT_POS']}"] += 1
@@ -76,7 +96,8 @@ def main():
     expected_total = sum(expected.values())
     print(
         f"expecting {expected_total} mapped bundle(s) from fixtures; "
-        "skipped (blank rezeptId/rezeptPos/verschreibung): "
+        "skipped (blank rezeptId/rezeptPos/patientId, or neither PZN nor "
+        "usable verschreibung): "
         f"{skipped_fixtures or 'none'}"
     )
 
