@@ -1,0 +1,21 @@
+{
+  "REZEPT_ID": "1111",
+  "REZEPT_QUELLE": "ACM",
+  "FALL_ID": "222",
+  "PATIENT_ID": "333",
+  "REZEPT_DATUM": 1782252000.000000000,
+  "PRIVAT_FLAG": "0",
+  "VERSCHREIBUNG": "...",
+  "SIGNATUR": " ",
+  "REZEPT_POS": "1",
+  "PZN": null,
+  "PACKAGE_NAME": null,
+  "IFA_PHARM_FORM_CODE": null,
+  "AMOUNT_TEXT": null,
+  "AMOUNT": null,
+  "FACTOR1": null,
+  "FACTOR2": null,
+  "PACKAGE_UNIT_CODE": null,
+  "ATC_CODES": [],
+  "INGREDIENTS": []
+}

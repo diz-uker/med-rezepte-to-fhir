@@ -8,6 +8,7 @@ import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.FhirExtensions.DataAbsentReason;
 import io.github.dizuker.tofhir.IdUtils;
 import java.util.Locale;
+import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Identifier;
@@ -28,16 +29,30 @@ public class MedRezeptToMedicationMapper {
     this.fhirProperties = fhirProperties;
   }
 
-  public Medication map(MedRezept rezept) {
+  /**
+   * Maps the given Rezept to a Medication.
+   *
+   * @return the Medication, or empty if the Rezept has neither a PZN nor a Verschreibung text from
+   *     which a usable identifier could be derived, e.g., if the text is just "...".
+   */
+  public Optional<Medication> map(MedRezept rezept) {
+    String identifierValue;
+    if (StringUtils.isNotBlank(rezept.pzn())) {
+      identifierValue = rezept.pzn();
+    } else {
+      identifierValue = slugifier.slugify(rezept.verschreibung());
+    }
+
+    if (StringUtils.isBlank(identifierValue)) {
+      LOG.warn("Neither PZN nor a usable Verschreibung text is set, cannot create medication.");
+      return Optional.empty();
+    }
+
     var medication = new Medication();
     var medicationIdentifier =
-        new Identifier().setSystem(fhirProperties.systems().identifiers().rezeptMedicationId());
-
-    if (StringUtils.isNotBlank(rezept.pzn())) {
-      medicationIdentifier.setValue(rezept.pzn());
-    } else {
-      medicationIdentifier.setValue(slugifier.slugify(rezept.verschreibung()));
-    }
+        new Identifier()
+            .setSystem(fhirProperties.systems().identifiers().rezeptMedicationId())
+            .setValue(identifierValue);
 
     medication.addIdentifier(medicationIdentifier);
     medication.setId(IdUtils.fromIdentifier(medicationIdentifier));
@@ -104,6 +119,6 @@ public class MedRezeptToMedicationMapper {
       medication.setForm(formConcept);
     }
 
-    return medication;
+    return Optional.of(medication);
   }
 }

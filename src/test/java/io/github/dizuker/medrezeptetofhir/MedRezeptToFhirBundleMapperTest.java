@@ -85,4 +85,17 @@ class MedRezeptToFhirBundleMapperTest {
 
     Assertions.assertThat(mapped).isEmpty();
   }
+
+  @Test
+  void map_withoutPznAndUnusableVerschreibung_shouldSkipMapping() throws IOException {
+    final var recordStream =
+        this.getClass().getClassLoader().getResource("fixtures/rezept-no-usable-text.json");
+    var mapper = new ObjectMapper();
+    mapper.registerModule(new JavaTimeModule());
+    final var rezept = mapper.readValue(recordStream.openStream(), MedRezept.class);
+
+    var mapped = sut.map(rezept);
+
+    Assertions.assertThat(mapped).isEmpty();
+  }
 }

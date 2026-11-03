@@ -49,7 +49,13 @@ public class MedRezeptToFhirBundleMapper {
       return Optional.empty();
     }
 
-    var medication = medicationMapper.map(rezept);
+    var mappedMedication = medicationMapper.map(rezept);
+    if (mappedMedication.isEmpty()) {
+      LOG.warn("Could not map medication, skipping.");
+      return Optional.empty();
+    }
+
+    var medication = mappedMedication.get();
     var medicationReference =
         ReferenceUtils.createReferenceTo(medication).setDisplay(medication.getCode().getText());
 
