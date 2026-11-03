@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.stream.binder.test.TestChannelBinderConfiguration;
 import org.springframework.context.annotation.Import;
 
-@SpringBootTest(properties = "fhir.meta-source=test-data-source:${app-version}")
+@SpringBootTest(properties = "fhir.meta.source=test-data-source:${app-version}")
 @Import(TestChannelBinderConfiguration.class)
 class MedRezeptToFhirBundleMapperMetaSourceTest {
   @Autowired private MedRezeptToFhirBundleMapper sut;

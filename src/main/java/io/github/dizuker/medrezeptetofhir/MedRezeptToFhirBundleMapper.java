@@ -44,23 +44,29 @@ public class MedRezeptToFhirBundleMapper {
       return Optional.empty();
     }
 
-    if (StringUtils.isBlank(rezept.verschreibung())) {
-      LOG.warn("Verschreibung is unset, skipping.");
+    if (StringUtils.isBlank(rezept.patientId())) {
+      LOG.warn("Patient ID is unset, skipping.");
       return Optional.empty();
     }
 
-    var medication = medicationMapper.map(rezept);
+    var mappedMedication = medicationMapper.map(rezept);
+    if (mappedMedication.isEmpty()) {
+      return Optional.empty();
+    }
+
+    var medication = mappedMedication.get();
     var medicationReference =
         ReferenceUtils.createReferenceTo(medication).setDisplay(medication.getCode().getText());
 
     var request = medicationRequestMapper.map(rezept, medicationReference);
 
-    if (StringUtils.isNotBlank(fhirProperties.metaSource())) {
-      request.getMeta().setSource(fhirProperties.metaSource());
-      medication.getMeta().setSource(fhirProperties.metaSource());
-    }
-
     var device = deviceMapper.map();
+
+    if (StringUtils.isNotBlank(fhirProperties.meta().source())) {
+      request.getMeta().setSource(fhirProperties.meta().source());
+      medication.getMeta().setSource(fhirProperties.meta().source());
+      device.getMeta().setSource(fhirProperties.meta().source());
+    }
 
     var sourceSystemValue =
         String.format(

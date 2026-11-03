@@ -8,6 +8,7 @@ import io.github.dizuker.medrezeptetofhir.models.MedRezept;
 import io.github.dizuker.tofhir.FhirExtensions.DataAbsentReason;
 import io.github.dizuker.tofhir.IdUtils;
 import java.util.Locale;
+import java.util.Optional;
 import org.apache.commons.lang3.StringUtils;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Identifier;
@@ -28,23 +29,38 @@ public class MedRezeptToMedicationMapper {
     this.fhirProperties = fhirProperties;
   }
 
-  public Medication map(MedRezept rezept) {
+  /**
+   * Maps the given Rezept to a Medication.
+   *
+   * @return the Medication, or empty if the Rezept has neither a PZN nor a Verschreibung text from
+   *     which a usable identifier could be derived, e.g., if the text is just "...".
+   */
+  public Optional<Medication> map(MedRezept rezept) {
+    var hasPzn = StringUtils.isNotBlank(rezept.pzn());
+    // texts like "..." contain nothing that survives slugification
+    var verschreibungSlug = slugifier.slugify(rezept.verschreibung());
+    var hasUsableVerschreibung = StringUtils.isNotBlank(verschreibungSlug);
+
+    if (!hasPzn && !hasUsableVerschreibung) {
+      LOG.warn("Neither PZN nor a usable Verschreibung text is set, cannot create medication.");
+      return Optional.empty();
+    }
+
     var medication = new Medication();
     var medicationIdentifier =
-        new Identifier().setSystem(fhirProperties.systems().identifiers().rezeptMedicationId());
-
-    if (StringUtils.isNotBlank(rezept.pzn())) {
-      medicationIdentifier.setValue(rezept.pzn());
-    } else {
-      medicationIdentifier.setValue(slugifier.slugify(rezept.verschreibung()));
-    }
+        new Identifier()
+            .setSystem(fhirProperties.systems().identifiers().rezeptMedicationId())
+            .setValue(hasPzn ? rezept.pzn() : verschreibungSlug);
 
     medication.addIdentifier(medicationIdentifier);
     medication.setId(IdUtils.fromIdentifier(medicationIdentifier));
     medication.getMeta().addProfile(Medikation.Profiles.miiPrMedikationMedication());
-    var code = new CodeableConcept().setText(rezept.verschreibung());
+    var code = new CodeableConcept();
+    if (hasUsableVerschreibung) {
+      code.setText(rezept.verschreibung());
+    }
 
-    if (StringUtils.isNotBlank(rezept.pzn())) {
+    if (hasPzn) {
       var pznCoding = fhirProperties.codings().pzn().setCode(rezept.pzn());
       if (StringUtils.isNotBlank(rezept.packageName())) {
         pznCoding.setDisplay(rezept.packageName());
@@ -104,6 +120,6 @@ public class MedRezeptToMedicationMapper {
       medication.setForm(formConcept);
     }
 
-    return medication;
+    return Optional.of(medication);
   }
 }

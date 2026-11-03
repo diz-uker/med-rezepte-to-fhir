@@ -17,7 +17,7 @@ public final class IfaUnitMapper {
   }
 
   // Maps IFA molecule-unit codes to their UCUM equivalents.
-  // Source: internal IFA unit list (descending frequency order, incomplete — E and MGMW missing).
+  // Source: internal IFA unit list (descending frequency order, incomplete — MGMW missing).
   private static final Map<String, UcumUnit> IFA_TO_UCUM =
       Map.ofEntries(
           Map.entry("MG", new UcumUnit("mg", "mg")),
@@ -55,7 +55,7 @@ public final class IfaUnitMapper {
           Map.entry("L", new UcumUnit("L", "L")),
           Map.entry("MBQ", new UcumUnit("MBq", "MBq")),
           Map.entry("MCG", new UcumUnit("ug", "ug")),
-          Map.entry("MOL", new UcumUnit("uL", "uL")),
+          Map.entry("MOL", new UcumUnit("mol", "mol")),
           Map.entry("PERC", new UcumUnit("%", "%")),
           Map.entry("MCMOL", new UcumUnit("umol", "umol")),
           Map.entry("MGD", new UcumUnit("mg/d", "mg/d")),
